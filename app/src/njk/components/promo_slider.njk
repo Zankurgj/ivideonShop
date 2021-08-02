@@ -1,0 +1,63 @@
+{% macro promoSlider(dataArr) %}
+<div class="iv-promo-slider_container">
+    <button class="iv-promo-slider_arrow iv-promo-slider_arrow--prev">
+        <span class="visually-hidden">предыдущий слайд</span>
+    </button>
+    <button class="iv-promo-slider_arrow iv-promo-slider_arrow--next">
+        <span class="visually-hidden">следующий слайд</span>
+    </button>
+    <div class="iv-promo-slider js--product-slider">
+        {% for item in dataArr %}
+        <div class="iv-promo-slide_inner">
+            <div class="iv-promo-slide">
+                <div class="iv-promo-slide_top">
+                    {% if item.badge %}
+                    <span class="iv-promo-slide_badge">{{item.badge}}</span>
+                    {% endif %}
+                    <div class="iv-promo-slide_stars">
+                        {% for i in range(0, item.stars) %}
+                        <span class="iv-promo-slide_star-icon"></span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="iv-promo-slide_middle">
+                    <div class="iv-promo-slide_img">
+                        <img src="{{item.img}}" alt="{{item.name}}">
+                    </div>
+                </div>
+                <div class="iv-promo-slide_bottom">
+                    <p class="iv-promo-slide_type">{{item.type}}</p>
+                    <div class="iv-promo-slide_wrapper">
+                        <p class="iv-promo-slide_name">{{item.name}}</p>
+                        <div class="iv-promo-slide_btns">
+                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                <span class="visually-hidden">нравится</span>
+                            </button>
+                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                <span class="visually-hidden">сравнить</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="iv-promo-slide_cost-wrapper">
+                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">{{item.cost}} </span>
+                            <span class="iv-promo-slide_cost-currency">₽</span>
+                        </span>
+                        {% if item.oldCost %}
+                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">{{item.oldCost}} </span>
+                            <span class="iv-promo-slide_cost-old-currency">₽</span>
+                        </span>
+                        {% endif %}
+                    </div>
+                    <div class="iv-promo-slide_btn-wrapper">
+                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,71 @@
+<footer class="main-footer">
+    <div class="iv-container main-footer_container">
+        <div class="iv-row main-footer_row">
+            <div class="main-footer_about-col">
+                <img class="main-footer_iv-logo" src="../images/icons/iv-footer.svg" alt="ivideon логотип">
+                <img class="main-footer_sk-logo" src="../images/icons/skolkovo.svg" alt="сколково логотип">
+                <a href="tel:+7-800-555-16-85" class="main-footer_phone">8 (800) 555-16-85</a>
+                <p class="main-footer_time">Режим работы: с 8:00 до 22:00, без выходных </p>
+                <div class="main-footer_about-social">
+                    {% include "app/src/njk/components/main_footer_socail.njk" %}
+                </div>
+                <div class="main-footer_block-icon">
+                    <a href="#" class="main-footer_platform main-footer_platform--ios">
+                        <span class="visually-hidden">app store</span>
+                    </a>
+                    <a href="#" class="main-footer_platform main-footer_platform--google">
+                        <span class="visually-hidden">google play</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="main-footer_nav-col">
+                <div class="main-footer_nav-item">
+                    <p class="main-footer_nav-title">Каталог</p>
+                    <a href="#" class="main-footer_nav-link">Для дома</a>
+                    <a href="#" class="main-footer_nav-link">Для бизнеса</a>
+                    <a href="#" class="main-footer_nav-link">Тарифы</a>
+                    <a href="#" class="main-footer_nav-link">Загрузки</a>
+                    <a href="#" class="main-footer_nav-link">Архив</a>
+                </div>
+                <div class="main-footer_nav-item">
+                    <p class="main-footer_nav-title">Покупателю</p>
+                    <a href="#" class="main-footer_nav-link">Отследить заказ</a>
+                    <a href="#" class="main-footer_nav-link">Акции</a>
+                    <a href="#" class="main-footer_nav-link">Монтаж</a>
+                    <a href="#" class="main-footer_nav-link">Доставка</a>
+                    <a href="#" class="main-footer_nav-link">Оплата</a>
+                    <a href="#" class="main-footer_nav-link">Гарантия</a>
+                    <a href="#" class="main-footer_nav-link">Возврат товара</a>
+                </div>
+                <div class="main-footer_nav-item">
+                    <p class="main-footer_nav-title">Поддержка</p>
+                    <a href="#" class="main-footer_nav-link">Центр помощи</a>
+                    <a href="#" class="main-footer_nav-link">Контакты</a>
+                </div>
+            </nav>
+            <div class="main-footer_email-col">
+                <form action="" class="main-footer_email-form">
+                    <p class="main-footer_email-title">Подписаться на рассылку</p>
+                    <label class="main-footer_email-input-wrapper">
+                        <span class="visually-hidden">Емейл</span>
+                        <input type="text" class="main-footer_email-input" placeholder="E-mail*" required>
+                    </label>
+                    <button type="submit" class="btn-blue main-footer_email-btn">Подписаться на рассылку</button>
+                </form>
+                <div class="main-footer_email-social">
+                    {% include "app/src/njk/components/main_footer_socail.njk" %}
+                </div>
+            </div>
+            <div class="main-footer_bottom-col">
+                <div class="main-footer_copyright-wrapper">
+                    <p class="main-footer_copyright">© Ivideon 2010 - 2021</p>
+                </div>
+                <div class="main-footer_bottom-link-block">
+                    <a href="#" class="main-footer_bottom-link">Публичная оферта (для юр. лиц)</a>
+                    <a href="#" class="main-footer_bottom-link">Политика конфиденциальности</a>
+                    <a href="#" class="main-footer_bottom-link">Условия обсулуживания</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

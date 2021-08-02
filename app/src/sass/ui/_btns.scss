@@ -1,0 +1,75 @@
+button,
+.btn,
+input[type="submit"] {
+  display: inline-block;
+  background-color: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  font-family: $base-font;
+  transition: all $base-duration $base-timing;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-blue {
+  @extend .btn;
+  border-radius: 20px;
+  padding: 11px 16px 13px 16px;
+  background-color: $blue;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  &:hover {
+    color: #fff;
+  }
+  @media all and (min-width: $tablet-bp) {
+    font-size: 17px;
+    line-height: 32px;
+    padding: 11px 24px 13px 24px;
+  }
+}
+.btn-blue-border {
+  @extend .btn;
+  border: 1px solid $blue;
+  padding: 10px 16px 12px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $blue;
+  &:hover {
+    color: $blue;
+  }
+  @media all and (min-width: $tablet-bp) {
+    font-size: 17px;
+    line-height: 32px;
+    padding: 10px 24px 12px 24px;
+  }
+}
+.btn-white-border {
+  @extend .btn;
+  border-radius: 20px;
+  padding: 11px 16px 13px 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  &:hover {
+    color: #fff;
+  }
+  @media all and (min-width: $tablet-bp) {
+    font-size: 17px;
+    line-height: 32px;
+    padding: 11px 24px 13px 24px;
+  }
+}

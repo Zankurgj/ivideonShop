@@ -1,0 +1,375 @@
+{% macro mainHeader(headerType = "default") %}
+<header class="main-header">
+    <div class="main-header_inner">
+        <button class="main-header_menu-btn js--toggle-left-menu">
+            <span class="visually-hidden">Меню</span>
+            <svg class="svg-icon main-header_menu-icon">
+                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#menu-icon"></use>
+            </svg>
+        </button>
+        <div class="main-header_nav-container">
+            <nav class="main-header_nav">
+                <a href="/" class="main-header_logo">
+                    <span class="visually-hidden">Главная страница</span>
+                </a>
+                <div class="main-header_nav-block-link">
+                    <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                        <span class="main-header_nav-link-item">Для Бизнеса</span>
+                        <div class="main-header_nav-dropdown-inner">
+                            <div class="iv-container main-header_nav-dropdown-container">
+                                <div class="main-header_nav-dropdown-img">
+                                    <img src="../images/img/menu/menu-banner.png" alt="">
+                                </div>
+                                <div class="iv-row main-header_nav-dropdown-row">
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">РЕшения для бизнеса</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">FAQ</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                        <span class="main-header_nav-link-item">Для Дома</span>
+                        <div class="main-header_nav-dropdown-inner">
+                            <div class="iv-container main-header_nav-dropdown-container">
+                                <div class="main-header_nav-dropdown-img">
+                                    <img src="../images/img/menu/menu-banner.png" alt="">
+                                </div>
+                                <div class="iv-row main-header_nav-dropdown-row">
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">РЕшения для бизнеса</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">FAQ</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                        <span class="main-header_nav-link-item">Интернет-магазин</span>
+                        <div class="main-header_nav-dropdown-inner">
+                            <div class="iv-container main-header_nav-dropdown-container">
+                                <div class="main-header_nav-dropdown-img">
+                                    <img src="../images/img/menu/menu-banner.png" alt="">
+                                </div>
+                                <div class="iv-row main-header_nav-dropdown-row">
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">РЕшения для бизнеса</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">FAQ</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                        <span class="main-header_nav-link-item">Партнёрам</span>
+                        <div class="main-header_nav-dropdown-inner">
+                            <div class="iv-container main-header_nav-dropdown-container">
+                                <div class="main-header_nav-dropdown-img">
+                                    <img src="../images/img/menu/menu-banner.png" alt="">
+                                </div>
+                                <div class="iv-row main-header_nav-dropdown-row">
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">РЕшения для бизнеса</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">FAQ</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                        <span class="main-header_nav-link-item">Тарифы</span>
+                        <div class="main-header_nav-dropdown-inner">
+                            <div class="iv-container main-header_nav-dropdown-container">
+                                <div class="main-header_nav-dropdown-img">
+                                    <img src="../images/img/menu/menu-banner.png" alt="">
+                                </div>
+                                <div class="iv-row main-header_nav-dropdown-row">
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">РЕшения для бизнеса</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">FAQ</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                    </div>
+                                    <div class="main-header_nav-dropdown-item">
+                                        <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                        <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="main-header-right">
+                <button class="main-header_icon-btn main-header_icon-btn--search">
+                    <svg class="svg-icon main-header_btn-icon">
+                        <use xlink:href="../images/sprites/svg/sprite.symbol.svg#header-search"></use>
+                    </svg>
+                    <span class="visually-hidden">Поиск</span>
+                </button>
+                <button class="main-header_icon-btn main-header_icon-btn--global">
+                    <svg class="svg-icon main-header_btn-icon">
+                        <use xlink:href="../images/sprites/svg/sprite.symbol.svg#globe"></use>
+                    </svg>
+                    <span class="visually-hidden">TODO</span>
+                </button>
+                <button class="btn-white-border main-header-nav_btn">Войти</button>
+            </div>
+        </div>
+    </div>
+    <nav class="main-header_sub-nav">
+        <div class="iv-container">
+            <div class="main-header_sub-nav-inner">
+                <a href="#" class="main-header_sub-nav-item">Главная</a>
+                <a href="#" class="main-header_sub-nav-item">Гарантия</a>
+                <a href="#" class="main-header_sub-nav-item">Доставка</a>
+                <a href="#" class="main-header_sub-nav-item">Оплата</a>
+                <a href="#" class="main-header_sub-nav-item">Монтаж</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="main-header_nav-dropdown-overlay js--top-menu-overlay"></div>
+
+<div class="main-header_left-nav-wrapper js--left-menu">
+    <div class="main-header_left-nav-wrapper-overlay js--toggle-left-menu"></div>
+    <button class="main-header_left-nav-btn-close js--toggle-left-menu">
+        <span class="visually-hidden">закрыть</span>
+    </button>
+    <nav class="main-header_left-nav">
+        <div class="main-header_left-nav-item">
+            <p class="main-header_left-nav-item-title">Продукты</p>
+            <a href="#" class="main-header_left-nav-item-item">Для бизнеса</a>
+            <a href="#" class="main-header_left-nav-item-item">Для дома</a>
+            <a href="#" class="main-header_left-nav-item-item">Загрузки</a>
+        </div>
+        <div class="main-header_left-nav-item">
+            <p class="main-header_left-nav-item-title">Компания</p>
+            <a href="#" class="main-header_left-nav-item-item">Блог</a>
+            <a href="#" class="main-header_left-nav-item-item">Вакансия</a>
+            <a href="#" class="main-header_left-nav-item-item">Контакты</a>
+        </div>
+        <div class="main-header_left-nav-item">
+            <p class="main-header_left-nav-item-title">Поддержка</p>
+            <a href="#" class="main-header_left-nav-item-item">Центр помощи</a>
+            <a href="#" class="main-header_left-nav-item-item">Партнерам</a>
+            <a href="#" class="main-header_left-nav-item-item">FAQ</a>
+        </div>
+    </nav>
+</div>
+
+<header class="main-header-bottom">
+    <div class="main-header-bottom_overlay js-header-menu-overlay js--close-bottom-menu"></div>
+    <div class="main-header-bottom_menu-wrapper js--bottom-menu-wrapper">
+        {% for i in range(0, 5) %}
+        <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="{{loop.index}}">
+            <div class="main-header-bottom_menu-header">
+                <p class="main-header-bottom_menu-title">Бизнес</p>
+                <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                    <span class="visually-hidden">закрыть</span>
+                </button>
+            </div>
+            <nav class="main-header-bottom_menu-nav">
+                <div class="main-header-bottom_dropdown-wrapper">
+                    <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                    <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                    </div>
+                </div>
+                <div class="main-header-bottom_dropdown-wrapper">
+                    <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                    <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        {% endfor %}
+    </div>
+    <nav class="main-header-bottom_nav">
+        {% set navItems = [
+        {
+        icon:'../images/icons/home.svg',
+        text:'Дом'
+        },
+        {
+        icon:'../images/icons/work.svg',
+        text:'Бизнес'
+        },
+        {
+        icon:'../images/icons/bag.svg',
+        text:'Магазин'
+        },
+        {
+        icon:'../images/icons/checklist.svg',
+        text:'Тарифы'
+        },
+        {
+        icon:'../images/icons/two_user.svg',
+        text:'Партнеры'
+        }
+        ] %}
+        {% for item in navItems %}
+        <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="{{loop.index}}">
+            <span class="main-header-bottom_nav-item-icon">
+                <img src="{{item.icon}}" alt="{{item.text}}">
+            </span>
+            <span>{{item.text}}</span>
+        </button>
+        {% endfor %}
+    </nav>
+</header>
+{% endmacro %}

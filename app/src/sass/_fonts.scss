@@ -1,0 +1,16 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    font-display: swap;
+    src: url($f-url + ".woff2") format("woff2");
+    src: url($f-url + ".woff") format("woff");
+  }
+}
+
+@include font("Golos", normal, 400, "../../fonts/Golos-Text_Regular");
+@include font("Golos", normal, 500, "../../fonts/Golos-Text_Medium");
+@include font("Golos", normal, 600, "../../fonts/Golos-Text_DemiBold");
+@include font("Golos", normal, 700, "../../fonts/Golos-Text_Bold");
+@include font("Golos", normal, 900, "../../fonts/Golos-Text_Black");

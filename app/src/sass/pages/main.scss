@@ -1,0 +1,394 @@
+.mp-h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+// PROMO SECTION
+// SLIDER
+.mp-promo_slide {
+  background-color: #0095ff;
+  height: 652px;
+  @media all and (min-width: $desktop-bp) {
+    height: 580px;
+  }
+}
+.mp-promo_slide {
+  padding: 138px 0 0 0;
+  @media all and (min-width: $desktop-bp) {
+    padding: 180px 0 0 0;
+  }
+}
+.mp-promo_slide-title {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #fff;
+}
+.mp-promo_slide-badge {
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 40px;
+  line-height: 48px;
+  background-color: #fff;
+  color: #0095ff;
+  margin-top: 8px;
+}
+.mp-promo_slide-text {
+  margin-bottom: 58px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+}
+.btn-mp-slider {
+  padding: 12px 26px;
+  background-color: #008cef;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+.mp-promo_slider {
+  position: relative;
+  // DOST
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 112px;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 24px;
+    margin: 0;
+    list-style: none;
+    z-index: 2;
+    @media all and (min-width: $desktop-bp) {
+      padding: 0 60px;
+      bottom: 76px;
+    }
+    @media all and (min-width: $large-bp) {
+      padding: 0 80px;
+    }
+    @media all and (min-width: 1920px) {
+      padding: 0 160px;
+    }
+    li {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.slick-active {
+        button {
+          width: 160px;
+          &:before {
+            animation-name: changeWidth;
+          }
+        }
+      }
+      button {
+        position: relative;
+        width: 16px;
+        height: 4px;
+        border-radius: 20px;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          transform-origin: left;
+          transform: scaleX(0);
+          animation-fill-mode: backwards;
+          animation-timing-function: linear;
+          animation-duration: 5000ms;
+        }
+      }
+    }
+  }
+  // ARROW
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    z-index: 2;
+  }
+  .slick-prev {
+    left: 10px;
+    background-image: url("../images/icons/mp-promo-slider-left.svg");
+    @media all and (min-width: $large-bp) {
+      left: 40px;
+    }
+  }
+  .slick-next {
+    right: 10px;
+    background-image: url("../images/icons/mp-promo-slider-right.svg");
+    @media all and (min-width: $large-bp) {
+      right: 40px;
+    }
+  }
+}
+@keyframes changeWidth {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+// SECTION SLIDER
+.mp-section {
+  padding: 28px 0;
+  background-color: #fdfdfd;
+  @media all and (min-width: $desktop-bp) {
+    padding: 65px 0 26px;
+  }
+  @media all and (min-width: 1600px) {
+    padding: 65px 0 51px;
+  }
+  @media all and (min-width: 1920px) {
+    padding: 65px 0 26px;
+  }
+}
+.mp-section_container {
+  padding: 0;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+  @media all and (min-width: $large-bp) {
+    padding: 0 80px;
+  }
+  @media all and (min-width: 1920px) {
+    padding: 0 160px;
+  }
+}
+.mp-section_slider {
+  @media all and (min-width: $desktop-bp) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .slick-track {
+    padding: 20px 0;
+    display: flex !important;
+  }
+  .slick-slide {
+    height: inherit !important;
+    > div {
+      height: 100%;
+    }
+  }
+}
+.mp-section_slide {
+  height: 100%;
+  padding: 0 7px;
+  @media all and (min-width: $tablet-bp) {
+    padding: 0 25px;
+  }
+  @media all and (min-width: $desktop-bp) {
+    flex-basis: calc((100% - 50px * 2) / 3);
+    max-width: calc((100% - 50px * 2) / 3);
+    height: auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1600px) {
+    flex-basis: calc((100% - 25px * 5) / 6);
+    max-width: calc((100% - 25px * 5) / 6);
+    margin-right: 25px;
+    margin-bottom: 25px;
+    &:nth-child(3n) {
+      margin-right: 25px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1920px) {
+    flex-basis: calc((100% - 50px * 5) / 6);
+    max-width: calc((100% - 50px * 5) / 6);
+    margin-right: 50px;
+    margin-bottom: 50px;
+    &:nth-child(3n) {
+      margin-right: 50px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.mp-section_slide-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 130px;
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.07),
+    0px 2.01027px 17.869px rgba(0, 0, 0, 0.0417275),
+    0px 0.598509px 5.32008px rgba(0, 0, 0, 0.0282725);
+  border-radius: 20px;
+  @media all and (min-width: $tablet-bp) {
+    padding: 20px 26px 32px 26px;
+    width: 225px;
+  }
+  @media all and (min-width: $desktop-bp) {
+    width: 100%;
+  }
+}
+.mp-section_slide-img {
+  position: relative;
+  margin-bottom: 2px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #0095ff;
+    z-index: 1;
+    @media all and (min-width: $tablet-bp) {
+      width: 75px;
+      height: 75px;
+    }
+  }
+  img {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    z-index: 2;
+    @media all and (min-width: $tablet-bp) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+.mp-section_slide-title {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: $black;
+  margin-bottom: 4px;
+  @media all and (min-width: $tablet-bp) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}
+.mp-section_slide-link {
+  position: relative;
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 24px;
+  color: $gray;
+  text-decoration: none;
+  white-space: nowrap;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    margin-left: 9px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../images/icons/arrow-gray-small.svg");
+    background-size: contain;
+    vertical-align: middle;
+    @media all and (min-width: $tablet-bp) {
+      width: 6px;
+      height: 12px;
+      margin-left: 14px;
+    }
+  }
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+  }
+}
+// SECTION BEST PRICE
+.mp-best-price {
+  padding: 55px 0 50px;
+  background-color: $dark-snow;
+}
+.mp-best-price_h2 {
+  margin-bottom: 24px;
+}
+.mp-best-price_container {
+  padding: 0;
+}
+// TOGGLE
+.mp-best-price_tab-toggle {
+  display: table;
+  padding: 4px;
+  background-color: $smoke;
+  border-radius: 32px;
+  margin: 0 auto;
+}
+.mp-best-price_toggle-wrapper {
+  margin: 0;
+  display: inline-block;
+}
+.mp-best-price_toggle-input {
+  @extend .visually-hidden;
+  &:checked + .mp-best-price_toggle-text {
+    background-color: #fff;
+  }
+}
+.mp-best-price_toggle-text {
+  display: inline-block;
+  padding: 8px 34px;
+  border-radius: 32px;
+  background-color: transparent;
+  transition: background-color $base-duration $base-timing;
+  font-size: 13px;
+  line-height: 24px;
+  color: $black;
+  white-space: nowrap;
+}
+.mp-best-price_tab-item {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+//BEST PRICE SLIDER

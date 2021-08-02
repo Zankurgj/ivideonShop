@@ -1,0 +1,25 @@
+// Font options
+$golos: "Golos", "Roboto", Arial, Helvetica, sans-serif;
+$base-font: $golos;
+
+// Colors
+$black: #1f2d3d;
+$gray: #8492a6;
+$blue: #008cef;
+$dark-blue: #0063bf;
+$light-blue: #ace3ff;
+$dark-snow: #eff2f7;
+$silver: #8492a6;
+$slate: #3c4858;
+$steel: #273444;
+$smoke: #e0e6ed;
+
+// Base colors
+$base-text: $black;
+// tarnsition
+$base-duration: 0.3s;
+$base-timing: ease-in-out;
+// BP
+$tablet-bp: 768px;
+$desktop-bp: 1024px;
+$large-bp: 1366px;

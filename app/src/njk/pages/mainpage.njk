@@ -1,0 +1,151 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'iVideon Главная страница' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="mp-promo">
+    <div class="mp-promo_slider js--mp-promo-slider">
+        {% for i in range(0, 3) %}
+        <div class="mp-promo_slide">
+            <div class="iv-container">
+                <h2 class="mp-promo_slide-title">- 12% на камеры по промокоду
+                    <span class="mp-promo_slide-badge">RUS2021</span>
+                </h2>
+                <p class="mp-promo_slide-text">До 20 июня 2021 </p>
+                <a href="#" class="btn btn-mp-slider">Перейти в каталог</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="mp-section">
+    <h2 class="visually-hidden">Разделы</h2>
+    <div class="iv-container mp-section_container">
+        <div class="mp-section_slider js--mp-section-slider">
+            {% set sectionSlider = [
+            {
+            img: '../images/img/main/section1.png',
+            title: 'Комплекты для загороднго дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section2.png',
+            title: 'Системы видеонянь для вашего дома',
+            link: 'Видеоняни'
+            },
+            {
+            img: '../images/img/main/section3.png',
+            title: 'Комплекты для магазина у дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section1.png',
+            title: 'Комплекты для загороднго дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section5.png',
+            title: 'Видеонаблюдение для квартиры',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section6.png',
+            title: 'Акции',
+            link: 'Видеонаблюдение'
+            }
+            ] %}
+            {% for item in sectionSlider %}
+            <div class="mp-section_slide">
+                <div class="mp-section_slide-item">
+                    <div class="mp-section_slide-img">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    <p class="mp-section_slide-title">{{item.title}}</p>
+                    <a href="#" class="mp-section_slide-link">{{item.link}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="mp-best-price">
+    <h2 class="mp-h2 mp-best-price_h2">Лучшие предложения</h2>
+    <div class="iv-container mp-best-price_container">
+        <div class="mp-best-price_tab-toggle">
+            <label class="mp-best-price_toggle-wrapper">
+                <input type="radio" name="bestPrice" data-tab-id="bestPrise1"
+                    class="mp-best-price_toggle-input js--toogle-input" checked>
+                <span class="mp-best-price_toggle-text">Хиты продаж</span>
+            </label>
+            <label class="mp-best-price_toggle-wrapper">
+                <input type="radio" name="bestPrice" data-tab-id="bestPrise2"
+                    class="mp-best-price_toggle-input js--toogle-input">
+                <span class="mp-best-price_toggle-text">Новинки</span>
+            </label>
+        </div>
+    </div>
+    <div class="mp-best-price_tab-wrapper">
+        <div class="mp-best-price_tab-item show" data-tab-name="bestPrice" data-tab="bestPrise1">
+            {% set promoSliderData = [
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 2,
+            badge: "Хит"
+            },
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            stars: 2,
+            badge: "Хит"
+            },
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 5
+            },
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 3,
+            badge: "Хит"
+            },
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 5,
+            badge: "Хит"
+            },
+            {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 4,
+            badge: "Хит"
+            }
+            ] %}
+            {% from "app/src/njk/components/promo_slider.njk" import promoSlider %}
+            {{ promoSlider(promoSliderData) }}
+        </div>
+        <div class="mp-best-price_tab-item" data-tab-name="bestPrice" data-tab="bestPrise2">
+            2
+        </div>
+    </div>
+</section>
+{% endblock %}
