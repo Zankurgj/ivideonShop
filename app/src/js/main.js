@@ -50,14 +50,13 @@ const initProductSlider = () => {
     arrows: true,
     dots: true,
     mobileFirst: true,
-    prevArrow: $(".iv-promo-slider_arrow--prev"),
-    nextArrow: $(".iv-promo-slider_arrow--next"),
+    focusOnSelect: true,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           dots: false,
-          centerMode: true,
         },
       },
     ],

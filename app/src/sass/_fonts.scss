@@ -9,8 +9,14 @@
   }
 }
 
-@include font("Golos", normal, 400, "../../fonts/Golos-Text_Regular");
-@include font("Golos", normal, 500, "../../fonts/Golos-Text_Medium");
-@include font("Golos", normal, 600, "../../fonts/Golos-Text_DemiBold");
-@include font("Golos", normal, 700, "../../fonts/Golos-Text_Bold");
-@include font("Golos", normal, 900, "../../fonts/Golos-Text_Black");
+@include font("Roboto", normal, 300, "../../fonts/Roboto-Light");
+@include font("Roboto", normal, 400, "../../fonts/Roboto-Regular");
+@include font("Roboto", normal, 500, "../../fonts/Roboto-Medium");
+@include font("Roboto", normal, 700, "../../fonts/Roboto-Bold");
+@include font("Roboto", normal, 900, "../../fonts/Roboto-Black");
+
+@include font("Roboto", italic, 300, "../../fonts/Roboto-LightItalic");
+@include font("Roboto", italic, 400, "../../fonts/Roboto-Italic");
+@include font("Roboto", italic, 500, "../../fonts/Roboto-MediumItalic");
+@include font("Roboto", italic, 700, "../../fonts/Roboto-BoldItalic");
+@include font("Roboto", italic, 900, "../../fonts/Roboto-BlackItalic");

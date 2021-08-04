@@ -144,7 +144,72 @@
             {{ promoSlider(promoSliderData) }}
         </div>
         <div class="mp-best-price_tab-item" data-tab-name="bestPrice" data-tab="bestPrise2">
-            2
+            {{ promoSlider(promoSliderData) }}
+        </div>
+    </div>
+</section>
+<section class="mp-promo-home">
+    <div class="iv-container">
+        <div class="mp-promo-home_inner">
+            <div class="mp-promo-home_img">
+                <img src="../images/img/main/promo-camer-img.png" alt="Камера">
+            </div>
+            <div class="mp-promo-home_text-block">
+                <h2 class="mp-promo-home_h2">Ваши камеры всегда под рукой!</h2>
+                <p class="mp-promo-home_text">Скачай наше удобное мобильное приложение</p>
+                <div class="mp-promo-home_btn-wrapper">
+                    <a href="#" class="btn-white-border mp-promo-home_btn">Скачать для Android</a>
+                    <a href="#" class="btn-white-border mp-promo-home_btn">Скачать для iOS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mp-discount">
+    <h2 class="mp-h2 mp-discount_h2">Скидки на товары</h2>
+    <div class="mp-discount_slider--wrapper">
+        {{ promoSlider(promoSliderData) }}
+    </div>
+</section>
+<section class="mp-feature">
+    <div class="iv-container">
+        <h2 class="mp-feature_h2">Преимущества <span class="mp-feature_h2-blue">ivideon</span></h2>
+        <div class="iv-row mp-feature_row">
+            {% set mpFeaureItem = [
+            {
+            img:'../images/img/main/feature1.png',
+            title: 'Официальный интрнет-магазин',
+            text: 'Доступ из любой точки мира'
+            },
+            {
+            img:'../images/img/main/feature2.png',
+            title: 'Гарантия качества',
+            text: 'Надежное шифрование данных'
+            },
+            {
+            img:'../images/img/main/feature3.png',
+            title: 'Быстрая доставка',
+            text: 'Системы быстрой доставки'
+            },
+            {
+            img:'../images/img/main/feature4.png',
+            title: 'Круглосуточная поддержка',
+            text: 'Стабильная работа в сетях 3G'
+            }
+            ] %}
+            {% for item in mpFeaureItem%}
+            <div class="mp-feature_item-col">
+                <div class="mp-feature_item">
+                    <div class="feature_item-img">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    <div class="feature_item-text-wrapper">
+                        <p class="feature_item-title">{{item.title}}</p>
+                        <p class="feature_item-text">{{item.text}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

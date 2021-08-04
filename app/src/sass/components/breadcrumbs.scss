@@ -1,0 +1,22 @@
+.breadcrumb-item-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #c2c7cc;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.breadcrumb-item {
+  padding-left: 5px;
+  color: #c2c7cc;
+}
+a.breadcrumb-item {
+  &:hover {
+    color: #c2c7cc;
+  }
+}
+.breadcrumb-item--last {
+  color: #97a1a8;
+}

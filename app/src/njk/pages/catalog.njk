@@ -1,0 +1,137 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'iVideon каталог' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="catalog-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Камеры видеонаблюдения']]) }}
+    </div>
+</div>
+<section class="catalog-section">
+    <div class="iv-container">
+        <h1 class="h1-catalog">Камеры видеонаблюдения</h1>
+        <div class="catalog-menu">
+            <!-- <div class="catalog-menu_sort-wrapper">
+                <div class="catalog-menu_dropdown">
+                    <button class="catalog-menu_dropdown-wrapper"></button>
+                    <div class="catalog-menu_dropdown-inner">
+                        <div class="catalog-menu_dropdown-item">
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="catalog-menu_type-wrapper">
+                <button class="catalog-menu_type-item active">
+                    <span class="catalog-menu_type-text">Все камеры</span>
+                    <span class="catalog-menu_type-number">(95)</span>
+                </button>
+                <button class="catalog-menu_type-item">
+                    <span class="catalog-menu_type-text">Цилиндрические</span>
+                    <span class="catalog-menu_type-number">(12)</span>
+                </button>
+                <button class="catalog-menu_type-item">
+                    <span class="catalog-menu_type-text">Купольные</span>
+                    <span class="catalog-menu_type-number">(4)</span>
+                </button>
+                <button class="catalog-menu_type-item">
+                    <span class="catalog-menu_type-text">Видеорегистраторы и NVR</span>
+                    <span class="catalog-menu_type-number">(8)</span>
+                </button>
+                <button class="catalog-menu_type-item">
+                    <span class="catalog-menu_type-text">Поворотные (PTZ)</span>
+                    <span class="catalog-menu_type-number">(18)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-wrapper">
+        <div class="iv-container">
+            <div class="iv-row">
+                <div class="catalog-filter_sidebar-col">
+                    <aside class="catalog-filter_sidebar">saddas</aside>
+                </div>
+                <div class="catalog-item_wrapper-col">
+                    {% for i in range(0, 10) %}
+                    {% set item = {
+                    type: "Поворотная камера",
+                    img: "../images/img/common/product_promo.png",
+                    name: "Ivideon Cute 360",
+                    cost: "5 190",
+                    oldCost: "5 390",
+                    stars: 5,
+                    badge: "Хит"
+                    } %}
+                    <div class="catalog-item_col">
+                        <div class="catalog-item">
+                            <div class="catalog-item_top catalog-item_top--desktop">
+                                {% if item.badge %}
+                                <span class="catalog-item_badge">{{item.badge}}</span>
+                                {% endif %}
+                                <div class="catalog-item_stars">
+                                    {% for i in range(0, item.stars) %}
+                                    <span class="catalog-item_star-icon"></span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="catalog-item_middle">
+                                <div class="catalog-item_img">
+                                    <img src="{{item.img}}" alt="{{item.name}}">
+                                </div>
+                                <div class="catalog-item_content">
+                                    <div class="catalog-item_star-mobile-wrapper">
+                                        <div class="catalog-item_btns">
+                                            <button class="catalog-item_btn catalog-item_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="catalog-item_btn catalog-item_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                        <div class="catalog-item_stars">
+                                            {% for i in range(0, item.stars) %}
+                                            <span class="catalog-item_star-icon"></span>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <p class="catalog-item_type">{{item.type}}</p>
+                                    <div class="catalog-item_wrapper">
+                                        <p class="catalog-item_name">{{item.name}}</p>
+                                        <div class="catalog-item_btns catalog-item_btns--desktop">
+                                            <button class="catalog-item_btn catalog-item_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="catalog-item_btn catalog-item_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item_cost-wrapper">
+                                        <span class="catalog-item_cost-item">
+                                            <span class="catalog-item_cost">{{item.cost}} </span>
+                                            <span class="catalog-item_cost-currency">₽</span>
+                                        </span>
+                                        {% if item.oldCost %}
+                                        <span class="catalog-item_cost-item">
+                                            <span class="catalog-item_cost-old">{{item.oldCost}} </span>
+                                            <span class="catalog-item_cost-old-currency">₽</span>
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-item_btn-wrapper">
+                                <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

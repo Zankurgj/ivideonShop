@@ -1,0 +1,26 @@
+{% macro breadcrumbs(breadcrumbsItems) %}
+<ul class="breadcrumb-item-wrapper">
+    <li>
+        <a href="/" class="breadcrumb-item">
+            Главная
+        </a>
+        /
+    </li>
+    {% for item in breadcrumbsItems %}
+    {% if not loop.last %}
+    <li>
+        <a href="#" class="breadcrumb-item">
+            {{item}}
+        </a>
+        /
+    </li>
+    {% else %}
+    <li>
+        <span href="#" aria-current="page" class="breadcrumb-item breadcrumb-item--last">
+            {{item}}
+        </span>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endmacro %}
