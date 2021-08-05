@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: false,
     dots: true,
     mobileFirst: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     responsive: [
       {
