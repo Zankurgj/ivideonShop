@@ -1,0 +1,63 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Контакты' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="contacts-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Контакты']]) }}
+    </div>
+</div>
+<section class="contacts-section">
+    <div class="iv-container">
+        <h1 class="contacts_h1">Контакты</h1>
+        <div class="iv-row contacts-items-row">
+            <div class="contacts_item-col">
+                <div class="contacts_item">
+                    <p class="contacts_item-title contacts_item-title--1">Интернет–магазин</p>
+                    <p class="contacts_item-text">Работает ежедневно с 8.00 до 22.00 (Мск)</p>
+                    <p class="contacts_item-text">8 800 555 16 85</p>
+                    <a href="#" class="contacts_item-link">magazin@ivideon.com</a>
+                </div>
+            </div>
+            <div class="contacts_item-col">
+                <div class="contacts_item">
+                    <p class="contacts_item-title contacts_item-title--2">Техническая поддержка</p>
+                    <p class="contacts_item-text">Работает 24/7 (круглосуточно)</p>
+                    <a href="#" class="contacts_item-link">support@ivideon.ru</a>
+                    <a href="#" class="contacts_item-btn">Центр поддержки</a>
+                </div>
+            </div>
+            <div class="contacts_item-col">
+                <div class="contacts_item">
+                    <p class="contacts_item-title contacts_item-title--3">Склад в Москве</p>
+                    <p class="contacts_item-text">Каширский пр., д. 17, стр. 12, база «Мосгоропторг»</p>
+                    <p class="contacts_item-text">8 800 555-42-97 (доб. 12)</p>
+                    <a href="#map" class="contacts_item-btn js--anchor-link">Показать на карте</a>
+                </div>
+            </div>
+        </div>
+        <script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
+        <div class="contacts-map-container" id="map"></div>
+        <script>
+            ymaps.ready(init);
+
+            function init() {
+                var myMap = new ymaps.Map("map", {
+                    center: [55.65530506907596, 37.63125350000001],
+                    zoom: 17,
+                    controls: []
+                }, {});
+                myMap.geoObjects
+                    .add(new ymaps.Placemark([55.65530506907596, 37.63125350000001], {
+                        iconCaption: 'Склад',
+                    }, {
+                        preset: 'islands#blueDotIcon'
+                    }))
+                myMap.behaviors.disable('scrollZoom');
+            }
+        </script>
+    </div>
+</section>
+{% endblock %}

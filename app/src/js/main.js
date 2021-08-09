@@ -35,8 +35,25 @@ document.addEventListener("DOMContentLoaded", function () {
   initSelect2();
   initRangeSlider();
   initProductCardSlider();
+  initAnchorLink();
 });
 
+const initAnchorLink = () => {
+  $(document).on("click", ".js--anchor-link", function (e) {
+    event.preventDefault();
+    const viewportHeight = $(window).height();
+    const elOffset = $($.attr(this, "href")).offset().top;
+    const elHeight = $($.attr(this, "href")).outerHeight();
+    let pageOffset;
+    pageOffset = elOffset - (viewportHeight / 2 - elHeight / 2);
+    $("html, body").animate(
+      {
+        scrollTop: pageOffset,
+      },
+      300
+    );
+  });
+};
 const initRangeSlider = () => {
   $(".js--catalog-range").slider({
     range: true,

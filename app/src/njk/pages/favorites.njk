@@ -1,0 +1,28 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Страница избранное' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="favorites-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Избранное']]) }}
+    </div>
+</div>
+<section class="favorites-section">
+    <div class="iv-container favorites--iv-container">
+        <div class="favorites-top">
+            <h1 class="favorites-h1">Понравившиеся товары</h1>
+            <button class="favorites_del-btn favorites_del-btn--desktop">Удалить все товары</button>
+        </div>
+        <div class="iv-row favorites-row">
+            <!-- <div class="favorites-item">
+                <div class="favorites-item-img">
+                    <img src="" alt="">
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+</section>
+{% endblock %}
