@@ -1,11 +1,15 @@
 .breadcrumb-item-wrapper {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style: none;
   color: #c2c7cc;
   font-size: 13px;
   line-height: 22px;
+  li {
+    white-space: nowrap;
+  }
 }
 
 .breadcrumb-item {

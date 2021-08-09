@@ -1,0 +1,422 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Карточка товара' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="catalog-breadcrumbs">
+    <div class="iv-container product-card--iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Камеры видеонаблюдения'],['Поворотная камера Ivideon Cute 360']]) }}
+    </div>
+</div>
+<section class="product-card">
+    <div class="iv-container product-card--iv-container">
+        <div class="product-card_top">
+            <div class="product-card_top-col-left">
+                <span class="product-card_top-badge">Новинка</span>
+                <button class="product-card_top-comment-btn">Написать отзыв</button>
+                <div class="product-card_top_btns product-card_top_btns--mobile">
+                    <button class="product-card_top_btn product-card_top_btn--like">
+                        <span class="visually-hidden">нравится</span>
+                    </button>
+                    <button class="product-card_top_btn product-card_top_btn--compare">
+                        <span class="visually-hidden">сравнить</span>
+                    </button>
+                </div>
+                <div class="product-card_top-stars">
+                    <div class="product-card_top_stars-wrapper">
+                        {% set starsItem = 5 %}
+                        {% for i in range(0, starsItem) %}
+                        <span class="product-card_top_stars-icon"></span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="product-card_top-col-right">
+                <div class="product-card_top_btns product-card_top_btns--desktop ">
+                    <button class="product-card_top_btn product-card_top_btn--like">
+                        <span class="visually-hidden">нравится</span>
+                    </button>
+                    <button class="product-card_top_btn product-card_top_btn--compare">
+                        <span class="visually-hidden">сравнить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card_section">
+            <div class="product-card_slider-col">
+                <p class="product-card_type">Поворотная камера</p>
+                <p class="product-card_name">Ivideon Cute 360</p>
+                <div class="product-card_slider-wrapper">
+                    <div class="product-card_slider-main js--product-card-slider-main">
+                        {% for i in range(0, 10) %}
+                        <div class="product-card_slider-item-wrapper">
+                            <div class="product-card_slider-item">
+                                <img src="../images/img/product/product-slide.png" alt="Ivideon Cute 360">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="product-card_slider-nav-container">
+                        <div class="product-card_slider-nav-wrapper">
+                            <div class="product-card_slider-nav js--product-card-slider-nav">
+                                {% for i in range(0, 10) %}
+                                <div class="product-card_slider-nav-item">
+                                    <div class="product-card_slider-nav-item-wrapper">
+                                        <img src="../images/img/product/product-slide-nav.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <button class="product-card_slider-btn" style="background-image:url('')">
+                            <span class="visually-hidden">видео</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card_info-col">
+                <form class="product-card_form">
+                    <div class="product-card_info-block">
+                        <p class="product-card_info-title">Какая емкость вам подойдет?</p>
+                        <div class="iv-row product-card_info-row">
+                            <label class="product-card_info-btn-wrapper">
+                                <input type="radio" class="product-card_info-btn-input" name="storage" checked>
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Без карты</span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper">
+                                <input type="radio" class="product-card_info-btn-input" name="storage">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">64 Gb</span>
+                                    <span class="product-card_info-btn-text-color">490 <span>₽</span></span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper">
+                                <input type="radio" class="product-card_info-btn-input" name="storage">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">128 Gb</span>
+                                    <span class="product-card_info-btn-text-color">990 <span>₽</span></span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper">
+                                <input type="radio" class="product-card_info-btn-input" name="storage">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">256 Gb</span>
+                                    <span class="product-card_info-btn-text-color">1 490 <span>₽</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="product-card_info-block">
+                        <p class="product-card_info-title">Тарифы и гарантия продукта</p>
+                        <div class="iv-row product-card_info-row">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--big">
+                                <input type="radio" class="product-card_info-btn-input" name="tariffs" checked>
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Тариф “Freemium”</span>
+                                    <span class="product-card_info-btn-text-color">1 990 ₽ <span>₽</span></span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--big">
+                                <input type="radio" class="product-card_info-btn-input" name="tariffs">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Тариф “Online”</span>
+                                    <span class="product-card_info-btn-text-color">2 490 <span>₽</span></span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--big">
+                                <input type="radio" class="product-card_info-btn-input" name="tariffs">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Тариф “Cloud”</span>
+                                    <span class="product-card_info-btn-text-color">2 990 <span>₽</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="product-card_info-block">
+                        <p class="product-card_info-title">Выбирите гарантию</p>
+                        <div class="iv-row product-card_info-row">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--big">
+                                <input type="radio" class="product-card_info-btn-input" name="warranty" checked>
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Без гарантии</span>
+                                </span>
+                            </label>
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--big">
+                                <input type="radio" class="product-card_info-btn-input" name="warranty">
+                                <span class="product-card_info-btn">
+                                    <span class="product-card_info-btn-text">Расширенная гарантия</span>
+                                    <span class="product-card_info-btn-text-color">1 990 <span>₽</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="product-card_info-cost-wrapper">
+                        <p class="product-card_info-cost">5 390 <span class="product-card_info-currency">₽</span></p>
+                        <p class="product-card_info-cost-old">5 390 <span
+                                class="product-card_info-cost-old-currency">₽</span></p>
+                    </div>
+                    <div class="product-card_counter_byu-wrapper">
+                        <div class="product-card_counter-wrapper">
+                            <button class="product-card_counter-btn js--btn-counter" data-counter-type="minus"
+                                data-counter-id="counter1" type="button">
+                                <span>–</span>
+                            </button>
+                            <input class="product-card_counter js--counter" type="number" value="1" size="4" min="1"
+                                id="counter1" required>
+                            <button class="product-card_counter-btn js--btn-counter" data-counter-type="plus"
+                                data-counter-id="counter1" type="button">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <button class="btn-blue product-card_info-cost-btn" type="submit">Купить</button>
+                    </div>
+                    <div class="product-card_info-feature-wrapper">
+                        {% set featureItems = [
+                        {
+                        icon: '../images/img/product/instagram.svg',
+                        title: 'Full HD',
+                        text: 'Разрешение'
+                        },
+                        {
+                        icon: '../images/img/product/shield.svg',
+                        title: '3 года',
+                        text: 'Гарантия'
+                        },
+                        {
+                        icon: '../images/img/product/rotate.svg',
+                        title: '360°',
+                        text: 'Угол поворота'
+                        },
+                        {
+                        icon: '../images/img/product/wifi.svg',
+                        title: 'Wi-Fi',
+                        text: 'И Ethernet'
+                        }
+                        ] %}
+                        {% for item in featureItems %}
+                        <div class="product-card_info-feature-item">
+                            <div class="product-card_info-feature-icon">
+                                <img src="{{item.icon}}" alt="{{item.title}}">
+                            </div>
+                            <p class="product-card_info-feature-title">{{item.title}}</p>
+                            <p class="product-card_info-feature-text">{{item.text}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="product-card_info-delivery">
+                        <p class="product-card_info-delivery-title">Способы доставки</p>
+                        <p class="product-card_info-delivery-text"><a href="#">Экспресс-доставка</a> за день <span>(1
+                                день,
+                                490 ₽)</span> </p>
+                        <p class="product-card_info-delivery-text"><a href="#">Самовывоз</a> из 14 магазинов
+                            <span>(сегодня
+                                и позже)</span>
+                        </p>
+                        <p class="product-card_info-delivery-text"><a href="#">Доставка</a> на дом <span>(завтра и
+                                позже, в
+                                подарок!)</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="product-card_tabs-wrapper">
+            <div class="product-card_tabs-nav-wrapper">
+                <div class="product-card_tabs-nav-inner">
+                    {% set navProductArr = [
+                    'Описание',
+                    'Характеристики',
+                    'Комплектация',
+                    'Настройка подключения',
+                    'Отзывы'
+                    ] %}
+                    {% for navProduct in navProductArr %}
+                    <label class="product-card_tabs-nav-item">
+                        <input type="radio" class="product-card_tabs-nav-input js--toogle-input" name="productTab"
+                            data-tab-id="productTab{{loop.index}}" {%if loop.first%}checked{%endif%}>
+                        <span class="product-card_tabs-nav-item-btn">{{navProduct}}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="product-card_tab-inner">
+                {% for navProduct in navProductArr %}
+                <div class="product-card_tab-item product-card_tab-item--description {% if loop.index == 1 %}show{% endif %}"
+                    data-tab-name="productTab" data-tab="productTab{{loop.index}}">
+                    <div class="iv-row product-card_tab-row">
+                        {% set cardDescriptionArr = [
+                        {
+                        icon: '../images/img/product/desc-1.png',
+                        title:'Для помещений',
+                        text: 'Работа в стандартных условиях'
+                        },
+                        {
+                        icon: '../images/img/product/desc-2.png',
+                        title:'Разрешение',
+                        text: '1/2,7 CMOS, 2Мп, 1920x1080'
+                        },
+                        {
+                        icon: '../images/img/product/desc-3.png',
+                        title:'Угол обзора',
+                        text: '93°'
+                        },
+                        {
+                        icon: '../images/img/product/desc-4.png',
+                        title:'Детектор движения',
+                        text: 'Email- и push-уведомления о движении в кадре'
+                        },
+                        {
+                        icon: '../images/img/product/desc-5.png',
+                        title:'Простая установка и подключение',
+                        text: 'Никакого дополнительного оборудования не требуется'
+                        },
+                        {
+                        icon: '../images/img/product/desc-6.png',
+                        title:'Шифрование при передаче данных',
+                        text: 'Сервис Ivideon обеспечивает надежное шифрование данны'
+                        }
+                        ] %}
+                        {% for item in cardDescriptionArr %}
+                        <div class="product-card-description-col">
+                            <div class="product-card-description-item">
+                                <div class="product-card-description-item-img">
+                                    <img src="{{item.icon}}" alt="{{item.title}}">
+                                </div>
+                                <div class="product-card-description-item-inner">
+                                    <p class="product-card-description-item-title">{{item.title}}</p>
+                                    <p class="product-card-description-item-text">{{item.text}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="product-card_tab-text-inner">
+                        <div class="product-card_tab-text-block">
+                            <h4 class="product-card_tab-h4">Комплектация</h4>
+                            <ul class="product-card_tab-text">
+                                <li>
+                                    Камера Ivideon Dome
+                                </li>
+                                <li>
+                                    Адаптер питания 12В
+                                </li>
+                                <li>
+                                    Монтажный комплект
+                                </li>
+                                <li>
+                                    Руководство пользователя
+                                </li>
+                                <li>
+                                    IP-камера видеонаблюдения Ivideon Dome – это Wi-Fi
+                                    камера для помещений
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-card_tab-text-block">
+                            <h4 class="product-card_tab-h4">Удобство установки</h4>
+                            <p class="product-card_tab-text">
+                                Камера идеально подходит для размещения на потолке. В комплекте есть всё необходимое для
+                                быстрого самостоятельно монтажа.
+                                Купольный корпус позволяет защитить объектив камеры от попадания пыли, мусора и паутины.
+                            </p>
+                        </div>
+                        <div class="product-card_tab-text-block">
+                            <h4 class="product-card_tab-h4">Высокое качество изображения</h4>
+                            <p class="product-card_tab-text">
+                                У камеры Full HD разрешение 1920x1080 и широкий угол обзора 114°. Этого хватит для
+                                контроля
+                                помещения площадью до 35 кв.м.
+                                Dome может записывать видео в режим ночного видения с инфракрасной подсветкой до 20
+                                метров.
+                            </p>
+                        </div>
+                        <div class="product-card_tab-text-block">
+                            <h4 class="product-card_tab-h4">Удобные настройки и интерфейс</h4>
+                            <p class="product-card_tab-text">
+                                Камера подключается и управляется через мобильное приложение (доступно под любой
+                                смартфон
+                                или ПК): покажет все в режиме реального времени, пришлет уведомление, среагировав на
+                                движение, запишет важные события.
+                            </p>
+                        </div>
+                        <div class="product-card_tab-text-block">
+                            <h4 class="product-card_tab-h4">Гибридный архив</h4>
+                            <p class="product-card_tab-text">
+                                Камера быстро подключается, поддерживают запись в шифрованный облачный и локальный архив
+                                (можно установить карту памяти объемом до 256 Гб), и позволяют управлять настройками
+                                архива
+                                и живой трансляции онлайн.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-card-promo">
+    <h2 class="mp-h2 product-card-promo_h2">С этим товаром покупают</h2>
+    <div class="product-card-promo_slider--wrapper">
+        {% set promoSliderData = [
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 3,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 4,
+        badge: "Хит"
+        }
+        ] %}
+        {% from "app/src/njk/components/promo_slider.njk" import promoSlider %}
+        {{ promoSlider(promoSliderData) }}
+    </div>
+</section>
+{% endblock %}

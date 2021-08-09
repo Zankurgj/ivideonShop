@@ -1,11 +1,15 @@
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
+import "select2";
 import "slick-carousel";
+require("~/node_modules/jquery-ui-dist/jquery-ui.min.js");
 import MainHeader from "./common/main-header";
+import CounterNumber from "./common/counter";
 
 document.addEventListener("DOMContentLoaded", function () {
   new MainHeader();
+  new CounterNumber();
   $(".js--mp-promo-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -28,8 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
   initsSectionSlider();
   initToggleTabListeners();
   initProductSlider();
+  initSelect2();
+  initRangeSlider();
+  initProductCardSlider();
 });
 
+const initRangeSlider = () => {
+  $(".js--catalog-range").slider({
+    range: true,
+    min: 0,
+    max: 50000,
+    values: [2290, 42800],
+    slide: function (event, ui) {
+      $(".js--catalog-range-start").val(ui.values[0]);
+      $(".js--catalog-range-stop").val(ui.values[1]);
+    },
+  });
+  $(".js--catalog-range-start").val(
+    $(".js--catalog-range").slider("values", 0)
+  );
+  $(".js--catalog-range-stop").val($(".js--catalog-range").slider("values", 1));
+};
+const initSelect2 = () => {
+  $(".js--simple-select").select2({
+    minimumResultsForSearch: -1,
+  });
+};
 const initToggleTabListeners = () => {
   $(".js--toogle-input").on("change", toggleTabHandler);
 };
@@ -87,5 +115,33 @@ const initsSectionSlider = () => {
         }
       }
     });
+  });
+};
+
+const initProductCardSlider = () => {
+  $(".js--product-card-slider-main").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: ".js--product-card-slider-nav",
+  });
+
+  $(".js--product-card-slider-nav").slick({
+    slidesToScroll: 1,
+    asNavFor: ".js--product-card-slider-main",
+    dots: false,
+    arrows: false,
+    mobileFirst: true,
+    focusOnSelect: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          arrows: true,
+        },
+      },
+    ],
   });
 };

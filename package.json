@@ -38,6 +38,9 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
+    "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1"
   }
 }

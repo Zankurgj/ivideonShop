@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>iVideon каталог</title>
+    <title>Каталог</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="../../../dist/css/app.min.css" />
@@ -549,16 +549,17 @@
             <div class="iv-container">
                 <h1 class="h1-catalog">Камеры видеонаблюдения</h1>
                 <div class="catalog-menu">
-                    <!-- <div class="catalog-menu_sort-wrapper">
-                <div class="catalog-menu_dropdown">
-                    <button class="catalog-menu_dropdown-wrapper"></button>
-                    <div class="catalog-menu_dropdown-inner">
-                        <div class="catalog-menu_dropdown-item">
-
+                    <div class="catalog-menu_sort-wrapper">
+                        <p class="catalog-menu_sort-wrappe-title">Сортировать по:</p>
+                        <div class="simple-select-wrapper catalog-menu_sort-select catalog-menu_sort-item">
+                            <select class="js--simple-select">
+                                <option value="1">По популярности</option>
+                                <option value="2">Росту цены</option>
+                                <option value="3">Понижению цены</option>
+                            </select>
                         </div>
+                        <button class="catalog-menu_sort-filter-btn catalog-menu_sort-item">Фильтр</button>
                     </div>
-                </div>
-            </div> -->
                     <div class="catalog-menu_type-wrapper">
                         <button class="catalog-menu_type-item active">
                             <span class="catalog-menu_type-text">Все камеры</span>
@@ -588,6 +589,23 @@
                     <div class="iv-row">
                         <div class="catalog-filter_sidebar-col">
                             <aside class="catalog-filter_sidebar">
+                                <div class="catalog-filter_sidebar-item">
+                                    <p class="catalog-filter_sidebar-title">Бренд</p>
+                                    <div class="catalog-range-wrapper">
+                                        <div class="catalog-range-inputs">
+                                            <label class="catalog-range-input-wrapper">
+                                                <span class="visually-hidden">Стартовое значение</span>
+                                                <input class="catalog-range-input js--catalog-range-start" type="text" readonly="readonly">
+                                            </label>
+                                            <div class="catalog-range-input-sep"></div>
+                                            <label class="catalog-range-input-wrapper">
+                                                <span class="visually-hidden">Конечное значение</span>
+                                                <input class="catalog-range-input js--catalog-range-stop" type="text" readonly="readonly">
+                                            </label>
+                                        </div>
+                                        <div class="catalog-range js--catalog-range"></div>
+                                    </div>
+                                </div>
                                 <div class="catalog-filter_sidebar-item">
                                     <p class="catalog-filter_sidebar-title">Бренд</p>
                                     <label class="catalog-filter_sidebar-checkbox-wrapper">
@@ -684,830 +702,1226 @@
                             </aside>
                         </div>
                         <div class="catalog-item_wrapper-col">
+                            <div class="iv-row">
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="catalog-item_col">
-                                <div class="catalog-item">
-                                    <div class="catalog-item_top catalog-item_top--desktop">
+                                <div class="catalog-item_col">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item_top catalog-item_top--desktop">
 
-                                        <span class="catalog-item_badge">Хит</span>
+                                            <span class="catalog-item_badge">Хит</span>
 
-                                        <div class="catalog-item_stars">
+                                            <div class="catalog-item_stars">
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
+                                                <span class="catalog-item_star-icon"></span>
 
-                                            <span class="catalog-item_star-icon"></span>
-
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item_middle">
-                                        <div class="catalog-item_img">
-                                            <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                                        </div>
-                                        <div class="catalog-item_content">
-                                            <div class="catalog-item_star-mobile-wrapper">
-                                                <div class="catalog-item_btns">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                                <div class="catalog-item_stars">
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                    <span class="catalog-item_star-icon"></span>
-
-                                                </div>
-                                            </div>
-                                            <p class="catalog-item_type">Поворотная камера</p>
-                                            <div class="catalog-item_wrapper">
-                                                <p class="catalog-item_name">Ivideon Cute 360</p>
-                                                <div class="catalog-item_btns catalog-item_btns--desktop">
-                                                    <button class="catalog-item_btn catalog-item_btn--like">
-                                                        <span class="visually-hidden">нравится</span>
-                                                    </button>
-                                                    <button class="catalog-item_btn catalog-item_btn--compare">
-                                                        <span class="visually-hidden">сравнить</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-item_cost-wrapper">
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost">5 190 </span>
-                                                <span class="catalog-item_cost-currency">₽</span>
-                                                </span>
-
-                                                <span class="catalog-item_cost-item">
-                                            <span class="catalog-item_cost-old">5 390 </span>
-                                                <span class="catalog-item_cost-old-currency">₽</span>
-                                                </span>
+                                                <span class="catalog-item_star-icon"></span>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="catalog-item_btn-wrapper">
-                                        <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
-                                        <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ</button>
+                                        <div class="catalog-item_middle">
+                                            <div class="catalog-item_img">
+                                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                            </div>
+                                            <div class="catalog-item_content">
+                                                <div class="catalog-item_star-mobile-wrapper">
+                                                    <div class="catalog-item_btns">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="catalog-item_stars">
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                        <span class="catalog-item_star-icon"></span>
+
+                                                    </div>
+                                                </div>
+                                                <p class="catalog-item_type">Поворотная камера</p>
+                                                <div class="catalog-item_wrapper">
+                                                    <p class="catalog-item_name">Ivideon Cute 360</p>
+                                                    <div class="catalog-item_btns catalog-item_btns--desktop">
+                                                        <button class="catalog-item_btn catalog-item_btn--like">
+                                                            <span class="visually-hidden">нравится</span>
+                                                        </button>
+                                                        <button class="catalog-item_btn catalog-item_btn--compare">
+                                                            <span class="visually-hidden">сравнить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-item_cost-wrapper">
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost">5 190 </span>
+                                                    <span class="catalog-item_cost-currency">₽</span>
+                                                    </span>
+
+                                                    <span class="catalog-item_cost-item">
+                                                <span class="catalog-item_cost-old">5 390 </span>
+                                                    <span class="catalog-item_cost-old-currency">₽</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item_btn-wrapper">
+                                            <button href="#" class="btn-blue catalog-item_btn-bottom">В корзину</button>
+                                            <button href="#" class="btn-blue-border catalog-item_btn-bottom">Быстрый заказ
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
+                            <button class="btn-blue-border catalog-item_wrapper-btn">Показать еще</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="catalog-promo">
+            <div class="iv-container catalog-promo_container">
+                <h2 class="catalog-promo_h2">Камеры видеонаблюдения</h2>
+                <p class="catalog-promo_text">К вам приходит домработница, или за вашим ребенком присматривает няня? У вас дома идет ремонт? Камера Дом.ru в режиме on-line и 24/7 поможет вам убедиться, что все в порядке.</p>
+                <div class="iv-row catalog-promo_row">
+
+
+                    <div class="catalog-promo_item">
+                        <div class="catalog-promo_item-icon">
+                            <img src="../images/icons/shield.svg" alt="3 года">
+                        </div>
+                        <div class="catalog-promo_item-text-wrapper">
+                            <p class="catalog-promo_item-title">3 года</p>
+                            <p class="catalog-promo_item-text">Гарантия</p>
+                        </div>
+                    </div>
+
+                    <div class="catalog-promo_item">
+                        <div class="catalog-promo_item-icon">
+                            <img src="../images/icons/user-scan.svg" alt="Full HD">
+                        </div>
+                        <div class="catalog-promo_item-text-wrapper">
+                            <p class="catalog-promo_item-title">Full HD</p>
+                            <p class="catalog-promo_item-text">Разрешение</p>
+                        </div>
+                    </div>
+
+                    <div class="catalog-promo_item">
+                        <div class="catalog-promo_item-icon">
+                            <img src="../images/icons/instagram.svg" alt="Детектор движения">
+                        </div>
+                        <div class="catalog-promo_item-text-wrapper">
+                            <p class="catalog-promo_item-title">Детектор движения</p>
+                            <p class="catalog-promo_item-text">Разрешение</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="catalog-before">
+            <h2 class="mp-h2 catalog-before_h2">Ранее вы просматривали</h2>
+            <div class="catalog-before_slider--wrapper">
+
+
+
+                <div class="iv-promo-slider_container">
+                    <!-- <button class="iv-promo-slider_arrow iv-promo-slider_arrow--prev">
+        <span class="visually-hidden">предыдущий слайд</span>
+    </button>
+    <button class="iv-promo-slider_arrow iv-promo-slider_arrow--next">
+        <span class="visually-hidden">следующий слайд</span>
+    </button> -->
+                    <div class="iv-promo-slider js--product-slider">
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <span class="iv-promo-slide_badge">Хит</span>
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">5 390 </span>
+                                        <span class="iv-promo-slide_cost-old-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <span class="iv-promo-slide_badge">Хит</span>
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">5 390 </span>
+                                        <span class="iv-promo-slide_cost-old-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <span class="iv-promo-slide_badge">Хит</span>
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">5 390 </span>
+                                        <span class="iv-promo-slide_cost-old-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <span class="iv-promo-slide_badge">Хит</span>
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">5 390 </span>
+                                        <span class="iv-promo-slide_cost-old-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iv-promo-slide_inner">
+                            <div class="iv-promo-slide">
+                                <div class="iv-promo-slide_top">
+
+                                    <span class="iv-promo-slide_badge">Хит</span>
+
+                                    <div class="iv-promo-slide_stars">
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                        <span class="iv-promo-slide_star-icon"></span>
+
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_middle">
+                                    <div class="iv-promo-slide_img">
+                                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                                    </div>
+                                </div>
+                                <div class="iv-promo-slide_bottom">
+                                    <p class="iv-promo-slide_type">Поворотная камера</p>
+                                    <div class="iv-promo-slide_wrapper">
+                                        <p class="iv-promo-slide_name">Ivideon Cute 360</p>
+                                        <div class="iv-promo-slide_btns">
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--like">
+                                                <span class="visually-hidden">нравится</span>
+                                            </button>
+                                            <button class="iv-promo-slide_btn iv-promo-slide_btn--compare">
+                                                <span class="visually-hidden">сравнить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="iv-promo-slide_cost-wrapper">
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost">5 190 </span>
+                                        <span class="iv-promo-slide_cost-currency">₽</span>
+                                        </span>
+
+                                        <span class="iv-promo-slide_cost-item">
+                            <span class="iv-promo-slide_cost-old">5 390 </span>
+                                        <span class="iv-promo-slide_cost-old-currency">₽</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="iv-promo-slide_btn-wrapper">
+                                        <button href="#" class="btn-blue iv-promo-slide_btn-bottom">В корзину</button>
+                                        <a href="#" class="btn-blue-border iv-promo-slide_btn-bottom">Быстрый заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
