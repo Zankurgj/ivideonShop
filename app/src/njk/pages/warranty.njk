@@ -1,0 +1,233 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Гарантия' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="warranty-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Гарантия']]) }}
+    </div>
+</div>
+<section class="warranty-section_text-top">
+    <div class="iv-container warranty--container">
+        <h1 class="warranty-h1">Гарантия</h1>
+        <div class="warranty_text-block warranty_text-block--1">
+            <p class="iv-base-text warranty_text"><a href="#">Более 7 лет Ivideon является надежным поставщиком</a>
+                качественного
+                оборудования для
+                видеонаблюдения в России,
+                Беларуси и Казахстане.
+            </p>
+
+            <p class="iv-base-text warranty_text">Через наш отдел контроля качества прошел не один десяток
+                производителей,
+                большая часть
+                которых не смогла
+                соответствовать уровню качества и надежности, которые мы жестко предъявляем к оборудованию,
+                предлагаемому в
+                нашем интернет-магазине.</p>
+
+            <p class="iv-base-text warranty_text">
+                <a href="#">Видеонаблюдение должно работать 24 часа в сутки, 7 дней в неделю.</a>
+                Оно не может отключаться на несколько дней или даже часов. Именно поэтому мы не продаем нашим клиентам
+                дешевые китайские камеры, которые не отвечают данным требованиям.
+            </p>
+
+            <p class="iv-base-text warranty_text">Тем не менее, даже самый известный и зарекомендовавший себя на рынке
+                производитель
+                допускает 2–3% брака. <a href="#">
+                    допускает 2–3% брака. Мы
+                    тестируем всё оборудование
+                    допускает 2–3% брака. </a>, представленное в нашем магазине, но некоторые дефекты можно выявить
+                только
+                при
+                более длительном использовании в пределах гарантийного срока.</p>
+        </div>
+        <div class="warranty_text-block warranty_text-block--2">
+            <h2 class="warranty-h2 warranty-h2--1">Гарантия магазина и гарантия производителя</h2>
+            <p class="iv-base-text warranty_text">
+                На каждый товар в нашем магазине распространяется гарантия магазина и гарантия производителя.
+            </p>
+            <p class="iv-base-text warranty_text">
+                <a href="#">Гарантия магазина — один год.</a> Это наша собственная гарантия, во время действия которой
+                мы производим
+                либо оперативный ремонт с помощью инженеров нашего сервисного центра, либо заменяем проблемное
+                оборудование на новое. На время ремонта предоставляется подменный фонд, чтобы вы не испытывали
+                трудностей в связи с отсутствием камеры.
+            </p>
+            <p class="iv-base-text warranty_text">
+                Это наша собственная инициатива, единственной целью которой является забота о наших клиентах. Мы
+                считаем, что если с момента покупки камеры прошло менее года и с ней начались проблемы, то самое худшее,
+                что можно сделать, это отправить клиента «разбираться с производителем», на что, иногда, могут уйти
+                месяцы. В этом случае мы получим совершенно справедливое недовольство клиента, который не порекомендует
+                Ivideon как поставщика видеонаблюдения.
+            </p>
+            <p class="iv-base-text warranty_text">
+                Данный подход, существенно повышающий качество наших услуг по поставке оборудования, является далеко не
+                новым на рынке. Но мы гордимся тем, что в отрасли видеонаблюдения мы внедрили его одни из первых, задав
+                высокую планку для других игроков.
+            </p>
+        </div>
+        <div class="table-base_wrapper warranty_table-top">
+            <div class="table-base_head-row table-base_head-row--bg">
+                <div class="table-base_head-col table-base_head-col--2">
+                    <p class="table-base_head-text">Производитель</p>
+                </div>
+                <div class="table-base_head-col table-base_head-col--2">
+                    <p class="table-base_head-text">Гарантийный слой</p>
+                </div>
+            </div>
+            <div class="table-base_inner table-base_inner--bg">
+                <div class="table-base-row">
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text">Nobelic</p>
+                    </div>
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text table-base_text--blue">1-3 года</p>
+                    </div>
+                </div>
+                <div class="table-base-row">
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text">Dahua</p>
+                    </div>
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text table-base_text--blue">1-3 года</p>
+                    </div>
+                </div>
+                <div class="table-base-row">
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text">HiWatch</p>
+                    </div>
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text table-base_text--blue">1 год</p>
+                    </div>
+                </div>
+                <div class="table-base-row">
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text">Hikvision</p>
+                    </div>
+                    <div class="table-base_col table-base_col--2">
+                        <p class="table-base_text table-base_text--blue">3 года</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warranty_text-block warranty_text-block--3">
+            <h2 class="warranty-h2 warranty-h2--2">Гарантийный ремонт</h2>
+            <p class="iv-base-text warranty_text">
+                Если вы правильно использовали купленное в нашем магазине оборудование, но <a href="#">в течение 1 года
+                    со дня покупки</a> обнаружили неисправность или поломку, мы сделаем бесплатный гарантийный ремонт.
+            </p>
+            <p class="iv-base-text warranty_text">
+                <a href="#">Максимальный срок устранения неполадок составляет 45 дней</a> (п. 1 ст. 20 закона РФ «О
+                защите прав потребителей»). На время ремонта мы предоставим вам аналогичное оборудование из нашего
+                подменного фонда.
+            </p>
+            <p class="iv-base-text warranty_text">
+                Гарантийный ремонт не распространяется на оборудование, вышедшее из строя:
+            </p>
+            <ul class="warranty_list">
+                <li>из-за неправильной эксплуатации (правила эксплуатации прописаны в руководстве пользователя);</li>
+                <li>из-за небрежного обращения;из-за включения в сеть с несоответствующим напряжением</li>
+                <li>из-за ремонта неуполно-моченными лицами;</li>
+                <li>из-за ремонта неуполномоченными лицами.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="warranty_promo">
+        <div class="warranty_promo-inner">
+            <h3 class="warranty_promo-h3">Свяжитесь с техподдержкой</h3>
+            <p class="warranty_promo-text">Чтобы отдать оборудование на диагностику или гарантийный ремонт в наш
+                сервисный центр</p>
+            <button class="btn-blue warranty_promo-btn">Заказать звонок</button>
+            <p class="warranty_promo-subtitle">* Также вы можете обратиться в службу поддержки по телефону
+                8 800 555 42 97
+                с 8:00 до 22:00, без выходных или по почте
+                support@ivideon.ru</p>
+        </div>
+    </div>
+</section>
+<div class="warranty_text-bottom">
+    <div class="iv-container warranty--container">
+        <div class="warranty_text-block warranty_text-block--4">
+            <p class="iv-base-text warranty_text">
+                Если гарантия магазина на товар истекла, но гарантия производителя еще действует, вы можете бесплатно
+                отремонтировать оборудование в сервисном центре производителя. Адреса сервисных центров вы можете найти
+                на официальных сайтах производителей:
+            </p>
+        </div>
+        <div class="table-base_wrapper-scroll">
+            <div class="table-base_wrapper warranty_table-bottom">
+                <div class="table-base_head-row table-base_head-row--bg">
+                    <div class="table-base_head-col table-base_head-col--4">
+                        <p class="table-base_head-text">Производитель</p>
+                    </div>
+                    <div class="table-base_head-col table-base_head-col--4">
+                        <p class="table-base_head-text">Гарантийный слой</p>
+                    </div>
+                    <div class="table-base_head-col table-base_head-col--2">
+                        <p class="table-base_head-text">Гарантийный слой</p>
+                    </div>
+                </div>
+                <div class="table-base_inner table-base_inner--bg">
+                    <div class="table-base-row">
+                        <div class="table-base_col table-base_col--4">
+                            <p class="table-base_text">Nobelic</p>
+                        </div>
+                        <div class="table-base_col table-base_col--4">
+                            <a href="#" class="table-base_text table-base_text--blue">www.nobelic.com</a>
+                        </div>
+                        <div class="table-base_col table-base_col--2">
+                            <p class="table-base_text table-base_text--gray">Официальный дистрибьютор в России</p>
+                        </div>
+                    </div>
+                    <div class="table-base-row">
+                        <div class="table-base_col table-base_col--4">
+                            <p class="table-base_text">Dahua</p>
+                        </div>
+                        <div class="table-base_col table-base_col--4">
+                            <a href="#" class="table-base_text table-base_text--blue">www.dahuasecurity.pro</a>
+                        </div>
+                        <div class="table-base_col table-base_col--2">
+                            <p class="table-base_text table-base_text--gray">Представительство производителя в России
+                            </p>
+                        </div>
+                    </div>
+                    <div class="table-base-row">
+                        <div class="table-base_col table-base_col--4">
+                            <p class="table-base_text">HiWatch</p>
+                        </div>
+                        <div class="table-base_col table-base_col--4">
+                            <a href="#" class="table-base_text table-base_text--blue">www.hiwatch.ru</a>
+                        </div>
+                        <div class="table-base_col table-base_col--2">
+                            <p class="table-base_text table-base_text--gray">Представительство производителя в России
+                            </p>
+                        </div>
+                    </div>
+                    <div class="table-base-row">
+                        <div class="table-base_col table-base_col--4">
+                            <p class="table-base_text">Hikvision</p>
+                        </div>
+                        <div class="table-base_col table-base_col--4">
+                            <a href="#" class="table-base_text table-base_text--blue">www.hikvision.ru</a>
+                        </div>
+                        <div class="table-base_col table-base_col--2">
+                            <p class="table-base_text table-base_text--gray">Представительство производителя в России
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warranty_text-block warranty_text-block--5">
+            <p class="iv-base-text warranty_text">
+                Если гарантия магазина на товар истекла, но гарантия производителя еще действует, вы можете бесплатно
+                отремонтировать оборудование в сервисном центре производителя. Адреса сервисных центров вы можете найти
+                на официальных сайтах производителей:
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

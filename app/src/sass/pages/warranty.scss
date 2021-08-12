@@ -1,0 +1,191 @@
+.warranty-breadcrumbs {
+  padding: 86px 0 0 0;
+  margin-bottom: 50px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 172px 0 0 0;
+    margin-bottom: 22px;
+  }
+}
+.warranty--container {
+  max-width: 1320px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+}
+.warranty-section {
+}
+.warranty-h1 {
+  margin-bottom: 22px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 36px;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 34px;
+    line-height: 35px;
+    margin-bottom: 50px;
+  }
+}
+.warranty-h2 {
+  padding-left: 40px;
+  margin-bottom: 24px;
+  background-repeat: no-repeat;
+  background-position: top 2px left;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 34px;
+  }
+}
+.warranty-h2--1 {
+  background-image: url("../images/img/warranty/header1.svg");
+}
+.warranty-h2--2 {
+  background-image: url("../images/img/warranty/header2.svg");
+}
+.warranty_text-block--1 {
+  margin-bottom: 90px;
+}
+.warranty_text-block--2 {
+  margin-bottom: 36px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 56px;
+  }
+}
+.warranty_text {
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.warranty_list {
+  padding: 0;
+  margin-bottom: 64px;
+  color: rgba($color: $black, $alpha: 0.6);
+  font-size: 13px;
+  line-height: 30px;
+  list-style: none;
+  li {
+    position: relative;
+    padding-left: 22px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+}
+// PROMO
+.warranty_promo {
+  margin-bottom: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/img/warranty/promo-bg-m.png");
+  @media all and (min-width: $tablet-bp) {
+    background-image: url("../images/img/warranty/promo-bg.png");
+  }
+}
+.warranty_promo-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 188px 30px 148px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(10, 20, 31, 0.7) 0%,
+    rgba(10, 20, 31, 0.4) 100%
+  );
+  @media all and (min-width: $tablet-bp) {
+    padding: 154px 30px 117px;
+  }
+}
+.warranty_promo-h3 {
+  margin-bottom: 26px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 34px;
+    font-size: 48px;
+    line-height: 80px;
+  }
+}
+.warranty_promo-text {
+  margin-bottom: 62px;
+  max-width: 282px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  @media all and (min-width: $tablet-bp) {
+    max-width: 728px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 36px;
+  }
+}
+.warranty_promo-btn {
+  margin-bottom: 168px;
+  max-width: 298px;
+  width: 100%;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 40px;
+    max-width: 258px;
+  }
+}
+.warranty_promo-subtitle {
+  max-width: 230px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  @media all and (min-width: $tablet-bp) {
+    max-width: 816px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.warranty_table-top {
+  margin-bottom: 60px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 76px;
+  }
+}
+.table-base_wrapper-scroll {
+  overflow-x: auto;
+  padding-bottom: 25px;
+  margin: 0 -20px 25px 0;
+  @media all and (min-width: $tablet-bp) {
+    margin: 0 0 35px 0;
+  }
+}
+.warranty_table-bottom {
+  min-width: 650px;
+  @media all and (min-width: $tablet-bp) {
+    min-width: 900px;
+  }
+}
+// TEXT BOTTOM
+.warranty_text-block--4 {
+  margin-bottom: 36px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 48px;
+  }
+}
+.warranty_text-block--5 {
+  margin-bottom: 78px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 100px;
+  }
+}

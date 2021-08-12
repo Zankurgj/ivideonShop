@@ -1,0 +1,122 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Гарантия' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="payment-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Оплата']]) }}
+    </div>
+</div>
+<section class="payment-section">
+    <div class="iv-container payment--container">
+        <h1 class="payment-h1">Способы оплаты</h1>
+        <div class="payment_text-block payment_text-block--1">
+            <p class="iv-base-text payment_text">
+                Мы ценим наших клиентов. Поэтому Ivideon одна из немногих компаний в отрасли видеонаблюдения, которая не
+                берет дополнительную комиссию при выборе варианта оплаты банковской картой или при оплате по
+                безналичному расчету!
+            </p>
+            <p class="iv-base-text payment_text">
+                Для удобства наших клиентов мы предоставляем несколько способов оплаты.
+            </p>
+        </div>
+        <div class="payment-tab_inner">
+            <div class="base-toggle_inner payment-toggle">
+                <label class="base-toggle_wrapper">
+                    <input type="radio" name="payment" data-tab-id="payment1" class="base-toggle_input js--toggle-input"
+                        checked>
+                    <span class="base-toggle_text">Оплата банковской картой онлайн</span>
+                </label>
+                <label class="base-toggle_wrapper">
+                    <input type="radio" name="payment" data-tab-id="payment2"
+                        class="base-toggle_input js--toggle-input">
+                    <span class="base-toggle_text">Предоплата банковским переводом</span>
+                </label>
+            </div>
+            <div class="payment-tab show" data-tab-name="payment" data-tab="payment1">
+                <div class="iv-row payment-tab_row">
+                    {% set tab1Arr = [
+                    {
+                    icon:'../images/img/payment/shopping-cart.svg',
+                    text:'Добавьте товар в корзину'
+                    },
+                    {
+                    icon:'../images/img/payment/web.svg',
+                    text:'Начните оформлять заказ'
+                    },
+                    {
+                    icon:'../images/img/payment/credit-card.svg',
+                    text:'Выберите способ оплаты картой'
+                    },
+                    {
+                    icon:'../images/img/payment/mail.svg',
+                    text:'Подтвердите заказ'
+                    }
+                    ] %}
+                    {% for item in tab1Arr %}
+                    <div class="payment-tab_col">
+                        <div class="payment-tab_item">
+                            <div class="payment-tab_img">
+                                <img src="{{item.icon}}" alt="{{item.text}}">
+                            </div>
+                            <p class="payment-tab_text">{{item.text}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="payment_text-block">
+                    <p class="iv-base-text payment_text">
+                        Через несколько секунд появится всплывающее окно платежной системы «CloudPayments», где вы
+                        можете ввести
+                        данные карты для оплаты и осуществить покупку.
+                        Если вам нужна помощь в оформлении заказа или консультация, вы можете связаться с нашим
+                        менеджером любым
+                        удобным для вас способом, доступным в разделе «Контакты» и мы вам поможем!
+                    </p>
+                </div>
+            </div>
+            <div class="payment-tab" data-tab-name="payment" data-tab="payment2">
+                <div class="iv-row payment-tab_row">
+                    {% set tab2Arr = [
+                    {
+                    icon:'../images/img/payment/shopping-cart.svg',
+                    text:'Добавьте товар в корзину'
+                    },
+                    {
+                    icon:'../images/img/payment/web.svg',
+                    text:'Начните оформлять заказ'
+                    },
+                    {
+                    icon:'../images/img/payment/payment-choose.svg',
+                    text:'Выберите способ «Предоплата по безналичному расчету»'
+                    },
+                    {
+                    icon:'../images/img/payment/mail.svg',
+                    text:'Нажмите кнопку «Завершить оформление»'
+                    }
+                    ] %}
+                    {% for item in tab2Arr %}
+                    <div class="payment-tab_col">
+                        <div class="payment-tab_item">
+                            <div class="payment-tab_img">
+                                <img src="{{item.icon}}" alt="{{item.text}}">
+                            </div>
+                            <p class="payment-tab_text">{{item.text}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="payment_text-block">
+                    <p class="iv-base-text payment_text">
+                        После завершения оформления заказа наш менеджер свяжется с вами для выставления счета для
+                        осуществления оплаты.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

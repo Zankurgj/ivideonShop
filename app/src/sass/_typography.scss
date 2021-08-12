@@ -15,3 +15,15 @@
 p {
   margin: 0;
 }
+.iv-base-text {
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba($color: $black, $alpha: 0.8);
+  a {
+    color: rgba($color: $blue, $alpha: 0.8);
+    &:hover {
+      color: rgba($color: $blue, $alpha: 0.8);
+      text-decoration: underline;
+    }
+  }
+}

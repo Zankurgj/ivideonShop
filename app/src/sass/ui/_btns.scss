@@ -73,3 +73,38 @@ input[type="submit"] {
     padding: 11px 24px 13px 24px;
   }
 }
+
+// TOOGLE BTN
+.base-toggle_inner {
+  display: inline-flex;
+  padding: 4px;
+  background-color: $smoke;
+  border-radius: 32px;
+}
+.base-toggle_wrapper {
+  margin: 0;
+  display: inline-block;
+}
+.base-toggle_input {
+  @extend .visually-hidden;
+  &:checked + .base-toggle_text {
+    background-color: #fff;
+  }
+}
+.base-toggle_text {
+  display: inline-block;
+  padding: 8px 34px;
+  border-radius: 32px;
+  background-color: transparent;
+  transition: background-color $base-duration $base-timing;
+  font-size: 13px;
+  line-height: 24px;
+  color: $black;
+  white-space: nowrap;
+  cursor: pointer;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 12px 35px;
+  }
+}

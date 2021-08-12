@@ -1,0 +1,114 @@
+.table-base_wrapper {
+  background-color: $blue;
+  border-radius: 44px;
+  padding: 4px;
+}
+.table-base_inner {
+  position: relative;
+  border-radius: 40px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.table-base_inner--bg {
+  @media all and (min-width: $tablet-bp) {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 76px;
+      height: 138px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/img/common/table-bg.png");
+      user-select: none;
+    }
+  }
+  .table-base_col {
+    @media all and (min-width: $tablet-bp) {
+      &:last-child {
+        padding-right: 90px;
+      }
+    }
+  }
+}
+.table-base_head-row {
+  display: flex;
+}
+.table-base_head-row--bg {
+  .table-base_head-col {
+    @media all and (min-width: $tablet-bp) {
+      &:last-child {
+        padding-right: 90px;
+      }
+    }
+  }
+}
+.table-base_head-text {
+  padding: 20px 0 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 32px;
+  color: #fff;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 18px;
+    line-height: 32px;
+    padding: 18px 0 12px;
+  }
+}
+
+.table-base_head-col--2 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.table-base_head-col--4 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.table-base-row {
+  display: flex;
+  &:nth-child(even) {
+    background-color: #e6f6fe;
+  }
+}
+
+.table-base_col--2 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.table-base_col--4 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.table-base_text {
+  padding: 24px 20px 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.table-base_text--blue {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $blue;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+a.table-base_text--blue {
+  display: block;
+  &:hover {
+    color: $blue;
+  }
+}
+.table-base_text--gray {
+  color: rgba($color: $black, $alpha: 0.6);
+}

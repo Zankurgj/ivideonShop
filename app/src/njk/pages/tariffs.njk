@@ -1,0 +1,159 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Гарантия' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="tariffs-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Тарифы']]) }}
+    </div>
+</div>
+<section class="tariffs-section">
+    <div class="iv-container">
+        <h1 class="tariffs-h1">Тарифы</h1>
+        <p class="tariffs-text-subtitle">Выберите производителя вашей камеры</p>
+        <div class="base-toggle_inner tariffs-toggle_wrapper">
+            <label class="base-toggle_wrapper">
+                <input type="radio" name="payment" data-tab-id="payment1" class="base-toggle_input js--toggle-input"
+                    checked>
+                <span class="base-toggle_text">Ivideon/Nobelic</span>
+            </label>
+            <label class="base-toggle_wrapper">
+                <input type="radio" name="payment" data-tab-id="payment2" class="base-toggle_input js--toggle-input">
+                <span class="base-toggle_text">Другие бренды</span>
+            </label>
+        </div>
+    </div>
+    <div class="iv-container tariffs--container">
+        <div class="ivideon-analytics-tariffs__wrapper ivideon-analytics-tariffs__slider js--tariff-slider">
+            <div class="ivideon-analytics-tariffs__col">
+                <div class="ivideon-tariffs__item ivideon-tariffs__item--basic">
+                    <div class="ivideon-tariffs__item-title-wrapper">
+                        <p class="ivideon-tariffs__item-title">Freemium</p>
+                    </div>
+                    <div class="ivideon-tariffs__item-inner">
+                        <p class="ivideon-tariffs__item-cost-wrapper">
+                            <span class="ivideon-tariffs__item-cost">0 </span>
+                            <span class="ivideon-tariffs__item-сurrency">₽</span>
+                        </p>
+                        <div class="ivideon-tariffs__item-list">
+                            {% set tariffs1 = [
+                            ['Удаленный просмотр локальной записи за последние 8 часов','cloud'],
+                            ['Количество пользователей 1','user-plus'],
+                            ['До 10 минут экспорт видео в формат MP4','export'],
+                            ['1 камера на аккаунте','video'],
+                            ['Push и E-mail уведомления','envelope']
+                            ]%}
+                            {% for item, icon in tariffs1 %}
+                            <p class="ivideon-tariffs__item-list-item">
+                                <svg class="ivideon-tariffs__item-list-img">
+                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#{{icon}}"></use>
+                                </svg>
+                                {{item}}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        <a href="#" class="btn-colored">
+                            Оставить заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ivideon-analytics-tariffs__col">
+                <div class="ivideon-tariffs__item ivideon-tariffs__item--standart">
+                    <div class="ivideon-tariffs__item-title-wrapper">
+                        <p class="ivideon-tariffs__item-title">Online</p>
+                    </div>
+                    <div class="ivideon-tariffs__item-inner">
+                        <p class="ivideon-tariffs__item-cost-wrapper">
+                            <span class="ivideon-tariffs__item-cost">150 </span>
+                            <span class="ivideon-tariffs__item-сurrency">₽</span>
+                        </p>
+                        <div class="ivideon-tariffs__item-list">
+                            {% set tariffs2 = [
+                            ['Неограниченный удаленный просмотр локальной записи','play'],
+                            ['Количество пользователей 25','user-plus'],
+                            ['Публичные транлсяции','monitor'],
+                            ['До 8 часов экспорт видео в формат MP4','export'],
+                            ['До 50 камер на аккаунте','video'],
+                            ['Push и E-mail уведомления','envelope']
+                            ]%}
+                            {% for item, icon in tariffs2 %}
+                            <p class="ivideon-tariffs__item-list-item">
+                                <svg class="ivideon-tariffs__item-list-img">
+                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#{{icon}}"></use>
+                                </svg>
+                                {{item}}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        <a href="#" class="btn-colored">
+                            Оставить заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ivideon-analytics-tariffs__col">
+                <div class="ivideon-tariffs__item ivideon-tariffs__item--premium">
+                    <div class="ivideon-tariffs__item-title-wrapper">
+                        <p class="ivideon-tariffs__item-title">Cloud</p>
+                        <p class="ivideon-tariffs__item-description">Выберите срок хранения в облаке:</p>
+                        <div class="ivideon-tariffs__toggle-item-wrapper">
+                            {% set tariffsToggle = [
+                            ['3 дня'],
+                            ['7 дней'],
+                            ['14 дней'],
+                            ['30 дней']
+                            ] %}
+                            {% for tariffsTitle in tariffsToggle %}
+                            <label class="ivideon-tariffs-toggle_wrapper">
+                                <input type="radio" name="tabTariffs" data-tab-id="tabTariffs{{loop.index}}"
+                                    class="ivideon-tariffs-toggle_input js--toggle-input" {%if
+                                    loop.first%}checked{%endif%}>
+                                <span class="ivideon-tariffs-toggle_text">{{tariffsTitle}}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% for i in range(0, 4) %}
+                    <div class="ivideon-tariffs__item-inner ivideon-tariffs__item-inner--tab {%if
+                        loop.first%}show{%endif%}" data-tab-name="tabTariffs" data-tab="tabTariffs{{loop.index}}">
+                        <p class="ivideon-tariffs__item-cost-wrapper">
+                            <span class="ivideon-tariffs__item-cost">300 </span>
+                            <span class="ivideon-tariffs__item-сurrency">₽</span>
+                        </p>
+                        <div class="ivideon-tariffs__item-list">
+                            {% set tariffs3 = [
+                            ['Запись видео и хранение в облаке', 'cloud'],
+                            ['Неограниченный удаленный просмотр локальной записи', 'play'],
+                            ['Количество пользователей 25', 'user-plus'],
+                            ['Публичные трансляции', 'monitor'],
+                            ['Умный поиск событий в видеозаписях', 'search'],
+                            ['До 8 часов экспорт видео в формат MP4', 'export'],
+                            ['До 50 камер на аккаунте', 'video'],
+                            ['Push и E-mail уведомления', 'envelope']
+                            ]%}
+                            {% for item, icon in tariffs3 %}
+                            <p class="ivideon-tariffs__item-list-item">
+                                <svg class="ivideon-tariffs__item-list-img">
+                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#{{icon}}"></use>
+                                </svg>
+                                {{item}}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        <a href="#" class="btn-colored">
+                            Оставить заявку
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <p class="tariffs-subtitle">* Тариф оплачивается на срок 3 или 12 месяцев. Цены указаны в российских рублях за
+            подключение одной камеры к сервису, при условии оплаты тарифа на срок 12 месяцев. Подробная информация о
+            тарифах доступна по ссылке.</p>
+    </div>
+</section>
+{% endblock %}
