@@ -60,28 +60,6 @@
     margin-bottom: 0;
   }
 }
-.warranty_list {
-  padding: 0;
-  margin-bottom: 64px;
-  color: rgba($color: $black, $alpha: 0.6);
-  font-size: 13px;
-  line-height: 30px;
-  list-style: none;
-  li {
-    position: relative;
-    padding-left: 22px;
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 12px;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: $blue;
-    }
-  }
-}
 // PROMO
 .warranty_promo {
   margin-bottom: 60px;

@@ -91,10 +91,6 @@
 
 .btn-mp-slider {
   align-self: flex-end;
-  &:hover {
-    color: #fff;
-    opacity: 0.8;
-  }
 }
 .mp-promo_slider {
   position: relative;
@@ -647,8 +643,20 @@
     }
   }
   @media all and (min-width: $large-bp) {
+    max-width: calc((100% - 15px * 3) / 4);
+    flex-basis: calc((100% - 15px * 3) / 4);
+    margin-right: 15px;
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1700px) {
     max-width: calc((100% - 30px * 3) / 4);
     flex-basis: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
     &:nth-child(2n) {
       margin-right: 30px;
     }
@@ -668,6 +676,12 @@
     max-width: 400px;
     padding: 22px 0 22px 120px;
   }
+  @media all and (min-width: $large-bp) {
+    padding: 22px 0 22px 66px;
+  }
+  @media all and (min-width: 1700px) {
+    padding: 22px 0 22px 120px;
+  }
 }
 .feature_item-img {
   position: absolute;
@@ -677,6 +691,12 @@
   img {
     width: 74%;
     @media all and (min-width: $tablet-bp) {
+      width: auto;
+    }
+    @media all and (min-width: $large-bp) {
+      width: 60%;
+    }
+    @media all and (min-width: 1700px) {
       width: auto;
     }
   }
@@ -692,12 +712,28 @@
     font-size: 16px;
     line-height: 24px;
   }
+  @media all and (min-width: $large-bp) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @media all and (min-width: 1700px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .feature_item-text {
   color: $gray;
   font-size: 12px;
   line-height: 24px;
   @media all and (min-width: $tablet-bp) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media all and (min-width: $large-bp) {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  @media all and (min-width: 1700px) {
     font-size: 16px;
     line-height: 24px;
   }

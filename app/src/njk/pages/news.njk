@@ -1,0 +1,31 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Новости и акции' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="news-breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Новости и акции']]) }}
+    </div>
+</div>
+<section class="news-section">
+    <div class="iv-container news-container">
+        <h1 class="news-h1">Новости и акции</h1>
+        <div class="iv-row news-row">
+            {% for i in range(0, 12) %}
+            <div class="news_item-col">
+                <a href="#" class="news_item">
+                    <div class="news_item-img" style="background-image:url('../images/img/news/news.jpg')"></div>
+                    <p class="news_item-title">Как начать работу с Ivideon?</p>
+                    <p class="news_item-text">Ivideon Dome – купольная модель для размещения на потолке или рейках
+                        торгового зала</p>
+                    <p class="news_item-date">20.06.2021</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="btn-blue-border news-btn">Показать еще</button>
+    </div>
+</section>
+{% endblock %}

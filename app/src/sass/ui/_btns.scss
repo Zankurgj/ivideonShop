@@ -29,8 +29,11 @@ input[type="submit"] {
   color: #fff;
   font-size: 15px;
   line-height: 24px;
+  border: 1px solid transparent;
   &:hover {
-    color: #fff;
+    color: $blue;
+    background-color: #fff;
+    border-color: $blue;
   }
   @media all and (min-width: $tablet-bp) {
     font-size: 17px;
@@ -47,7 +50,9 @@ input[type="submit"] {
   line-height: 24px;
   color: $blue;
   &:hover {
-    color: $blue;
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
   }
   @media all and (min-width: $tablet-bp) {
     font-size: 17px;
@@ -65,7 +70,8 @@ input[type="submit"] {
   font-size: 15px;
   line-height: 24px;
   &:hover {
-    color: #fff;
+    background-color: #fff;
+    color: $black;
   }
   @media all and (min-width: $tablet-bp) {
     font-size: 17px;
@@ -73,7 +79,19 @@ input[type="submit"] {
     padding: 11px 24px 13px 24px;
   }
 }
-
+.btn-white {
+  @extend .btn;
+  color: $steel;
+  border-radius: 20px;
+  padding: 11px 16px 13px 16px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  &:hover {
+    background-color: transparent;
+    color: $black;
+    color: #fff;
+  }
+}
 // TOOGLE BTN
 .base-toggle_inner {
   display: inline-flex;
