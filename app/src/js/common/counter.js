@@ -4,6 +4,7 @@ class CounterNumber {
     this.counterSelector = $(".js--counter");
     this.minVal = this.counterSelector.attr("min") || 1;
     this.counterValue = this.counterSelector.val();
+    this.counterId = "";
     this.setCounterValueHandler = this.setCounterValue.bind(this);
     this.setInputValueHandler = this.setInputValue.bind(this);
     this.initCounter();
@@ -21,12 +22,17 @@ class CounterNumber {
   setCounterValue(evt) {
     const btn = $(evt.currentTarget);
     const btnType = btn.data("counterType");
+    this.counterId = btn.data("counterId");
+    this.setCurrentCounterVal();
     if (btnType == "plus") {
       this.setPlus();
     } else {
       this.setMinus();
     }
     this.setVal();
+  }
+  setCurrentCounterVal() {
+    this.counterValue = $(`#${this.counterId}`).val();
   }
   setPlus() {
     this.counterValue = ++this.counterValue;
@@ -38,7 +44,7 @@ class CounterNumber {
     }
   }
   setVal() {
-    this.counterSelector.val(this.counterValue);
+    $(`#${this.counterId}`).val(this.counterValue);
   }
   //INPUT
   initSetInputValueListener() {
@@ -48,6 +54,7 @@ class CounterNumber {
     const input = $(evt.currentTarget);
     const currentVal = input.val();
     this.counterValue = currentVal;
+    this.counterId = input.attr("id");
     this.setVal();
   }
 }

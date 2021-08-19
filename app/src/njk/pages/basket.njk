@@ -1,0 +1,219 @@
+{% set pageTitle = 'Корзина' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="basket-section">
+    <div class="iv-container basket-container">
+        <h1 class="basket-h1">Корзина</h1>
+        <div class="basket-top">
+            <p class="basket-subtitle">Товаров в корзине: <a href="#">3 продукта</a></p>
+            <button class="basket-del-btn">Удалить все товары</button>
+        </div>
+        <div class="basket_inner-title-wrapper">
+            <div class="basket_inner-title-row iv-row">
+                <div class="basket_inner-title-col-name">
+                    <span class="basket_inner-title">Наименование товара</span>
+                </div>
+                <div class="basket_inner-title-col-cost">
+                    <span class="basket_inner-title">Цена</span>
+                </div>
+                <div class="basket_inner-title-col-quantity">
+                    <span class="basket_inner-title">Количество</span>
+                </div>
+                <div class="basket_inner-title-col-price">
+                    <span class="basket_inner-title">Стоимость</span>
+                </div>
+            </div>
+        </div>
+        <div class="basket_inner-row iv-row">
+            {% for i in range(0, 3) %}
+            <div class="basket_item">
+                <button class="basket_item-del">
+                    <span class="visually-hidden">Удалить</span>
+                </button>
+                <div class="basket_item-img-col">
+                    <div class="basket_item-img">
+                        <img src="../images/img/basket/item.png" alt="Ivideon Dome">
+                    </div>
+                </div>
+                <div class="basket_item-inner-col">
+                    <div class="basket_item-middle-col">
+                        <div class="basket_item-desc-col">
+                            <div class="basket_item-desc-top">
+                                <a href="#" class="basket_item-desc-name">Видеоняни</a>
+                                <span class="basket_item-desc-model">MHR1042</span>
+                            </div>
+                            <p class="basket_item-desc">
+                                Камера видеонаблюдения Ivideon Dome (без микрофона)
+                            </p>
+                        </div>
+                        <div class="basket_item-cost-col">
+                            <div class="basket_item-cost-wrapper">
+                                <span class="basket_item-cost-item">
+                                    <span class="basket_item-cost">5 190 </span>
+                                    <span class="basket_item-cost-currency">₽</span>
+                                </span>
+                                <span class="basket_item-cost-item">
+                                    <span class="basket_item-cost-old">5 990 </span>
+                                    <span class="basket_item-cost-old-currency">₽</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket_item-last-col">
+                        <div class="basket_item-counter-col">
+                            <div class="basket_item-counter-wrapper">
+                                <button class="basket_item-counter-btn js--btn-counter" data-counter-type="minus"
+                                    data-counter-id="counter{{loop.index}}" type="button">
+                                    <span>–</span>
+                                </button>
+                                <input class="basket_item-counter js--counter" type="number" value="1" size="4" min="1"
+                                    id="counter{{loop.index}}" required>
+                                <button class="basket_item-counter-btn js--btn-counter" data-counter-type="plus"
+                                    data-counter-id="counter{{loop.index}}" type="button">
+                                    <span>+</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket_item-price-col">
+                            <div class="basket_item-price-inner">
+                                <span class="basket_item-price-title">Стоимость:</span>
+                                <span class="basket_item-price-wrapper">
+                                    <span class="basket_item-price">5 190 </span>
+                                    <span class="basket_item-price-currency">₽</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="basket_bottom">
+            <div class="basket_bottom-cost-inner">
+                <p class="basket_bottom-cost-title">Общая сумма заказа:</p>
+                <div class="basket_bottom-cost-wrapper">
+                    <span class="basket_bottom-cost-item">
+                        <span class="basket_bottom-cost">5 190 </span>
+                        <span class="basket_bottom-cost-currency">₽</span>
+                    </span>
+                    <span class="basket_bottom-cost-item">
+                        <span class="basket_bottom-cost-old">5 990 </span>
+                        <span class="basket_bottom-cost-old-currency">₽</span>
+                    </span>
+                </div>
+                <button class="btn-blue basket_promocode-btn basket_promocode-btn--desktop">Перейти к
+                    офорлмению</button>
+            </div>
+            <form class="basket_promocode-form">
+                <input type="text" class="basket_promocode-input" placeholder="Ввести промокод">
+                <button class="basket_promocode-form-btn" type="submit">Применить</button>
+            </form>
+            <button class="btn-blue basket_promocode-btn basket_promocode-btn--mobile">Перейти к офорлмению</button>
+        </div>
+    </div>
+</section>
+<section class="basket-discount">
+    <h2 class="mp-h2 basket-discount_h2">Добавьте необходимые аксессуары</h2>
+    <div class="basket-discount_slider--wrapper">
+        {% set promoSliderData = [
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 3,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 4,
+        badge: "Хит"
+        }
+        ] %}
+        {% from "app/src/njk/components/promo_slider.njk" import promoSlider %}
+        {{ promoSlider(promoSliderData) }}
+    </div>
+</section>
+<section class="mp-feature">
+    <div class="iv-container">
+        <h2 class="mp-feature_h2">Преимущества <span class="mp-feature_h2-blue">ivideon</span></h2>
+        <div class="iv-row mp-feature_row">
+            {% set mpFeaureItem = [
+            {
+            img:'../images/img/main/feature1.png',
+            title: 'Официальный интрнет-магазин',
+            text: 'Доступ из любой точки мира'
+            },
+            {
+            img:'../images/img/main/feature2.png',
+            title: 'Гарантия качества',
+            text: 'Надежное шифрование данных'
+            },
+            {
+            img:'../images/img/main/feature3.png',
+            title: 'Быстрая доставка',
+            text: 'Системы быстрой доставки'
+            },
+            {
+            img:'../images/img/main/feature4.png',
+            title: 'Круглосуточная поддержка',
+            text: 'Стабильная работа в сетях 3G'
+            }
+            ] %}
+            {% for item in mpFeaureItem%}
+            <div class="mp-feature_item-col">
+                <div class="mp-feature_item">
+                    <div class="feature_item-img">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    <div class="feature_item-text-wrapper">
+                        <p class="feature_item-title">{{item.title}}</p>
+                        <p class="feature_item-text">{{item.text}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
