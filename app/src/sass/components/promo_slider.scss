@@ -103,6 +103,7 @@
     }
     &.slick-current {
       .iv-promo-slide {
+        background-color: #fff;
         @media all and (min-width: $desktop-bp) {
           transform: scale(1.1);
         }
@@ -117,11 +118,12 @@
   width: 310px;
   height: 100%;
   padding: 26px 20px 36px;
-  background-color: #fff;
+  background-color: rgba($color: #fff, $alpha: 0.9);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04),
     0px 0px 20px rgba(0, 0, 0, 0.03);
   border-radius: 40px;
-  transition: transform $base-duration $base-timing;
+  transition: transform $base-duration $base-timing,
+    background-color $base-duration $base-timing;
   @media all and (min-width: $desktop-bp) {
     width: 440px;
     padding: 40px;

@@ -6,10 +6,13 @@ class MainHeader {
     this.menuOverlay = $(".js-header-menu-overlay");
     this.leftMenuWrapper = $(".js--left-menu");
     this.topMenuOverlay = $(".js--top-menu-overlay");
+    this.subNav = $(".js--header-subnav");
     this.bottomMenuBtnHandler = this.bottomMenuBtn.bind(this);
     this.closeBottomMenuHandler = this.closeBottomMenu.bind(this);
     this.toggleLeftMenuHandler = this.toggleLeftMenu.bind(this);
     this.addClassActiveDropdownHandler = this.addClassActiveDropdown.bind(this);
+    this.toggleSearchHandler = this.toggleSearch.bind(this);
+    this.checkWindowScrollHandler = this.checkWindowScroll.bind(this);
     this.removeClassActiveDropdownHandler =
       this.removeClassActiveDropdown.bind(this);
     this.initMenu();
@@ -19,6 +22,35 @@ class MainHeader {
     this.initBottomMenuListeners();
     this.initLeftMenuListeners();
     this.initDropdownMenuListeners();
+    this.initToggleSearchListeners();
+    this.initCheckWindowScrollListeners();
+  }
+  // CHECK SCROLL
+  initCheckWindowScrollListeners() {
+    // $(window).scroll(this.checkWindowScroll);
+    $(window).scroll(this.checkWindowScrollHandler);
+  }
+  checkWindowScroll() {
+    const scroll = $(window).scrollTop();
+    if (scroll > 1) {
+      this.subNav.addClass("hide-by-scroll");
+    } else {
+      this.subNav.removeClass("hide-by-scroll");
+    }
+  }
+  // SEARCH
+  initToggleSearchListeners() {
+    $(".js--toggle-search").on("click", this.toggleSearchHandler);
+  }
+
+  toggleSearch() {
+    this.subNav.toggleClass("hide");
+    $(".js--header-search").toggleClass("show");
+    if ($(".js--header-search").hasClass("show")) {
+      setTimeout(function () {
+        $(".js--header-search-input").focus();
+      }, 300);
+    }
   }
   //   DROPDOWN MENU
   initDropdownMenuListeners() {

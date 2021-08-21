@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initAnchorLink();
   initSliders();
   initTelInput();
+  scrollTopBtnInit();
 });
 
 const initAnchorLink = () => {
@@ -66,4 +67,22 @@ const initTelInput = () => {
       separateDialCode: true,
     });
   }
+};
+const scrollTopBtnInit = () => {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".js--fixed-btn").fadeIn();
+    } else {
+      $(".js--fixed-btn").fadeOut();
+    }
+  });
+  $(".js--scroll-top-btn").click(() => {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      400
+    );
+    return false;
+  });
 };
