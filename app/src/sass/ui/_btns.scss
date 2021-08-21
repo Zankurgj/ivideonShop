@@ -126,3 +126,40 @@ input[type="submit"] {
     padding: 12px 35px;
   }
 }
+// DOWNLOAD
+.base-btn-download-wrapper {
+  margin: 0;
+}
+.base-btn-download-input {
+  @extend .visually-hidden;
+  &:focus + .base-btn-download-text {
+    text-decoration: none;
+  }
+}
+.base-btn-download-text {
+  position: relative;
+  display: block;
+  padding-left: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  color: $blue;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/icons/file.svg");
+  }
+}

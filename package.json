@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "intl-tel-input": "^17.0.13",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",

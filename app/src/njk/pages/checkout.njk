@@ -1,0 +1,350 @@
+{% set pageTitle = 'Оформление заказа' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="checkout-section">
+    <div class="iv-container checkout-container">
+        <form class="iv-row checkout-section-row">
+            <div class="checkout-section-form-col">
+                <h1 class="checkout-h1">Оформление заказа</h1>
+                <p class="checkout-subtitle">Оформлено 3 товара на сумму: <a href="#">5 390 ₽</a></p>
+                <div class="checkout-form">
+                    <fieldset class="checkout-form_field">
+                        <legend class="checkout-form_title">Шаг 1. <b>Данные покупателя</b></legend>
+                        <div class="checkout-form_input-row">
+                            <div class="checkout-form_input-col">
+                                <label class="checkout-form_input-wrapper">
+                                    <span class="visually-hidden">Имя</span>
+                                    <input class="checkout-form_input" type="text" placeholder="Имя*" required>
+                                </label>
+                                <label class="checkout-form_input-wrapper">
+                                    <span class="visually-hidden">Фамилия</span>
+                                    <input class="checkout-form_input" type="text" placeholder="Фамилия">
+                                </label>
+                            </div>
+                            <div class="checkout-form_input-col">
+                                <label class="checkout-form_input-wrapper checkout-form_input-wrapper--phone">
+                                    <span class="visually-hidden">Телефон</span>
+                                    <input class="checkout-form_input" autocomplete="off" type="tel" id="phone">
+                                </label>
+                                <label class="checkout-form_input-wrapper">
+                                    <span class="visually-hidden">Электронная почта</span>
+                                    <input class="checkout-form_input" type="email" placeholder="example@yandex.com*"
+                                        required>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="checkout-form_field">
+                        <legend class="checkout-form_title">Шаг 2. <b>Регион доставки</b></legend>
+                        <div class="checkout-form_input-row">
+                            <div class="checkout-form_input-col">
+                                <div class="border-select-wrapper checkout-form_input-wrapper">
+                                    <select class="js--border-select" data-placeholder="Страна*" required>
+                                        <option></option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                    </select>
+                                </div>
+                                <div class="border-select-wrapper checkout-form_input-wrapper">
+                                    <select class="js--border-select" data-placeholder="Регион*" required>
+                                        <option></option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="checkout-form_input-col">
+                                <div class="border-select-wrapper checkout-form_input-wrapper">
+                                    <select class="js--border-select" data-placeholder="Город*" required>
+                                        <option></option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                        <option value="1">Value1</option>
+                                        <option value="2">Value2</option>
+                                        <option value="3">Value3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                    <fieldset class="checkout-form_field">
+                        <legend class="checkout-form_title">Шаг 3. <b>Способ доставки</b></legend>
+                        <div class="checkout-tabs_nav-wrapper">
+                            <div class="checkout-tabs_nav-inner">
+                                {% set checkoutTabArr = [
+                                'Самовывоз со склада Ivideon',
+                                'Пункты выдачи и постаматы',
+                                'Доставка курьером'
+                                ] %}
+                                {% for checkoutTab in checkoutTabArr %}
+                                <label class="checkout-tabs_nav-item">
+                                    <input type="radio" class="checkout-tabs_nav-input js--toggle-input"
+                                        name="checkoutTab" data-tab-id="checkoutTab{{loop.index}}" {%if
+                                        loop.first%}checked{%endif%}>
+                                    <span class="checkout-tabs_nav-item-btn">{{checkoutTab}}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="checkout-tabs_item show" data-tab-name="checkoutTab" data-tab="checkoutTab1">
+                            <div class="checkout-address-map-wrapper">
+                                <div class="checkout-address_item js--checkout-address-storage">
+                                    <button class="checkout-address_item-close js--checkout-address-storage-btn"
+                                        type="button">
+                                        <span class="visually-hidden">Закрыть</span>
+                                    </button>
+                                    <p class="checkout-address_item-title">Адрес склада</p>
+                                    <p class="checkout-address_item-text checkout-address_item-middle">
+                                        г. Москва,Каширский проезд д. 17, стр. 12, база «Мосгоропторг» <br>
+                                        <a href="tel:+7-916-486-10-03" class="checkout-address_item-text-blue">8 (916)
+                                            486
+                                            10 03</a>
+                                        <br>
+                                        Пн-Пт: <span class="checkout-address_item-text-blue">с 9:00 до 18:00</span> <br>
+                                        Ближайшее метро: Варшавская
+                                    </p>
+                                    <p class="checkout-address_item-text checkout-address_item-bottom">Стоимость: <span
+                                            class="checkout-address_item-text-blue">Бесплатно</span></p>
+
+                                </div>
+                                <script
+                                    src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
+                                <div class="checkout-address-map" id="map"></div>
+                                <script>
+                                    {
+                                        ymaps.ready(init);
+                                        function init() {
+                                            var myMap = new ymaps.Map("map", {
+                                                center: [55.6548319279804, 37.629279394165046],
+                                                zoom: 17,
+                                                controls: []
+                                            }, {});
+                                            storageDot = new ymaps.Placemark([55.65530506907596, 37.63125350000001], {
+                                                iconCaption: 'Склад',
+                                            }, {
+                                                preset: 'islands#blueCircleDotIcon'
+                                            });
+                                            myMap.geoObjects
+                                                .add(storageDot);
+                                            storageDot.events.add('click', onToggleAdressItem);
+                                            myMap.behaviors.disable('scrollZoom');
+                                        }
+                                        function onToggleAdressItem() {
+                                            document.querySelector('.js--checkout-address-storage').classList.toggle('hide');
+                                        }
+                                        document.querySelector('.js--checkout-address-storage-btn').addEventListener("click", onToggleAdressItem);
+                                    }
+
+                                </script>
+                            </div>
+                        </div>
+                        <div class="checkout-tabs_item" data-tab-name="checkoutTab" data-tab="checkoutTab2">
+                            <h2 class="checkout-tabs_item-title">Адреса пунктов выдачи и пастаматов:</h2>
+                        </div>
+                        <div class="checkout-tabs_item checkout-tabs_item--сourier" data-tab-name="checkoutTab"
+                            data-tab="checkoutTab3">
+                            <h2 class="checkout-tabs_item-title">Адрес доставки</h2>
+                            <label class="checkout-form_input-wrapper-address">
+                                <span class="visually-hidden">Адрес</span>
+                                <input class="checkout-form_input" type="text"
+                                    placeholder="Улица, дом, строение, корпус, подъезд, квартира">
+                            </label>
+                            <div class="iv-row checkout-tabs_сourier-btn-row">
+                                {% set сourierDate = [
+                                ['Пн', '14 июня'],
+                                ['Вт', '15 июня'],
+                                ['Ср', '16 июня'],
+                                ['Чт', '17 июня'],
+                                ['Пт', '18 июня']
+                                ] %}
+                                {% for text1, text2 in сourierDate %}
+                                <div class="checkout-tabs_btn-white-col">
+                                    <label class="checkout-tabs_btn-white-wrapper">
+                                        <input type="radio" class="checkout-tabs_btn-white-input" name="сourierDate"
+                                            checked>
+                                        <span class="checkout-tabs_btn-white">
+                                            <span class="checkout-tabs_btn-white-text-color">{{text1}}</span>
+                                            <span class="checkout-tabs_btn-white-text">{{text2}}</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                {% endfor %}
+                                <div class="checkout-tabs_btn-white-col">
+                                    <label class="checkout-tabs_btn-white-wrapper">
+                                        <input type="radio" class="checkout-tabs_btn-white-input" name="сourierDate">
+                                        <span class="checkout-tabs_btn-white">
+                                            <span class="checkout-tabs_btn-white-text-color">Другая дата</span>
+                                            <span
+                                                class="checkout-tabs_btn-white-text checkout-tabs_btn-white-text--mobile">Выбрать</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="iv-row checkout-tabs_сourier-radio-row">
+                                {% set сourierTime = [
+                                ['10:00-12:00'],
+                                ['10:00-14:00'],
+                                ['10:00-18:00'],
+                                ['14:00-22:00'],
+                                ['14:00-18:00'],
+                                ['14:00-18:00'],
+                                ['14:00-22:00'],
+                                ['14:00-22:00'],
+                                ['14:00-18:00'],
+                                ['18:00-22:00']
+                                ] %}
+                                {% for time in сourierTime %}
+                                <div class="checkout-tabs_сourier-radio-col">
+                                    <label class="base_radio-wrapper">
+                                        <input class="base_radio-input" type="radio" name="сourierTime">
+                                        <span class="base_radio-input-fake"></span>
+                                        <span class="base_radio-text">{{time}}</span>
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <p class="checkout-tabs_сourier-subtitle">
+                                <span class="checkout-tabs_сourier-subtitle-text">Стоимость доставки:</span>
+                                <span class="checkout-tabs_сourier-subtitle-cost">990 ₽</span>
+                            </p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="checkout-form_field">
+                        <legend class="checkout-form_title">Шаг 4. <b>Способ оплаты</b></legend>
+                        <div class="checkout-form_payment-radio-wrapper">
+                            {% set paymentRadio = [
+                            ['Оплата онлайн'],
+                            ['Наличными при получении'],
+                            ['Предоплата по безналичному расчету'],
+                            ['По счету для юридических лиц']
+                            ] %}
+                            {% for text in paymentRadio %}
+                            <div class="checkout-form_payment-radio-col">
+                                <label class="base_radio-wrapper">
+                                    <input class="base_radio-input js--toggle-input" type="radio" name="paymentType"
+                                        data-tab-id="paymentTypeTab{{loop.index}}" {%if loop.first%}checked{%endif%}>
+                                    <span class="base_radio-input-fake"></span>
+                                    <span class="base_radio-text">{{text}}</span>
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="checkout-tabs_item-tab" data-tab-name="paymentType" data-tab="paymentTypeTab1">
+                            1
+                        </div>
+                        <div class="checkout-tabs_item-tab" data-tab-name="paymentType" data-tab="paymentTypeTab2">2
+                        </div>
+                        <div class="checkout-tabs_item-tab" data-tab-name="paymentType" data-tab="paymentTypeTab3">3
+                        </div>
+                        <div class="checkout-tabs_item-tab show" data-tab-name="paymentType" data-tab="paymentTypeTab4">
+                            <h2 class="checkout-tabs_item-title">Пожалуйста, укажите реквизиты юридического лица</h2>
+                            <div class="checkout-form_payment-row">
+                                <div class="checkout-form_payment-col-wrapper">
+                                    <div class="checkout-form_payment-col checkout-form_payment-col--1">
+                                        <label class="checkout-form_input-wrapper">
+                                            <span class="visually-hidden">Наименование организации</span>
+                                            <input class="checkout-form_input" type="text"
+                                                placeholder="Наименование организации*" required>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout-form_payment-col-wrapper">
+                                    <div class="checkout-form_payment-col checkout-form_payment-col--2">
+                                        <label class="checkout-form_input-wrapper">
+                                            <span class="visually-hidden">КПП</span>
+                                            <input class="checkout-form_input" type="text" placeholder="КПП*" required>
+                                        </label>
+                                    </div>
+                                    <div class="checkout-form_payment-col checkout-form_payment-col--2">
+                                        <label class="checkout-form_input-wrapper">
+                                            <span class="visually-hidden">ПИН</span>
+                                            <input class="checkout-form_input" type="text" placeholder="ПИН*" required>
+                                        </label>
+                                    </div>
+                                    <div class="checkout-form_payment-col checkout-form_payment-col--2">
+                                        <label class="checkout-form_input-wrapper">
+                                            <span class="visually-hidden">КПП</span>
+                                            <input class="checkout-form_input" type="text" placeholder="КПП*" required>
+                                        </label>
+                                    </div>
+                                    <div class="checkout-form_payment-col checkout-form_payment-col--2">
+                                        <label class="checkout-form_input-wrapper">
+                                            <span class="visually-hidden">ПИН</span>
+                                            <input class="checkout-form_input" type="text" placeholder="ПИН*" required>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="base_radio-wrapper checkout-form-personal-radio">
+                                <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+                                <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+                                <span class="base_radio-text-link">Согласие на обработку <a href="#">персональных
+                                        данных</a></span>
+                            </label>
+                            <label class="base-btn-download-wrapper">
+                                <input type="file" class="base-btn-download-input">
+                                <span class="base-btn-download-text">Приложить файл с реквизитами</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="checkout-section-product-col">
+                <div class="checkout-product-block">
+                    <div class="checkout-product-item-wrapper">
+                        {% for i in range(0, 3) %}
+                        <div class="checkout-product-item">
+                            <div class="checkout-product-item-img">
+                                <img src="../images/img/checkout/product.png"
+                                    alt="Камера видеонаблюдения Ivideon Dome (без микрофона)">
+                            </div>
+                            <div class="checkout-product-item-inner">
+                                <p class="checkout-product-item-title">Камера видеонаблюдения Ivideon Dome (без
+                                    микрофона)</p>
+                                <p class="checkout-product-item-cost">1 990 <span
+                                        class="checkout-product-item-cost-currency">₽</span></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="checkout-product-total">
+                        <div class="checkout-product-total-cost-inner">
+                            <span class="checkout-product-total-text">Стоимость товаров:</span>
+                            <span class="checkout-product-total-cost">4 400 ₽</span>
+                        </div>
+                        <div class="checkout-product-total-cost-inner">
+                            <span class="checkout-product-total-text">Стоимость доставки:</span>
+                            <span class="checkout-product-total-cost">990 ₽</span>
+                        </div>
+                        <p class="checkout-product-total-text checkout-product-total-text--bottom">Итоговая стоимость
+                            заказа:</p>
+                        <div class="checkout-product-total-bottom-wrapper">
+                            <span class="checkout-product-total-bottom-item">
+                                <span class="checkout-product-total-bottom">5 190 </span>
+                                <span class="checkout-product-total-bottom-currency">₽</span>
+                            </span>
+                            <span class="checkout-product-total-bottom-item">
+                                <span class="checkout-product-total-bottom-old">5 990 </span>
+                                <span class="checkout-product-total-bottom-old-currency">₽</span>
+                            </span>
+                        </div>
+                        <button class="btn-blue checkout-product-total-btn" type="submit">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

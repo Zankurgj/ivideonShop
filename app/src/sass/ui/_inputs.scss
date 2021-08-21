@@ -1,0 +1,83 @@
+.iti__flag {
+  background-image: url("../images/img/common/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../images/img/common/flags@2x.png");
+  }
+}
+
+.base_radio-wrapper {
+  display: flex;
+  margin: 0;
+}
+.base_radio-input {
+  @extend .visually-hidden;
+  &:checked + .base_radio-input-fake {
+    border-color: $blue;
+    &::after {
+      opacity: 1;
+    }
+  }
+  &:checked + .base_radio-input-fake + .base_radio-text {
+    color: $blue;
+    font-weight: bold;
+  }
+}
+.base_radio-input-fake {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #d3dce6;
+  cursor: pointer;
+  transition: border-color $base-duration $base-timing;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $blue;
+    opacity: 0;
+    transition: opacity $base-duration $base-timing;
+  }
+}
+.base_radio-input-fake--small {
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+  &::after {
+    width: 8px;
+    height: 8px;
+  }
+}
+.base_radio-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  color: $steel;
+  letter-spacing: 0.02em;
+  transition: color $base-duration $base-timing;
+}
+.base_radio-text-link {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(31, 45, 61, 0.5);
+  letter-spacing: 0.02em;
+  a {
+    color: $blue;
+    &:hover {
+      color: $blue;
+    }
+  }
+}

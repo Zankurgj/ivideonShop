@@ -3,6 +3,8 @@ window.jQuery = $;
 window.$ = $;
 import "select2";
 require("~/node_modules/jquery-ui-dist/jquery-ui.min.js");
+import intlTelInput from "intl-tel-input";
+require("~/node_modules/intl-tel-input/build/js/utils.js");
 import MainHeader from "./common/main-header";
 import CounterNumber from "./common/counter";
 import { initSliders } from "./common/sliders";
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSelect2();
   initAnchorLink();
   initSliders();
+  initTelInput();
 });
 
 const initAnchorLink = () => {
@@ -36,6 +39,11 @@ const initAnchorLink = () => {
 const initSelect2 = () => {
   $(".js--simple-select").select2({
     minimumResultsForSearch: -1,
+    theme: "simple-select",
+  });
+  $(".js--border-select").select2({
+    minimumResultsForSearch: -1,
+    theme: "border-select",
   });
 };
 const initToggleTabListeners = () => {
@@ -47,4 +55,15 @@ const toggleTabHandler = (evt) => {
   const tabName = $(evt.currentTarget).attr("name");
   $(`[data-tab-name=${tabName}]`).removeClass("show");
   $(`[data-tab=${tabId}]`).addClass("show");
+};
+
+const initTelInput = () => {
+  const input = document.querySelector("#phone");
+  if (input) {
+    intlTelInput(input, {
+      initialCountry: "ru",
+      preferredCountries: ["ru", "kz", "ua", "by"],
+      separateDialCode: true,
+    });
+  }
 };
