@@ -15,7 +15,16 @@
   padding: 68px 0 100px 0;
   background-image: linear-gradient(111.37deg, #2b8acb -5.7%, #c70093 67.85%);
   @media all and (min-width: $desktop-bp) {
-    padding: 180px 0 86px 0;
+    display: flex !important;
+    min-height: 590px;
+    padding: 50px 0 0px 0;
+  }
+}
+.mp-promo_slide_row {
+  @media all and (min-width: $desktop-bp) {
+    height: 100%;
+    align-items: center;
+    padding-left: 50px;
   }
 }
 .mp-promo_slide-img-col {
@@ -27,6 +36,7 @@
   @media all and (min-width: $desktop-bp) {
     flex-basis: 34%;
     max-width: 34%;
+    margin-bottom: 0;
   }
   img {
     width: 100%;
@@ -65,7 +75,7 @@
   @media all and (min-width: 1200px) {
     font-size: 52px;
   }
-  @media all and (min-width: $large-bp) {
+  @media all and (min-width: 1600px) {
     margin-bottom: 80px;
     font-size: 72px;
   }
@@ -84,7 +94,7 @@
   @media all and (min-width: 1200px) {
     font-size: 38px;
   }
-  @media all and (min-width: $large-bp) {
+  @media all and (min-width: 1600px) {
     font-size: 48px;
   }
 }
@@ -477,7 +487,7 @@
     padding: 40px 0;
   }
   @media all and (min-width: $desktop-bp) {
-    padding: 60px 0;
+    padding: 0;
   }
 }
 .mp-promo-home_inner {
@@ -583,6 +593,7 @@
   width: 100%;
   max-width: 285px;
   margin-bottom: 12px;
+  border-width: 3px;
   @media all and (min-width: $tablet-bp) {
     margin-bottom: 20px;
   }

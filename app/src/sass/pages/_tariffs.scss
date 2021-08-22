@@ -171,7 +171,7 @@
       padding: 0px 24px 40px 24px;
     }
     @media all and (min-width: 1600px) {
-      padding: 15px 32px 40px 32px;
+      padding: 10px 32px 40px 32px;
     }
   }
 }
@@ -246,6 +246,7 @@
   }
 }
 .ivideon-tariffs__item-cost {
+  font-weight: 500;
   font-size: 48px;
   line-height: 48px;
   @media all and (min-width: $tablet-bp) {
@@ -258,10 +259,11 @@
   }
 }
 .ivideon-tariffs__item-сurrency {
+  font-weight: 500;
   font-size: 36px;
   line-height: 48px;
   @media all and (min-width: $tablet-bp) {
-    font-size: 36px;
+    font-size: 64px;
     line-height: 64px;
   }
 }

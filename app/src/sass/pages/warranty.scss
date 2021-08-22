@@ -136,6 +136,7 @@
 }
 .warranty_table-top {
   margin-bottom: 60px;
+  max-width: 770px;
   @media all and (min-width: $tablet-bp) {
     margin-bottom: 76px;
   }

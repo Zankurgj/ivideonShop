@@ -108,6 +108,15 @@
           transform: scale(1.1);
         }
       }
+      .iv-promo-slide_img {
+        transform: translateX(-50px);
+        @media all and (min-width: $desktop-bp) {
+          transform: translateX(-70px);
+        }
+      }
+      .iv-promo-slide_feature {
+        opacity: 1;
+      }
     }
   }
 }
@@ -175,6 +184,7 @@
 }
 // IMG
 .iv-promo-slide_middle {
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -184,14 +194,94 @@
     margin-bottom: 4px;
   }
 }
-.iv-promo-slide_img {
+.iv-promo-slide_feature {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity $base-duration $base-timing;
+}
+.iv-promo-slide_feature-item {
+  max-width: 72px;
+  margin-bottom: 10px;
+  @media all and (min-width: $desktop-bp) {
+    max-width: 92px;
+    margin-bottom: 20px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.iv-promo-slide_feature-item-icon {
+  margin-bottom: 6px;
   img {
     display: block;
-    max-width: 174px;
-    margin: 0 auto;
+    width: 24px;
+    height: 24px;
     @media all and (min-width: $desktop-bp) {
-      max-width: 230px;
+      width: 28px;
+      height: 28px;
     }
+  }
+}
+.iv-promo-slide_feature-item-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: $slate;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.iv-promo-slide_feature-item-text {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: $slate;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.iv-promo-slide_img {
+  width: 174px;
+  height: 174px;
+  transition: transform $base-duration $base-timing;
+  @media all and (min-width: $desktop-bp) {
+    width: 230px;
+    height: 230px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: -47px;
+    width: 215px;
+    height: 294px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/img/common/slider-product-bg.svg");
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+    @media all and (min-width: $desktop-bp) {
+      left: -29px;
+      top: -45px;
+      width: 320px;
+      height: 393px;
+    }
+  }
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 2;
   }
 }
 // TYPE

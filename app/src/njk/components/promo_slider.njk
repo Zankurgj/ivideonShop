@@ -1,11 +1,5 @@
 {% macro promoSlider(dataArr) %}
 <div class="iv-promo-slider_container">
-    <!-- <button class="iv-promo-slider_arrow iv-promo-slider_arrow--prev">
-        <span class="visually-hidden">предыдущий слайд</span>
-    </button>
-    <button class="iv-promo-slider_arrow iv-promo-slider_arrow--next">
-        <span class="visually-hidden">следующий слайд</span>
-    </button> -->
     <div class="iv-promo-slider js--product-slider">
         {% for item in dataArr %}
         <div class="iv-promo-slide_inner">
@@ -23,6 +17,28 @@
                 <div class="iv-promo-slide_middle">
                     <div class="iv-promo-slide_img">
                         <img src="{{item.img}}" alt="{{item.name}}">
+                    </div>
+                    <div class="iv-promo-slide_feature">
+                        <div class="iv-promo-slide_feature-item">
+                            <div class="iv-promo-slide_feature-item-icon">
+                                <img src="../images/icons/pr-instagram.svg" alt="Full HD">
+                            </div>
+                            <p class="iv-promo-slide_feature-item-title">Full HD</p>
+                            <p class="iv-promo-slide_feature-item-text">Разрешение</p>
+                        </div>
+                        <div class="iv-promo-slide_feature-item">
+                            <div class="iv-promo-slide_feature-item-icon">
+                                <img src="../images/icons/pr-user-scan.svg" alt="Детектор движения">
+                            </div>
+                            <p class="iv-promo-slide_feature-item-title">Детектор движения</p>
+                        </div>
+                        <div class="iv-promo-slide_feature-item">
+                            <div class="iv-promo-slide_feature-item-icon">
+                                <img src="../images/icons/pr-shield.svg" alt="Гарантия">
+                            </div>
+                            <p class="iv-promo-slide_feature-item-title">3 года</p>
+                            <p class="iv-promo-slide_feature-item-text">Гарантия</p>
+                        </div>
                     </div>
                 </div>
                 <div class="iv-promo-slide_bottom">

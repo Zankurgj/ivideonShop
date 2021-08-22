@@ -4,7 +4,7 @@
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
 <div class="catalog-breadcrumbs">
-    <div class="iv-container product-card--iv-container">
+    <div class="iv-container">
         {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
         {{ breadcrumbs([['Камеры видеонаблюдения'],['Поворотная камера Ivideon Cute 360']]) }}
     </div>
@@ -14,7 +14,6 @@
         <div class="product-card_top">
             <div class="product-card_top-col-left">
                 <span class="product-card_top-badge">Новинка</span>
-                <button class="product-card_top-comment-btn">Написать отзыв</button>
                 <div class="product-card_top_btns product-card_top_btns--mobile">
                     <button class="product-card_top_btn product-card_top_btn--like">
                         <span class="visually-hidden">нравится</span>
@@ -80,27 +79,27 @@
                     <div class="product-card_info-block">
                         <p class="product-card_info-title">Какая емкость вам подойдет?</p>
                         <div class="iv-row product-card_info-row">
-                            <label class="product-card_info-btn-wrapper">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--small">
                                 <input type="radio" class="product-card_info-btn-input" name="storage" checked>
                                 <span class="product-card_info-btn">
                                     <span class="product-card_info-btn-text">Без карты</span>
                                 </span>
                             </label>
-                            <label class="product-card_info-btn-wrapper">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--small">
                                 <input type="radio" class="product-card_info-btn-input" name="storage">
                                 <span class="product-card_info-btn">
                                     <span class="product-card_info-btn-text">64 Gb</span>
                                     <span class="product-card_info-btn-text-color">490 <span>₽</span></span>
                                 </span>
                             </label>
-                            <label class="product-card_info-btn-wrapper">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--small">
                                 <input type="radio" class="product-card_info-btn-input" name="storage">
                                 <span class="product-card_info-btn">
                                     <span class="product-card_info-btn-text">128 Gb</span>
                                     <span class="product-card_info-btn-text-color">990 <span>₽</span></span>
                                 </span>
                             </label>
-                            <label class="product-card_info-btn-wrapper">
+                            <label class="product-card_info-btn-wrapper product-card_info-btn-wrapper--small">
                                 <input type="radio" class="product-card_info-btn-input" name="storage">
                                 <span class="product-card_info-btn">
                                     <span class="product-card_info-btn-text">256 Gb</span>
@@ -242,9 +241,8 @@
                 </div>
             </div>
             <div class="product-card_tab-inner">
-                {% for navProduct in navProductArr %}
-                <div class="product-card_tab-item product-card_tab-item--description {% if loop.index == 1 %}show{% endif %}"
-                    data-tab-name="productTab" data-tab="productTab{{loop.index}}">
+                <div class="product-card_tab-item product-card_tab-item--description show" data-tab-name="productTab"
+                    data-tab="productTab1">
                     <div class="iv-row product-card_tab-row">
                         {% set cardDescriptionArr = [
                         {
@@ -353,7 +351,99 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
+                    data-tab="productTab2">
+                    <div class="product-card_tab-text-inner">
+                        <div class="product-card_tab-dot-text-block">
+                            <h4 class="product-card_tab-h4">Камера видеонаблюдения</h4>
+                            {% set dotText1 = [
+                            ['Бренд', 'Ivideon'],
+                            ['Модель', 'Ivideon Cute 360'],
+                            ['Тип камеры', 'Для помещений'],
+                            ['Форм-фактор камеры', 'Поворотная (PTZ), Для помещений (Indoor)'],
+                            ['Необходимая минимальная скорость исходящего Интернет соединения', '1 Мбит/с']
+                            ] %}
+                            {% for text1, text2 in dotText1 %}
+                            <div class="product-card_dotblock">
+                                <span class="product-card_dotblock-left">
+                                    <span class="product-card_tab-text">{{text1}}</span>
+                                </span>
+                                <span class="product-card_dotblock-right">
+                                    <span class="product-card_tab-text">{{text2}}</span>
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="product-card_tab-dot-text-block">
+                            <h4 class="product-card_tab-h4">Изображение</h4>
+                            {% set dotText2 = [
+                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
+                            ['Тип матрицы', '93°'],
+                            ['Угол обзора', 'Нет'],
+                            ['Вариофокальный объектив', '3.6мм'],
+                            ['Объектив', '1 Мбит/с'],
+                            ['Функции улучшения изображения','BLC, 3D-DNR, DWDR, ROI']
+                            ] %}
+                            {% for text1, text2 in dotText2 %}
+                            <div class="product-card_dotblock">
+                                <span class="product-card_dotblock-left">
+                                    <span class="product-card_tab-text">{{text1}}</span>
+                                </span>
+                                <span class="product-card_dotblock-right">
+                                    <span class="product-card_tab-text">{{text2}}</span>
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="product-card_tab-dot-text-block">
+                            <h4 class="product-card_tab-h4">Функциональные возможности</h4>
+                            {% set dotText1 = [
+                            ['Бренд', 'Ivideon'],
+                            ['Модель', 'Ivideon Cute 360'],
+                            ['Тип камеры', 'Для помещений'],
+                            ['Форм-фактор камеры', 'Поворотная (PTZ), Для помещений (Indoor)'],
+                            ['Необходимая минимальная скорость исходящего Интернет соединения', '1 Мбит/с']
+                            ] %}
+                            {% for text1, text2 in dotText1 %}
+                            <div class="product-card_dotblock">
+                                <span class="product-card_dotblock-left">
+                                    <span class="product-card_tab-text">{{text1}}</span>
+                                </span>
+                                <span class="product-card_dotblock-right">
+                                    <span class="product-card_tab-text">{{text2}}</span>
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="product-card_tab-dot-text-block">
+                            <h4 class="product-card_tab-h4">Интерфейсы и питание</h4>
+                            {% set dotText2 = [
+                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
+                            ['Тип матрицы', '93°'],
+                            ['Угол обзора', 'Нет'],
+                            ['Вариофокальный объектив', '3.6мм'],
+                            ['Объектив', '1 Мбит/с'],
+                            ['Функции улучшения изображения','BLC, 3D-DNR, DWDR, ROI']
+                            ] %}
+                            {% for text1, text2 in dotText2 %}
+                            <div class="product-card_dotblock">
+                                <span class="product-card_dotblock-left">
+                                    <span class="product-card_tab-text">{{text1}}</span>
+                                </span>
+                                <span class="product-card_dotblock-right">
+                                    <span class="product-card_tab-text">{{text2}}</span>
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
+                    data-tab="productTab3">3</div>
+                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
+                    data-tab="productTab4">4</div>
+                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
+                    data-tab="productTab5">5</div>
             </div>
         </div>
     </div>

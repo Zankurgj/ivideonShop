@@ -8,6 +8,7 @@ require("~/node_modules/intl-tel-input/build/js/utils.js");
 import MainHeader from "./common/main-header";
 import CounterNumber from "./common/counter";
 import { initSliders } from "./common/sliders";
+import { initCatalog } from "./common/catalog";
 
 document.addEventListener("DOMContentLoaded", function () {
   new MainHeader();
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSelect2();
   initAnchorLink();
   initSliders();
+  initCatalog();
   initTelInput();
   scrollTopBtnInit();
 });

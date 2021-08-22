@@ -3,7 +3,6 @@ import "slick-carousel";
 export const initSliders = () => {
   initsSectionSlider();
   initProductSlider();
-  initRangeSlider();
   initProductCardSlider();
   initPromoSlider();
   initTariffSlider();
@@ -58,23 +57,6 @@ const initProductSlider = () => {
       },
     ],
   });
-};
-
-const initRangeSlider = () => {
-  $(".js--catalog-range").slider({
-    range: true,
-    min: 0,
-    max: 50000,
-    values: [2290, 42800],
-    slide: function (event, ui) {
-      $(".js--catalog-range-start").val(ui.values[0]);
-      $(".js--catalog-range-stop").val(ui.values[1]);
-    },
-  });
-  $(".js--catalog-range-start").val(
-    $(".js--catalog-range").slider("values", 0)
-  );
-  $(".js--catalog-range-stop").val($(".js--catalog-range").slider("values", 1));
 };
 
 const initProductCardSlider = () => {

@@ -1,16 +1,22 @@
 .fixed-btn_wrapper {
   position: fixed;
-  right: 30px;
+  right: 10px;
   bottom: 100px;
   z-index: 7;
   @media all and (min-width: $tablet-bp) {
+    right: 20px;
+  }
+  @media all and (min-width: $desktop-bp) {
+    right: 10px;
+  }
+  @media all and (min-width: 1920px) {
     right: 72px;
   }
 }
 .fixed-btn {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: $blue;
   margin-bottom: 14px;
@@ -19,7 +25,11 @@
   &:last-child {
     margin-bottom: 0;
   }
-  @media all and (min-width: $tablet-bp) {
+  @media all and (min-width: $desktop-bp) {
+    width: 50px;
+    height: 50px;
+  }
+  @media all and (min-width: $large-bp) {
     width: 60px;
     height: 60px;
   }
