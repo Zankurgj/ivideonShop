@@ -355,6 +355,7 @@
   opacity: 0;
   transition: opacity $base-timing $base-duration,
     visibility $base-timing $base-duration;
+  z-index: 2;
   &.show {
     visibility: visible;
     opacity: 1;

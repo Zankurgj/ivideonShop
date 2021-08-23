@@ -319,7 +319,7 @@
     flex-direction: row;
     padding-left: 20px;
   }
-  @media all and (min-width: 1500px) {
+  @media all and (min-width: 1550px) {
     max-width: 53%;
     flex-basis: 53%;
   }
@@ -337,7 +337,7 @@
       margin-right: 0;
     }
   }
-  @media all and (min-width: 1500px) {
+  @media all and (min-width: 1550px) {
     flex-basis: calc((100% - 30px * 2) / 3);
     max-width: calc((100% - 30px * 2) / 3);
     margin-right: 30px;

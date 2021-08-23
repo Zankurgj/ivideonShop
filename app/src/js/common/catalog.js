@@ -1,25 +1,38 @@
 export const initCatalog = () => {
-  initRangeSlider();
+  //   initRangeSlider();
   initCatalogSpolier();
   initCatalogPopup();
 };
 
 const initRangeSlider = () => {
-  console.log("init catalog");
-  $(".js--catalog-range").slider({
-    range: true,
-    min: 0,
-    max: 50000,
-    values: [2290, 42800],
-    slide: function (event, ui) {
-      $(".js--catalog-range-start").val(ui.values[0]);
-      $(".js--catalog-range-stop").val(ui.values[1]);
+  var slider = document.querySelector(".js--catalog-range");
+  var startRangeInput = document.querySelector(".js--catalog-range-start");
+  var stopRangeInput = document.querySelector(".js--catalog-range-stop");
+  noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+      min: 0,
+      max: 100,
     },
   });
-  $(".js--catalog-range-start").val(
-    $(".js--catalog-range").slider("values", 0)
-  );
-  $(".js--catalog-range-stop").val($(".js--catalog-range").slider("values", 1));
+
+  slider.noUiSlider.on("update", function (values, handle) {
+    var value = Math.round(values[handle]);
+
+    if (handle) {
+      stopRangeInput.value = value;
+    } else {
+      startRangeInput.value = value;
+    }
+  });
+  startRangeInput.addEventListener("change", function () {
+    slider.noUiSlider.set([this.value, null]);
+  });
+
+  stopRangeInput.addEventListener("change", function () {
+    slider.noUiSlider.set([null, this.value]);
+  });
 };
 
 const initCatalogSpolier = () => {

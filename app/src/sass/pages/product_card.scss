@@ -857,3 +857,217 @@
     background-color: #fff;
   }
 }
+// BUY POPUP
+.product_buy-popup {
+  position: fixed;
+  left: 0;
+  top: 56px;
+  padding: 24px 0 30px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px -2px 80px rgba(0, 0, 0, 0.18),
+    0px 0.0958456px 10.0172px rgba(0, 0, 0, 0.09);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $base-timing $base-duration,
+    visibility $base-timing $base-duration;
+  @media all and (min-width: $desktop-bp) {
+    top: 80px;
+    padding: 28px 0;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.product_buy-popup-row {
+  width: 100%;
+}
+.product_buy-popup-middle {
+  flex-grow: 1;
+  @media all and (min-width: $tablet-bp) {
+    display: flex;
+  }
+}
+.product_buy-popup-img {
+  position: relative;
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  @media all and (min-width: $desktop-bp) {
+    width: 80px;
+    height: 80px;
+    margin-right: 44px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: -8px;
+    width: 101px;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/img/common/slider-product-bg.svg");
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+    @media all and (min-width: $desktop-bp) {
+      left: -44px;
+      top: -20px;
+      width: 131px;
+      height: 128px;
+    }
+  }
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 2;
+  }
+}
+.product_buy-popup-text-col {
+  @media all and (min-width: $desktop-bp) {
+    max-width: 33%;
+    flex-basis: 33%;
+  }
+}
+.product_buy-popup-type {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 16px;
+  color: $black;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.product_buy-popup-name {
+  margin-bottom: 8px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  @media all and (min-width: $desktop-bp) {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.product_buy-popup-feature-col {
+  display: none;
+  flex-grow: 1;
+  @media all and (min-width: $large-bp) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.product_buy-popup-feature-item {
+  min-width: 78px;
+  margin-right: 6px;
+}
+.product_buy-popup-feature-icon {
+  margin-bottom: 6px;
+  img {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+}
+.product_buy-popup-feature-title {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: $slate;
+}
+.product_buy-popup-feature-text {
+  font-size: 10px;
+  line-height: 12px;
+  color: $slate;
+  letter-spacing: 0.02em;
+}
+
+.product_buy-popup-cost-col {
+  margin-left: auto;
+  padding-right: 100px;
+  @media all and (min-width: $large-bp) {
+    margin-left: 0;
+    padding-right: 64px;
+  }
+}
+.product_buy-popup-cost-title {
+  display: none;
+  margin-bottom: 7px;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $slate;
+  margin-top: 7px;
+  @media all and (min-width: $tablet-bp) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  b {
+    color: $blue;
+  }
+}
+// COST
+.product_buy-popup-cost-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.product_buy-popup-cost {
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+  @media all and (min-width: $desktop-bp) {
+    margin-right: 15px;
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+.product_buy-popup-cost-currency {
+  font-size: 16px;
+  line-height: 24px;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+.product_buy-popup-cost-old {
+  font-size: 12px;
+  line-height: 25px;
+  color: $black;
+  text-decoration: line-through;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+.product_buy-popup-cost-old-currency {
+  font-size: 10px;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 12px;
+  }
+}
+.product_buy-popup-btn {
+  align-self: flex-start;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 6px;
+  @media all and (min-width: $desktop-bp) {
+    min-width: 176px;
+  }
+}

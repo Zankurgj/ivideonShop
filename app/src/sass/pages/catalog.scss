@@ -102,7 +102,9 @@
   line-height: 16px;
   letter-spacing: 0.02em;
   color: $slate;
+  transition: color $base-duration $base-timing;
   &:hover {
+    text-decoration: none;
     color: rgba($color: $slate, $alpha: 0.8);
   }
   &.active {
@@ -204,6 +206,7 @@
     padding: 0;
     transform: translateX(0);
     background-color: transparent;
+    z-index: 1;
   }
 }
 .catalog-item_wrapper-col {
@@ -221,6 +224,7 @@
   }
   @media all and (min-width: $desktop-bp) {
     padding: 0 20px 0 0;
+    overflow-y: visible;
   }
 }
 .catalog-filter_sidebar-close-btn {

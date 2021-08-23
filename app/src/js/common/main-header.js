@@ -27,7 +27,6 @@ class MainHeader {
   }
   // CHECK SCROLL
   initCheckWindowScrollListeners() {
-    // $(window).scroll(this.checkWindowScroll);
     $(window).scroll(this.checkWindowScrollHandler);
   }
   checkWindowScroll() {

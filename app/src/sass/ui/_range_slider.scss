@@ -23,11 +23,19 @@
   font-size: 17px;
   line-height: 32px;
   color: rgba($color: $slate, $alpha: 0.6);
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 .catalog-range {
-  position: relative;
   width: 276px;
   height: 16px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
   &::after {
     content: "";
     position: absolute;
@@ -37,24 +45,21 @@
     height: 1px;
     background-color: $blue;
   }
-  .ui-widget-header {
+  .noUi-connect {
     display: none;
   }
-  &.ui-widget.ui-widget-content {
-    border: none;
-  }
-  .ui-slider-handle {
+  .noUi-handle {
     height: 16px;
     width: 16px;
     background-color: #fff;
     border-radius: 50%;
     border: 1px solid $blue;
     top: 0;
+    right: -9px;
     cursor: pointer;
-    &:focus,
-    .ui-state-focus,
-    .ui-state-active {
-      outline: none;
+    &::before,
+    &::after {
+      display: none;
     }
   }
 }

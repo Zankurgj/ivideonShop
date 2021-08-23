@@ -36,6 +36,9 @@
     margin: 0 auto 64px auto;
   }
 }
+.base-toggle_text--tariffs {
+  padding: 8px 18px;
+}
 .tariffs--container {
   @media all and (min-width: $tablet-bp) {
     padding: 0;
@@ -296,8 +299,11 @@
   line-height: 24px;
   color: $black;
   @media all and (min-width: $tablet-bp) {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 24px;
+  }
+  &.ivideon-tariffs__item-list-item--disabled {
+    color: rgba($color: $black, $alpha: 0.6);
   }
 }
 .ivideon-tariffs__item-list-img {
@@ -402,7 +408,7 @@
 }
 .ivideon-tariffs-toggle_text {
   display: inline-block;
-  padding: 4px 18px;
+  padding: 4px 16px;
   background-color: transparent;
   border-radius: 20px;
   font-size: 13px;
@@ -411,6 +417,9 @@
   transition: color $base-duration $base-timing,
     background-color $base-duration $base-timing;
   cursor: pointer;
+  @media all and (min-width: $tablet-bp) {
+    padding: 4px 18px;
+  }
   @media all and (min-width: 1500px) {
     font-size: 15px;
     line-height: 24px;

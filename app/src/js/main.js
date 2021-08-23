@@ -5,10 +5,13 @@ import "select2";
 require("~/node_modules/jquery-ui-dist/jquery-ui.min.js");
 import intlTelInput from "intl-tel-input";
 require("~/node_modules/intl-tel-input/build/js/utils.js");
+import noUiSlider from "nouislider";
 import MainHeader from "./common/main-header";
 import CounterNumber from "./common/counter";
 import { initSliders } from "./common/sliders";
 import { initCatalog } from "./common/catalog";
+
+window.noUiSlider = noUiSlider;
 
 document.addEventListener("DOMContentLoaded", function () {
   new MainHeader();
@@ -20,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initCatalog();
   initTelInput();
   scrollTopBtnInit();
+  checkProductPopupScrollListener();
 });
 
 const initAnchorLink = () => {
@@ -87,4 +91,17 @@ const scrollTopBtnInit = () => {
     );
     return false;
   });
+};
+const checkProductPopupScrollListener = () => {
+  checkProductPopupScroll();
+  $(window).scroll(checkProductPopupScroll);
+};
+
+const checkProductPopupScroll = () => {
+  const scroll = $(window).scrollTop();
+  if (scroll > 1) {
+    $(".js--product-buy-popup").addClass("show");
+  } else {
+    $(".js--product-buy-popup").removeClass("show");
+  }
 };

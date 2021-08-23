@@ -527,26 +527,26 @@
                         <button class="catalog-menu_sort-filter-btn catalog-menu_sort-item js--toggle-filter">Фильтр</button>
                     </div>
                     <div class="catalog-menu_type-wrapper">
-                        <button class="catalog-menu_type-item active">
+                        <a href="#" class="catalog-menu_type-item active">
                             <span class="catalog-menu_type-text">Все камеры</span>
                             <span class="catalog-menu_type-number">(95)</span>
-                        </button>
-                        <button class="catalog-menu_type-item">
+                        </a>
+                        <a href="#" class="catalog-menu_type-item">
                             <span class="catalog-menu_type-text">Цилиндрические</span>
                             <span class="catalog-menu_type-number">(12)</span>
-                        </button>
-                        <button class="catalog-menu_type-item">
+                        </a>
+                        <a href="#" class="catalog-menu_type-item">
                             <span class="catalog-menu_type-text">Купольные</span>
                             <span class="catalog-menu_type-number">(4)</span>
-                        </button>
-                        <button class="catalog-menu_type-item">
+                        </a>
+                        <a href="#" class="catalog-menu_type-item">
                             <span class="catalog-menu_type-text">Видеорегистраторы и NVR</span>
                             <span class="catalog-menu_type-number">(8)</span>
-                        </button>
-                        <button class="catalog-menu_type-item">
+                        </a>
+                        <a href="#" class="catalog-menu_type-item">
                             <span class="catalog-menu_type-text">Поворотные (PTZ)</span>
                             <span class="catalog-menu_type-number">(18)</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -566,15 +566,50 @@
                                             <div class="catalog-range-inputs">
                                                 <label class="catalog-range-input-wrapper">
                                                     <span class="visually-hidden">Стартовое значение</span>
-                                                    <input class="catalog-range-input js--catalog-range-start" type="text" readonly="readonly">
+                                                    <input class="catalog-range-input js--catalog-range-start" type="number">
                                                 </label>
                                                 <div class="catalog-range-input-sep"></div>
                                                 <label class="catalog-range-input-wrapper">
                                                     <span class="visually-hidden">Конечное значение</span>
-                                                    <input class="catalog-range-input js--catalog-range-stop" type="text" readonly="readonly">
+                                                    <input class="catalog-range-input js--catalog-range-stop" type="number">
                                                 </label>
                                             </div>
+
                                             <div class="catalog-range js--catalog-range"></div>
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", function () {
+                                                    var slider = document.querySelector(".js--catalog-range");
+                                                    var startRangeInput = document.querySelector(".js--catalog-range-start");
+                                                    var stopRangeInput = document.querySelector(".js--catalog-range-stop");
+                                                    var minVal = 0;
+                                                    var maxVal = 8999;
+                                                    noUiSlider.create(slider, {
+                                                        start: [999, 4999],
+                                                        connect: true,
+                                                        range: {
+                                                            min: minVal,
+                                                            max: maxVal,
+                                                        },
+                                                    });
+        
+                                                    slider.noUiSlider.on("update", function (values, handle) {
+                                                        var value = Math.round(values[handle]);
+        
+                                                        if (handle) {
+                                                            stopRangeInput.value = value;
+                                                        } else {
+                                                            startRangeInput.value = value;
+                                                        }
+                                                    });
+                                                    startRangeInput.addEventListener("change", function () {
+                                                        slider.noUiSlider.set([this.value, null]);
+                                                    });
+        
+                                                    stopRangeInput.addEventListener("change", function () {
+                                                        slider.noUiSlider.set([null, this.value]);
+                                                    });
+                                                });
+                                            </script>
                                         </div>
                                     </div>
                                     <div class="catalog-filter_sidebar-item">

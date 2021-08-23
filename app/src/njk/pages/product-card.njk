@@ -3,6 +3,64 @@
 {% set headerType = 'transparent' %}
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
+<div class="product_buy-popup js--product-buy-popup">
+    <div class="iv-container">
+        <div class="iv-row product_buy-popup-row">
+            <div class="product_buy-popup-img">
+                <img src="../images/img/product/product-slide.png" alt="Ivideon Cute 360">
+            </div>
+            <div class="product_buy-popup-middle">
+                <div class="product_buy-popup-text-col">
+                    <p class="product_buy-popup-type">Поворотная камера</p>
+                    <p class="product_buy-popup-name">Ivideon Cute 360</p>
+                </div>
+                <div class="product_buy-popup-feature-col">
+                    {% set featureItems = [
+                    {
+                    icon: '../images/img/product/instagram.svg',
+                    title: 'Full HD',
+                    text: 'Разрешение'
+                    },
+                    {
+                    icon: '../images/img/product/shield.svg',
+                    title: '3 года',
+                    text: 'Гарантия'
+                    },
+                    {
+                    icon: '../images/img/product/rotate.svg',
+                    title: '360°',
+                    text: 'Угол поворота'
+                    },
+                    {
+                    icon: '../images/img/product/wifi.svg',
+                    title: 'Wi-Fi',
+                    text: 'И Ethernet'
+                    }
+                    ] %}
+                    {% for item in featureItems %}
+                    <div class="product_buy-popup-feature-item">
+                        <div class="product_buy-popup-feature-icon">
+                            <img src="{{item.icon}}" alt="{{item.title}}">
+                        </div>
+                        <p class="product_buy-popup-feature-title">{{item.title}}</p>
+                        <p class="product_buy-popup-feature-text">{{item.text}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="product_buy-popup-cost-col">
+                    <p class="product_buy-popup-cost-title"><b>Скидка</b> на товар составит <b>20%</b></p>
+                    <div class="product_buy-popup-cost-wrapper">
+                        <p class="product_buy-popup-cost">5 390 <span class="product_buy-popup-cost-currency">₽</span>
+                        </p>
+                        <p class="product_buy-popup-cost-old">5 390 <span
+                                class="product_buy-popup-cost-old-currency">₽</span></p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-blue product_buy-popup-btn">Купить</button>
+        </div>
+    </div>
+</div>
 <div class="catalog-breadcrumbs">
     <div class="iv-container">
         {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
@@ -377,7 +435,7 @@
                         <div class="product-card_tab-dot-text-block">
                             <h4 class="product-card_tab-h4">Изображение</h4>
                             {% set dotText2 = [
-                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
+                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
                             ['Тип матрицы', '93°'],
                             ['Угол обзора', 'Нет'],
                             ['Вариофокальный объектив', '3.6мм'],
@@ -418,7 +476,7 @@
                         <div class="product-card_tab-dot-text-block">
                             <h4 class="product-card_tab-h4">Интерфейсы и питание</h4>
                             {% set dotText2 = [
-                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
+                            ['Разрешение матрицы', '1920x1080 1/2.7" CMOS, 2Мп'],
                             ['Тип матрицы', '93°'],
                             ['Угол обзора', 'Нет'],
                             ['Вариофокальный объектив', '3.6мм'],

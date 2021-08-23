@@ -17,11 +17,11 @@
             <label class="base-toggle_wrapper">
                 <input type="radio" name="payment" data-tab-id="payment1" class="base-toggle_input js--toggle-input"
                     checked>
-                <span class="base-toggle_text">Ivideon/Nobelic</span>
+                <span class="base-toggle_text base-toggle_text--tariffs">Ivideon/Nobelic</span>
             </label>
             <label class="base-toggle_wrapper">
                 <input type="radio" name="payment" data-tab-id="payment2" class="base-toggle_input js--toggle-input">
-                <span class="base-toggle_text">Другие бренды</span>
+                <span class="base-toggle_text base-toggle_text--tariffs">Другие бренды</span>
             </label>
         </div>
     </div>
@@ -42,11 +42,11 @@
                             ['Удаленный просмотр локальной записи за последние 8 часов','cloud'],
                             ['Количество пользователей 1','user-plus'],
                             ['До 10 минут экспорт видео в формат MP4','export'],
-                            ['1 камера на аккаунте','video'],
-                            ['Push и E-mail уведомления','envelope']
+                            ['1 камера на аккаунте','video']
                             ]%}
-                            {% for item, icon in tariffs1 %}
-                            <p class="ivideon-tariffs__item-list-item">
+                            {% for item, icon, disabled in tariffs1 %}
+                            <p
+                                class="ivideon-tariffs__item-list-item {% if disabled %}ivideon-tariffs__item-list-item--disabled{%endif%}">
                                 <svg class="ivideon-tariffs__item-list-img">
                                     <use xlink:href="../images/sprites/svg/sprite.symbol.svg#{{icon}}"></use>
                                 </svg>
@@ -74,10 +74,9 @@
                             {% set tariffs2 = [
                             ['Неограниченный удаленный просмотр локальной записи','play'],
                             ['Количество пользователей 25','user-plus'],
-                            ['Публичные транлсяции','monitor'],
                             ['До 8 часов экспорт видео в формат MP4','export'],
                             ['До 50 камер на аккаунте','video'],
-                            ['Push и E-mail уведомления','envelope']
+                            ['Публичные транлсяции','monitor']
                             ]%}
                             {% for item, icon in tariffs2 %}
                             <p class="ivideon-tariffs__item-list-item">
@@ -125,17 +124,17 @@
                         </p>
                         <div class="ivideon-tariffs__item-list">
                             {% set tariffs3 = [
-                            ['Запись видео и хранение в облаке', 'cloud'],
                             ['Неограниченный удаленный просмотр локальной записи', 'play'],
                             ['Количество пользователей 25', 'user-plus'],
-                            ['Публичные трансляции', 'monitor'],
-                            ['Умный поиск событий в видеозаписях', 'search'],
                             ['До 8 часов экспорт видео в формат MP4', 'export'],
                             ['До 50 камер на аккаунте', 'video'],
-                            ['Push и E-mail уведомления', 'envelope']
+                            ['Публичные трансляции', 'monitor'],
+                            ['Запись видео и хранение в облаке', 'cloud'],
+                            ['Умный поиск событий в видеозаписях', 'search', 'disabled']
                             ]%}
-                            {% for item, icon in tariffs3 %}
-                            <p class="ivideon-tariffs__item-list-item">
+                            {% for item, icon, disabled in tariffs3 %}
+                            <p
+                                class="ivideon-tariffs__item-list-item {% if disabled %}ivideon-tariffs__item-list-item--disabled{%endif%}">
                                 <svg class="ivideon-tariffs__item-list-img">
                                     <use xlink:href="../images/sprites/svg/sprite.symbol.svg#{{icon}}"></use>
                                 </svg>

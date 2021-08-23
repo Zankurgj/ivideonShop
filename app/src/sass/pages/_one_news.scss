@@ -70,9 +70,10 @@
   }
   p {
     @extend .iv-base-text;
+    font-size: 13px;
     margin-bottom: 18px;
     @media all and (min-width: $tablet-bp) {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   ul {
@@ -133,6 +134,9 @@
   }
   .ya-share2__item {
     margin-right: 28px;
+    @media all and (min-width: $tablet-bp) {
+      margin-right: 18px;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -152,7 +156,6 @@
     @media all and (min-width: $tablet-bp) {
       width: 40px;
       height: 40px;
-      margin-right: 18px;
     }
   }
   .ya-share2__title {
