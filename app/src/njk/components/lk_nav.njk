@@ -1,0 +1,40 @@
+{% macro lkNav(activeIndex) %}
+<nav class="lk-nav-wrapper">
+    <ul class="lk-nav-list">
+        {% set lkMenuItems = [
+        {
+        icon:'../images/icons/lk-bag.svg',
+        text:'Мои заказы'
+        },
+        {
+        icon:'../images/icons/lk-user.svg',
+        text:'Мои данные'
+        },
+        {
+        icon:'../images/icons/lk-bag.svg',
+        text:'Адреса доставки'
+        }
+        ] %}
+        {% for item in lkMenuItems %}
+        <li>
+            {%if loop.index == activeIndex%}
+            <span class="lk-nav-item lk-nav-item--active">
+                <span class="lk-nav-item-content">
+                    <img class="lk-nav-item-img" src="{{item.icon}}" alt="{{item.text}}">
+                    {{item.text}}
+                </span>
+            </span>
+            {%else%}
+            <a href="#" class="lk-nav-item">
+                <span class="lk-nav-item-content">
+                    <img class="lk-nav-item-img" src="{{item.icon}}" alt="{{item.text}}">
+                    {{item.text}}
+                </span>
+
+            </a>
+            {%endif%}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endmacro %}

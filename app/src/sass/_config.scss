@@ -33,7 +33,13 @@ body {
     overflow: hidden;
   }
 }
-
+.iv-page_lk {
+  .main-footer {
+    @media all and (min-width: $desktop-bp) {
+      display: none;
+    }
+  }
+}
 .iv-page__wrapper {
   width: 100%;
   min-width: 0;

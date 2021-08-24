@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    {% if not(pageTitle) %}
+    {% set pageTitle = "iVideon" %}
+    {% endif %}
+    <title>{{ pageTitle }}</title>
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="../../../dist/css/app.min.css" />
+</head>
+
+<body class="iv-page_lk">
+    {% if not(headerType) %}
+    {% set headerType = "default" %}
+    {% endif %}
+    {% from "app/src/njk/components/main_header.njk" import mainHeader %}
+    {{ mainHeader(headerType) }}
+    <div class="iv-page__wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include "app/src/njk/components/main_footer.njk" %}
+    <script src="../../../dist/js/app.min.js"></script>
+</body>
+
+</html>
