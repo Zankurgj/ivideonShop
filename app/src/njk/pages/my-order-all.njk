@@ -1,0 +1,118 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Личный кабинет (мои заказы)' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/lk.njk" %}
+{% block content %}
+{% from "app/src/njk/components/lk_nav.njk" import lkNav %}
+{{ lkNav(1) }}
+<div class="lk-wrapper">
+    <section class="lk-orders lk-orders--all">
+        <div class="iv-container lk-orders_container">
+            <h1 class="lk-orders_h1">Мои заказы</h1>
+            <p class="lk-orders_subtitle lk-orders_subtitle--all">Всего заказов: <a href="#"
+                    class="lk-orders_subtitle-color">16 заказов</a></p>
+            <div class="lk-orders-all-item-block">
+                <div class="lk-orders-all-item-title-wrapper">
+                    <p class="lk-orders-all-item-title">Заказ № 314-HO-280</p>
+                    <p class="lk-orders-all-item-subtitle">25 июля 2021, 16:14</p>
+                </div>
+                <p class="lk-orders-all-item-desktop-title">Список товаров</p>
+                <div class="lk-orders-all-item-wrapper">
+                    {% for i in range(0, 3) %}
+                    <div class="lk-orders-all-item">
+                        <div class="lk-orders-all-img-col">
+                            <div class="lk-orders-all-img">
+                                <img src="../images/img/basket/item.png" alt="Ivideon Dome">
+                            </div>
+                        </div>
+                        <div class="lk-orders-all-inner-col">
+                            <div class="lk-orders-all-desc-col">
+                                <div class="lk-orders-all-desc-top">
+                                    <a href="#" class="lk-orders-all-desc-name">Видеоняни</a>
+                                    <span class="lk-orders-all-desc-model">MHR1042</span>
+                                </div>
+                                <p class="lk-orders-all-desc">
+                                    Камера видеонаблюдения Ivideon Dome (без микрофона)
+                                </p>
+                            </div>
+                            <div class="lk-orders-all-bottom-col">
+                                <div class="lk-orders-all-quantity-col">
+                                    <p class="lk-orders-all-quantity">1 товар</p>
+                                </div>
+                                <div class="lk-orders-all-price-col">
+                                    <span class="lk-orders-all-price-wrapper">
+                                        <span class="lk-orders-all-price">5 190 </span>
+                                        <span class="lk-orders-all-price-currency">₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="lk-orders-all-cost-block">
+                    <div class="lk-orders-all-cost-inner">
+                        <span class="lk-orders-all-cost-title">Стоимость товаров:</span>
+                        <span class="lk-orders-all-cost-text">4 400 <span
+                                class="lk-orders-all-cost-text-currency">₽</span></span>
+                    </div>
+                    <div class="lk-orders-all-cost-inner">
+                        <span class="lk-orders-all-cost-title">Стоимость доставки:</span>
+                        <span class="lk-orders-all-cost-text">990 <span
+                                class="lk-orders-all-cost-text-currency">₽</span></span>
+                    </div>
+                    <div class="lk-orders-all-cost-inner lk-orders-all-cost-inner--bottom">
+                        <span class="lk-orders-all-cost-title">Стоимость доставки:</span>
+                        <div class="lk-orders-all-cost-bottom-wrapper">
+                            <span class="lk-orders-all-cost-bottom-item">
+                                <span class="lk-orders-all-cost-bottom">5 190 </span>
+                                <span class="lk-orders-all-cost-bottom-currency">₽</span>
+                            </span>
+                            <span class="lk-orders-all-cost-bottom-item">
+                                <span class="lk-orders-all-cost-bottom-old">5 990 </span>
+                                <span class="lk-orders-all-cost-bottom-old-currency">₽</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-orders-all-desc-block">
+                    <div class="lk-orders-all-desc-wrapper">
+                        <p class="lk-orders-all-desc-title">Данные получателя</p>
+                        <p class="lk-orders-all-desc-text">
+                            Владислав Миронов <br> <b>a.shafiev@ivideon.com, + 7 (988) 540-40-20</b>
+                        </p>
+                    </div>
+                    <div class="lk-orders-all-desc-wrapper lk-orders-all-desc-wrapper-toright">
+                        <p class="lk-orders-all-desc-title">Адрес доставки</p>
+                        <p class="lk-orders-all-desc-text">
+                            г. Москва,Каширский проезд д. 17, стр. 12, база «Мосгоропторг» <br>
+                            <b>8 (916) 486 10 03</b> <br>
+                            Пн-Пт: <b>с 9:00 до 18:00</b> <br>
+                            Ближайшее метро: Варшавская
+                        </p>
+                    </div>
+                    <div class="lk-orders-all-desc-wrapper">
+                        <p class="lk-orders-all-desc-title">Способ доставки</p>
+                        <p class="lk-orders-all-desc-text">
+                            Доставка способом: <b>Самовывоз со склада Ivideon</b>
+                        </p>
+                    </div>
+                    <div class="lk-orders-all-desc-wrapper">
+                        <p class="lk-orders-all-desc-title">Способ оплаты</p>
+                        <p class="lk-orders-all-desc-text">
+                            Статус заказа:<b> оплачено</b>
+                        </p>
+                    </div>
+                    <div class="lk-orders-all-desc-wrapper">
+                        <p class="lk-orders-all-desc-title">Способ оплаты</p>
+                        <p class="lk-orders-all-desc-text">
+                            Статус заказа: <b>оплата онлайн</b>
+                        </p>
+                    </div>
+                </div>
+                <button class="btn-blue lk-orders-all-bottom-btn">Оплатить</button>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

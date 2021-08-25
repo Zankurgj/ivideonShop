@@ -81,3 +81,56 @@
     }
   }
 }
+.base-text-input {
+  width: 100%;
+  padding: 9px 24px 8px 24px;
+  border: 1px solid #d3dce6;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 27px;
+  color: rgb(132, 146, 166);
+  transition: border-color $base-duration $base-timing;
+  &::placeholder {
+    font-size: 13px;
+    line-height: 27px;
+    color: rgba(132, 146, 166, 0.8);
+  }
+  &:focus {
+    border-color: rgba($color: #d3dce6, $alpha: 0.6);
+  }
+}
+.base-text-input--search {
+  padding: 9px 36px 8px 24px;
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+.base-phone-wrapper {
+  .iti__selected-flag {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 1px;
+      height: 32px;
+      background-color: rgba($color: #8492a6, $alpha: 0.2);
+    }
+  }
+  .iti__flag {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  .iti--separate-dial-code .iti__selected-dial-code {
+    font-size: 13px;
+  }
+  .iti--allow-dropdown {
+    width: 100%;
+  }
+}

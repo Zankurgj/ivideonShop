@@ -1,0 +1,119 @@
+.search-section {
+  padding: 98px 0 71px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 216px 0 172px;
+  }
+}
+.search--container {
+  max-width: 1320px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+}
+.search-h1 {
+  margin-bottom: 14px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 36px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 26px;
+    font-size: 34px;
+    line-height: 35px;
+  }
+}
+.search-subtitle {
+  margin-bottom: 32px;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba($color: $steel, $alpha: 0.5);
+}
+.search-subtitle-color {
+  color: rgba($color: $blue, $alpha: 0.8);
+}
+.search-row {
+  margin-bottom: 52px;
+}
+.search-item_col {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-bottom: 26px;
+  @media all and (min-width: $tablet-bp) {
+    flex-basis: calc((100% - 15px) / 2);
+    max-width: calc((100% - 15px) / 2);
+    margin-right: 15px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: $large-bp) {
+    flex-basis: calc((100% - 15px * 2) / 3);
+    max-width: calc((100% - 15px * 2) / 3);
+    margin-right: 15px;
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1700px) {
+    flex-basis: calc((100% - 15px * 3) / 4);
+    max-width: calc((100% - 15px * 3) / 4);
+    margin-right: 15px;
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
+    &:nth-child(3n) {
+      margin-right: 15px;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  .catalog-item {
+    max-width: 400px;
+    @media all and (min-width: $tablet-bp) {
+      max-width: 100%;
+    }
+  }
+}
+.search-btn-bottom {
+  display: block;
+  width: 100%;
+  max-width: 298px;
+  margin: 0 auto;
+  @media all and (min-width: $tablet-bp) {
+    max-width: 214px;
+  }
+}
+
+// SEARCH FORM
+.search-form-wrapper {
+  max-width: 416px;
+}
+.search-form-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.search-form-title {
+  margin-bottom: 26px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #1f2d3d;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 15px;
+  }
+}
+.search-form-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-image: url("../images/icons/search-input.svg");
+}

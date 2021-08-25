@@ -10,21 +10,21 @@
         <div class="iv-container lk-orders_container">
             <h1 class="lk-orders_h1">Мои заказы</h1>
             <p class="lk-orders_subtitle">Всего заказов: <a href="#" class="lk-orders_subtitle-color">16 заказов</a></p>
-            <div class="lk-orders-item-title-wrapper">
-                <p class="lk-orders-item-title-col">
-                    Номер заказа
-                </p>
-                <p class="lk-orders-item-title-col">
-                    Дата
-                </p>
-                <p class="lk-orders-item-title-col">
-                    Общая стоимость заказа
-                </p>
-                <p class="lk-orders-item-title-col">
-                    Статус оплаты
-                </p>
-            </div>
             <div class="lk-orders-item-block">
+                <div class="lk-orders-item-title-wrapper">
+                    <p class="lk-orders-item-title-col">
+                        Номер заказа
+                    </p>
+                    <p class="lk-orders-item-title-col">
+                        Дата
+                    </p>
+                    <p class="lk-orders-item-title-col lk-orders-item-title-col--cost">
+                        Общая стоимость заказа
+                    </p>
+                    <p class="lk-orders-item-title-col lk-orders-item-title-col--statys">
+                        Статус оплаты
+                    </p>
+                </div>
                 <div class="lk-orders-item-wrapper">
                     {% for i in range(0, 3) %}
                     <div class="lk-orders-item">

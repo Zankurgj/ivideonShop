@@ -665,11 +665,14 @@
 }
 .catalog-item_btn-bottom {
   margin-right: 14px;
-  padding: 6px 18px 8px 18px;
+  padding: 6px 10px 8px 10px;
   font-size: 15px;
   line-height: 32px;
   &:last-child {
     margin-right: 0;
+  }
+  @media all and (min-width: 360px) {
+    padding: 6px 18px 8px 18px;
   }
   @media all and (min-width: $desktop-bp) {
     width: auto;
