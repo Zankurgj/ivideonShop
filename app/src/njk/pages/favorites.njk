@@ -15,14 +15,138 @@
             <h1 class="favorites-h1">Понравившиеся товары</h1>
             <button class="favorites_del-btn favorites_del-btn--desktop">Удалить все товары</button>
         </div>
-        <div class="iv-row favorites-row">
-            <!-- <div class="favorites-item">
-                <div class="favorites-item-img">
-                    <img src="" alt="">
+        <div class="favorites_inner-title-wrapper">
+            <div class="favorites_inner-title-row iv-row">
+                <div class="favorites_inner-title-col-name">
+                    <span class="favorites_inner-title">Наименование товара</span>
                 </div>
-
-            </div> -->
+                <div class="favorites_inner-title-col-cost">
+                    <span class="favorites_inner-title">Цена</span>
+                </div>
+                <div class="favorites_inner-title-col-quantity">
+                    <span class="favorites_inner-title">Наличие</span>
+                </div>
+                <div class="favorites_inner-title-col-price">
+                    <span class="favorites_inner-title">Стоимость</span>
+                </div>
+            </div>
         </div>
+        <div class="favorites_inner-row iv-row">
+            {% for i in range(0, 3) %}
+            <div class="favorites_item">
+                <div class="favorites_item-img-col">
+                    <div class="favorites_item-img">
+                        <img src="../images/img/basket/item.png" alt="Ivideon Dome">
+                    </div>
+                </div>
+                <div class="favorites_item-inner-col">
+                    <div class="favorites_item-middle-col">
+                        <div class="favorites_item-desc-col">
+                            <div class="favorites_item-desc-top">
+                                <a href="#" class="favorites_item-desc-name">Видеоняни</a>
+                                <span class="favorites_item-desc-model">MHR1042</span>
+                            </div>
+                            <p class="favorites_item-desc">
+                                Камера видеонаблюдения Ivideon Dome (без микрофона)
+                            </p>
+                        </div>
+                        <div class="favorites_item-cost-col">
+                            <div class="favorites_item-cost-wrapper">
+                                <span class="favorites_item-cost-item">
+                                    <span class="favorites_item-cost">5 190 </span>
+                                    <span class="favorites_item-cost-currency">₽</span>
+                                </span>
+                                <span class="favorites_item-cost-item">
+                                    <span class="favorites_item-cost-old">5 990 </span>
+                                    <span class="favorites_item-cost-old-currency">₽</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favorites_item-last-col">
+                        <div class="favorites_item-presence-col">
+                            <span class="favorites_item-presence">товар в наличии</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites_item-btn-col">
+                    <div class="favorites_item-price-col">
+                        <span class="favorites_item-price-wrapper">
+                            <span class="favorites_item-price">5 190 </span>
+                            <span class="favorites_item-price-currency">₽</span>
+                        </span>
+                        <button class="btn-blue favorites_item-btn">В корзину</button>
+                        <button class="favorites_item-del">
+                            <span class="visually-hidden">Удалить</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="favorites_del-btn favorites_del-btn--mobile">Удалить все товары</button>
+        <button class="btn-blue favorites-bottom-btn">Добавить все в корзину</button>
+    </div>
+</section>
+<section class="favorites-before">
+    <h2 class="mp-h2 favorites-before_h2">Ранее вы просматривали</h2>
+    <div class="favorites-before_slider--wrapper">
+        {% set promoSliderData = [
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 3,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 4,
+        badge: "Хит"
+        }
+        ] %}
+        {% from "app/src/njk/components/promo_slider.njk" import promoSlider %}
+        {{ promoSlider(promoSliderData) }}
     </div>
 </section>
 {% endblock %}
