@@ -1,0 +1,105 @@
+.s-checkout_section {
+  padding: 98px 0 168px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 216px 0 182px;
+  }
+}
+.s-checkout_container {
+  max-width: 1320px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+}
+.s-checkout_h1 {
+  padding-left: 44px;
+  margin-bottom: 42px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("../images/icons/success-circle.svg");
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 37px;
+  }
+}
+.s-checkout_top-text-block {
+  margin-bottom: 37px;
+  max-width: 477px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 48px;
+    padding-left: 44px;
+  }
+}
+.s-checkout_top-text {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 22px;
+  color: rgba(31, 45, 61, 0.5);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    color: $blue;
+    text-decoration: underline;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+.s-checkout_top-mail-text-block {
+  margin-bottom: 50px;
+  max-width: 477px;
+  @media all and (min-width: $tablet-bp) {
+    padding-left: 44px;
+    margin-bottom: 54px;
+  }
+}
+.s-checkout_top-mail-title {
+  margin-bottom: 12px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1f2d3d;
+}
+.s-checkout_top-mail-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(31, 45, 61, 0.8);
+}
+.s-checkout_top-mail-text-color {
+  color: $blue;
+}
+// TABLE
+.lk-orders-all-item-block--chekout {
+  @media all and (min-width: $desktop-bp) {
+    max-width: 1040px;
+    border: 1px solid #008cef;
+    border-radius: 33px;
+    overflow: hidden;
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.04),
+      0px 0px 33px rgba(0, 0, 0, 0.03);
+  }
+}
+.s-checkout_table-inner {
+  @media all and (min-width: $desktop-bp) {
+    margin: 0 70px;
+  }
+}
+.lk-orders-all-item-title-wrapper--checkout {
+  @media all and (min-width: $desktop-bp) {
+    background-color: $blue;
+    padding: 40px 70px 35px;
+  }
+  .lk-orders-all-item-title {
+    @media all and (min-width: $desktop-bp) {
+      color: #fff;
+    }
+  }
+  .lk-orders-all-item-subtitle {
+    @media all and (min-width: $desktop-bp) {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+<!-- Переменная из json, проставляет тайтл страницы -->
+{% set pageTitle = 'Гарантия' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="delivery_breadcrumbs">
+    <div class="iv-container">
+        {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+        {{ breadcrumbs([['Доставка']]) }}
+    </div>
+</div>
+<section class="delivery_section">
+    <div class="iv-container delivery_container">
+        <h1 class="delivery_h1">Курьерская доставка</h1>
+        <div class="delivery_top-text-wrapper">
+            <p class="delivery_top-text">
+                Мы осуществляем доставку во все регионы России, Беларуси и Казахстана собственной курьерской службой и
+                надежными, проверенными транспортными компаниями.
+            </p>
+            <p class="delivery_top-text">
+                При заказе на <span class="delivery_top-text-color">сумму от 40 000 рублей</span> доставка — <span
+                    class="delivery_top-text-color">бесплатно</span>!
+            </p>
+        </div>
+    </div>
+    <div class="iv-container delivery-tabs-container">
+        <div class="delivery-tabs_nav-wrapper">
+            <div class="delivery-tabs_nav-inner">
+                {% set deliveryTabArr = [
+                'Доставка по Москве',
+                'Доставка по Московской области',
+                'Доставка по России',
+                'Доставка по Беларуси',
+                'Доставка по Казахстану'
+                ] %}
+                {% for deliveryTab in deliveryTabArr %}
+                <label class="delivery-tabs_nav-item">
+                    <input type="radio" class="delivery-tabs_nav-input js--toggle-input" name="deliveryTab"
+                        data-tab-id="deliveryTab{{loop.index}}" {%if loop.first%}checked{%endif%}>
+                    <span class="delivery-tabs_nav-item-btn">{{deliveryTab}}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="iv-container delivery_container delivery_container--table">
+        {% set tableItems = [
+        {
+        title: 'Доставка курьером',
+        items: [
+        {
+        head1:"В день заказа с 17:00 до 21:00",
+        text1:"Только в пределах МКАД с понедельника по пятницу, если заказ <span>подтвержден и оплачен до
+            15:00.</span>",
+        head2:"600 рублей",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        },
+        {
+        head1:"На следующий рабочий день с 10:00 до 18:00",
+        text1:"Только с понедельника по пятницу, если заказ <span>подтвержден и оплачен до 22:00.</span>",
+        head2:"400 рублей",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        },
+        {
+        head1:"В день заказа с 16:00 до 21:00",
+        text1:"Только в пределах МКАД с понедельника по пятницу, если заказ <span>подтвержден и оплачен до
+            15:00.</span>",
+        head2:"500 рублей",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        },
+        {
+        head1:"Через 2-3 рабочих дня с 10:00 до 18:00",
+        text1:"Только с понедельника по пятницу.",
+        head2:"300 рублей.",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        },
+        {
+        head1:"Через 2-3 рабочих дня с 16:00 до 20:00",
+        text1:"Только с понедельника по пятницу.",
+        head2:"400 рублей",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        },
+        {
+        head1:"Доставка в субботу",
+        text1:"Возможна, если заказ подтвержден до 15:00 пятницы.",
+        head2:"300 рублей",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        }
+        ]
+        },
+        {
+        title: 'Доставка курьером СДЭК',
+        items: [
+        {
+        head1:"На следующий день",
+        text1:"",
+        head2:"Автоматически рассчитывается при оформлении заказа в соответствии с текущим тарифом транспортной
+        компании",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        }
+        ]
+        },
+        {
+        title: 'Постаматы и пункты выдачи СДЭК',
+        items: [
+        {
+        head1:"На следующий день",
+        text1:"",
+        head2:"Автоматически рассчитывается при оформлении заказа в соответствии с текущим тарифом транспортной
+        компании",
+        text2:"При заказе от 40 000 рублей доставка — <span>бесплатно.</span>"
+        }
+        ]
+        }
+        ]%}
+        {% for deliveryTab in deliveryTabArr %}
+        <div class="delivery-tabs_item {% if loop.first %}show{%endif%}" data-tab-name="deliveryTab"
+            data-tab="deliveryTab{{loop.index}}">
+
+            <div class="delivery_table delivery_table--mobile">
+                <div class="delivery_table-head">
+                    <div class="delivery_table-head-col">
+                        <p class="delivery_table-head-text">Тип доставки</p>
+                    </div>
+                </div>
+                <div class="delivery_table-body">
+                    {% for tableItem in tableItems %}
+                    <div class="delivery_spoiler-wrapper js-delivery-spoiler-parent">
+                        <div class="delivery_spoiler-title">
+                            <p class="delivery_table-title">{{tableItem.title}}</p>
+                            <button class="delivery_spoiler-btn js-delivery-spoiler-btn">
+                                <span class="visually-hidden">Показать или скрыть</span>
+                            </button>
+                        </div>
+                        <div class="delivery_spoiler-inner-wrapper js-delivery-spoiler-inner">
+                            {% for item in tableItem.items %}
+                            <div class="delivery_spoiler-inner">
+                                <div class="delivery_spoiler-item">
+                                    <p class="delivery_table-title delivery_table-title--mobile">Срок доставки</p>
+                                    <p class="delivery_table-subtitle">{{item.head1 | safe}}</p>
+                                    <p class="delivery_table-text">{{item.text1 | safe}}</p>
+                                </div>
+                                <div class="delivery_spoiler-item">
+                                    <p class="delivery_table-title delivery_table-title--mobile">Стоимость</p>
+                                    <p class="delivery_table-subtitle">{{item.head2 | safe}}</p>
+                                    <p class="delivery_table-text">{{item.text2 | safe}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="delivery_table delivery_table--desktop">
+                <div class="delivery_table-head">
+                    <div class="delivery_table-head-col">
+                        <p class="delivery_table-head-text">Тип доставки</p>
+                    </div>
+                    <div class="delivery_table-head-col">
+                        <p class="delivery_table-head-text">Срок доставки</p>
+                    </div>
+                    <div class="delivery_table-head-col">
+                        <p class="delivery_table-head-text">Стоимость</p>
+                    </div>
+                </div>
+                <div class="delivery_table-body">
+                    {% for tableItem in tableItems %}
+                    {% for item in tableItem.items %}
+                    <div class="delivery_table-row">
+                        {%if loop.first%}
+                        <div class="delivery_table-col">
+                            <p class="delivery_table-title">{{tableItem.title}}</p>
+                        </div>
+                        {% else%}
+                        <div class="delivery_table-col">
+                        </div>
+                        {%endif%}
+                        <div class="delivery_table-col">
+                            <p class="delivery_table-subtitle">{{item.head1 | safe}}</p>
+                            <p class="delivery_table-text">{{item.text1 | safe}}</p>
+                        </div>
+                        <div class="delivery_table-col">
+                            <p class="delivery_table-subtitle">{{item.head2 | safe}}</p>
+                            <p class="delivery_table-text">{{item.text2 | safe}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="iv-container delivery_container">
+        <h3 class="delivery_card-h3">Самовывоз</h3>
+        <div class="delivery_card-item">
+            <p class="delivery_card-title">Склад в Москве</p>
+            <div class="delivery_card-text-wrapper">
+                <p class="delivery_card-text">Каширский пр., д. 17, стр. 12, база «Мосгоропторг»</p>
+                <p class="delivery_card-text">8 800 555-42-97 (доб. 12)</p>
+            </div>
+            <a href="#" class="btn-blue delivery_card-btn">Показать на карте</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

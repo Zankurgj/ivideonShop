@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initTelInput();
   scrollTopBtnInit();
   checkProductPopupScrollListener();
+  deliverySpoilerListenerInit();
 });
 
 const initAnchorLink = () => {
@@ -104,4 +105,15 @@ const checkProductPopupScroll = () => {
   } else {
     $(".js--product-buy-popup").removeClass("show");
   }
+};
+
+const deliverySpoilerListenerInit = () => {
+  $(".js-delivery-spoiler-btn").on("click", (evt) => {
+    const btn = $(evt.currentTarget);
+    const parent = btn.parents(".js-delivery-spoiler-parent");
+    const spoiler = parent.children(".js-delivery-spoiler-inner");
+    parent.toggleClass("opened");
+    btn.toggleClass("opened");
+    spoiler.slideToggle(300);
+  });
 };
