@@ -1,0 +1,230 @@
+.compare_section {
+  padding: 98px 0 68px 0;
+  @media all and (min-width: $desktop-bp) {
+    padding: 172px 0 204px;
+  }
+}
+.compare_h1 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 43px;
+    font-size: 34px;
+    line-height: 35px;
+  }
+}
+.compare_iv-container {
+  max-width: 1320px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+}
+.compare_top {
+  margin-bottom: 28px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 65px;
+  }
+}
+.compare_del-btn {
+  font-size: 14px;
+  line-height: 32px;
+  color: rgba($color: $steel, $alpha: 0.5);
+}
+.compare_del-btn--desktop {
+  display: none;
+}
+// NAV
+.compare_nav-row {
+  flex-direction: column;
+}
+.compare_nav {
+  padding: 0 0 34px 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e9f2;
+}
+.compare_nav-item-wrapper {
+  position: relative;
+  max-width: 320px;
+  margin-bottom: 18px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.compare_nav-item-wrapper--active {
+  .compare_nav-item {
+    border-color: $blue;
+  }
+  .compare_nav-item-remove {
+    background-color: $blue;
+    color: #fff;
+  }
+}
+.compare_nav-item {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 30px;
+  border: 2px solid #e5e9f2;
+  border-radius: 20px;
+  transition: opacity $base-duration $base-timing;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+.compare_nav-item-name {
+  font-size: 12px;
+  line-height: 22px;
+  color: $black;
+}
+.compare_nav-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+}
+.compare_nav-item-remove {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  background: #eff2f7;
+  border-radius: 12px;
+  padding: 15px;
+  color: $steel;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.compare_nav-item-remove-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+// SLIDER
+.compare_product-slider {
+  margin-bottom: 40px;
+}
+.compare_product-slide {
+  border-right: 1px solid #e5e9f2;
+}
+// ITEM
+.compare_product-item {
+  margin: 0 auto;
+  max-width: 157px;
+  padding: 10px 32px;
+}
+// IMG
+.compare_product-item-img {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 26px;
+  transition: transform $base-duration $base-timing;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: -23px;
+    width: 130px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/img/common/slider-product-bg.svg");
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+  }
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 2;
+  }
+}
+.compare_product-item-inner {
+  position: relative;
+  padding-right: 18px;
+}
+
+// COST
+.compare_product-cost-wrapper {
+  display: flex;
+  align-items: center;
+}
+.compare_product-cost-item {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.compare_product-cost-item--old {
+  display: none;
+}
+.compare_product-cost {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: $black;
+}
+.compare_product-cost-currency {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 25px;
+  color: $black;
+}
+.compare_product-cost-old {
+  font-size: 16px;
+  line-height: 25px;
+  color: $black;
+  text-decoration: line-through;
+}
+.compare_product-cost-old-currency {
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+}
+// BTN BASKET
+.compare_product-item-basket-btn-mobile {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-color: $blue;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/icons/add.svg");
+}
+
+// TABLE
+.compare_table-title {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+}
+.compare_table-text {
+  font-size: 15px;
+  line-height: 28px;
+  color: rgba($color: $black, $alpha: 0.6);
+}

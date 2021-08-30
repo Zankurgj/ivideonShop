@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Условия обслуживания</title>
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="../../../dist/css/app.min.css" />
+</head>
+
+<body>
+
+
+
+    <header class="main-header">
+        <div class="main-header_inner">
+            <button class="main-header_menu-btn js--toggle-left-menu">
+                <span class="visually-hidden">Меню</span>
+                <svg class="svg-icon main-header_menu-icon">
+                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#menu-icon"></use>
+                </svg>
+            </button>
+            <div class="main-header_nav-container">
+                <nav class="main-header_nav">
+                    <a href="/" class="main-header_logo">
+                        <span class="visually-hidden">Главная страница</span>
+                    </a>
+                    <div class="main-header_nav-block-link">
+                        <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                            <span class="main-header_nav-link-item">Для Дома</span>
+                            <div class="main-header_nav-dropdown-inner">
+                                <div class="iv-container main-header_nav-dropdown-container">
+                                    <div class="main-header_nav-dropdown-img">
+                                        <img src="../images/img/menu/menu-banner.png" alt="">
+                                    </div>
+                                    <div class="iv-row main-header_nav-dropdown-row">
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Решения для бизнеса</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">FAQ</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                            <span class="main-header_nav-link-item">Для Бизнеса</span>
+                            <div class="main-header_nav-dropdown-inner">
+                                <div class="iv-container main-header_nav-dropdown-container">
+                                    <div class="main-header_nav-dropdown-img">
+                                        <img src="../images/img/menu/menu-banner.png" alt="">
+                                    </div>
+                                    <div class="iv-row main-header_nav-dropdown-row">
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Решения для бизнеса</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">FAQ</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-header_nav-block-dropdown js--main-header-dropdown">
+                            <span class="main-header_nav-link-item">Акции</span>
+                            <div class="main-header_nav-dropdown-inner">
+                                <div class="iv-container main-header_nav-dropdown-container">
+                                    <div class="main-header_nav-dropdown-img">
+                                        <img src="../images/img/menu/menu-banner.png" alt="">
+                                    </div>
+                                    <div class="iv-row main-header_nav-dropdown-row">
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Видеоаналитика</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Analytics</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание лиц</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Детектор очередей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Контроль кассовых операций</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">СКУД</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Распознавание автомобильных
+                                            номеров</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Решения для бизнеса</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Офис</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Магазин</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Подсчет посетителей</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Склад</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Салон красоты</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">АЗС</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Гостиница</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Стройка</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">FAQ</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Видеонаблюдение для
+                                            бизнеса</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Bridge</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Ivideon Server</a>
+                                        </div>
+                                        <div class="main-header_nav-dropdown-item">
+                                            <p class="main-header_nav-dropdown-title">Тарифы</p>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеонаблюдения</a>
+                                            <a href="#" class="main-header_nav-dropdown-link">Для видеоаналитики</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="main-header_info">
+                    <a href="tel:+7-800-555-16-85" class="main-header_info-phone">8 (800) 555-16-85</a>
+                    <span class="main-header_info-text">с 8:00 до 22:00, без выходных</span>
+                </div>
+                <div class="main-header-right">
+                    <button class="main-header_icon-btn main-header_icon-btn--search js--toggle-search">
+                        <svg class="svg-icon main-header_btn-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#header-search"></use>
+                        </svg>
+                        <span class="visually-hidden">Поиск</span>
+                    </button>
+                    <button class="main-header_icon-btn main-header_icon-btn--global">
+                        <svg class="svg-icon main-header_btn-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#globe"></use>
+                        </svg>
+                        <span class="visually-hidden">TODO</span>
+                    </button>
+                    <!-- Авторизованный -->
+                    <div class="main-header_user-block">
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#clock-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#swap-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#heart-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                        <button class="main-header_user-btn main-header_user-btn--basket main-header_user-btn--show">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#add-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                            <span class="main-header_user-btn-bubble">12 999,00 ₽</span>
+                        </button>
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#user-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                    </div>
+                    <!-- Неавторизованный, раскоментить-->
+                    <!-- <button class="btn-white-border main-header-nav_btn">Войти</button> -->
+                </div>
+            </div>
+        </div>
+        <nav class="main-header_sub-nav js--header-subnav">
+            <div class="iv-container">
+                <div class="main-header_sub-nav-inner">
+                    <a href="#" class="main-header_sub-nav-item">Главная</a>
+                    <a href="#" class="main-header_sub-nav-item">Гарантия</a>
+                    <a href="#" class="main-header_sub-nav-item">Доставка</a>
+                    <a href="#" class="main-header_sub-nav-item">Оплата</a>
+                    <a href="#" class="main-header_sub-nav-item">Монтаж</a>
+                </div>
+            </div>
+        </nav>
+        <div class="main-header_search-block js--header-search">
+            <div class="iv-container main-header_search-container">
+                <label class="main-header_search-wrapper">
+                    <span class="visually-hidden">Поиск</span>
+                    <input type="search" class="main-header_search-input js--header-search-input" placeholder="Поиск">
+                </label>
+                <button class="main-header_search-close js--toggle-search">
+                    <span class="visually-hidden">Закрыть поиск</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="main-header_nav-dropdown-overlay js--top-menu-overlay"></div>
+
+    <div class="main-header_left-nav-wrapper js--left-menu">
+        <div class="main-header_left-nav-wrapper-overlay js--toggle-left-menu"></div>
+        <button class="main-header_left-nav-btn-close js--toggle-left-menu">
+            <span class="visually-hidden">закрыть</span>
+        </button>
+        <nav class="main-header_left-nav">
+            <div class="main-header_left-nav-item">
+                <p class="main-header_left-nav-item-title">Продукты</p>
+                <a href="#" class="main-header_left-nav-item-item">Для бизнеса</a>
+                <a href="#" class="main-header_left-nav-item-item">Для дома</a>
+                <a href="#" class="main-header_left-nav-item-item">Загрузки</a>
+            </div>
+            <div class="main-header_left-nav-item">
+                <p class="main-header_left-nav-item-title">Компания</p>
+                <a href="#" class="main-header_left-nav-item-item">Блог</a>
+                <a href="#" class="main-header_left-nav-item-item">Вакансия</a>
+                <a href="#" class="main-header_left-nav-item-item">Контакты</a>
+            </div>
+            <div class="main-header_left-nav-item">
+                <p class="main-header_left-nav-item-title">Поддержка</p>
+                <a href="#" class="main-header_left-nav-item-item">Центр помощи</a>
+                <a href="#" class="main-header_left-nav-item-item">Партнерам</a>
+                <a href="#" class="main-header_left-nav-item-item">FAQ</a>
+            </div>
+            <form class="main-header_left-form">
+                <label class="main-header_left-form-wrapper">
+                    <span class="main-header_left-form-title">Подписаться на рассылку</span>
+                    <input type="text" class="main-header_left-form-input" placeholder="E-mail*">
+                </label>
+                <button type="submit" class="btn-white main-header_left-form-btn">Подписаться на рассылку</button>
+            </form>
+        </nav>
+    </div>
+
+    <header class="main-header-bottom">
+        <div class="main-header-bottom_overlay js-header-menu-overlay js--close-bottom-menu"></div>
+        <div class="main-header-bottom_menu-wrapper js--bottom-menu-wrapper">
+
+            <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="1">
+                <div class="main-header-bottom_menu-header">
+                    <p class="main-header-bottom_menu-title">Бизнес</p>
+                    <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                </div>
+                <nav class="main-header-bottom_menu-nav">
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="2">
+                <div class="main-header-bottom_menu-header">
+                    <p class="main-header-bottom_menu-title">Бизнес</p>
+                    <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                </div>
+                <nav class="main-header-bottom_menu-nav">
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="3">
+                <div class="main-header-bottom_menu-header">
+                    <p class="main-header-bottom_menu-title">Бизнес</p>
+                    <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                </div>
+                <nav class="main-header-bottom_menu-nav">
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="4">
+                <div class="main-header-bottom_menu-header">
+                    <p class="main-header-bottom_menu-title">Бизнес</p>
+                    <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                </div>
+                <nav class="main-header-bottom_menu-nav">
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main-header-bottom_menu js--bottom-menu" data-menu-id="5">
+                <div class="main-header-bottom_menu-header">
+                    <p class="main-header-bottom_menu-title">Бизнес</p>
+                    <button class="main-header-bottom_menu-header-btn js--close-bottom-menu">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                </div>
+                <nav class="main-header-bottom_menu-nav">
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                    <div class="main-header-bottom_dropdown-wrapper">
+                        <button class="main-header-bottom_dropdown-btn js--bottom-menu-spoiler">Видеоаналитика</button>
+                        <div class="main-header-bottom_dropdown js--bottom-menu-spoiler-inner">
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                            <a href="#" class="main-header-bottom_dropdown-item">Ivideon Analytics</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <nav class="main-header-bottom_nav">
+
+
+            <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="1">
+                <span class="main-header-bottom_nav-item-icon">
+                <img src="../images/icons/home.svg" alt="Дом">
+            </span>
+                <span>Дом</span>
+            </button>
+
+            <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="2">
+                <span class="main-header-bottom_nav-item-icon">
+                <img src="../images/icons/work.svg" alt="Бизнес">
+            </span>
+                <span>Бизнес</span>
+            </button>
+
+            <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="3">
+                <span class="main-header-bottom_nav-item-icon">
+                <img src="../images/icons/bag.svg" alt="Магазин">
+            </span>
+                <span>Магазин</span>
+            </button>
+
+            <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="4">
+                <span class="main-header-bottom_nav-item-icon">
+                <img src="../images/icons/checklist.svg" alt="Тарифы">
+            </span>
+                <span>Тарифы</span>
+            </button>
+
+            <button href="#" class="main-header-bottom_nav-item js--bottom-menu-btn" data-menu-id="5">
+                <span class="main-header-bottom_nav-item-icon">
+                <img src="../images/icons/two_user.svg" alt="Партнеры">
+            </span>
+                <span>Партнеры</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <div class="iv-page__wrapper">
+
+        <div class="text-content_breadcrumbs">
+            <div class="iv-container">
+
+
+                <ul class="breadcrumb-item-wrapper">
+                    <li>
+                        <a href="/" class="breadcrumb-item">
+            Главная
+        </a>
+                        /
+                    </li>
+
+
+                    <li>
+                        <span href="#" aria-current="page" class="breadcrumb-item breadcrumb-item--last">
+            Условия обслуживания
+        </span>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+        <section class="text-content_section">
+            <div class="iv-container text-content_container">
+                <div class="iv-row">
+                    <div class="text-content_col">
+                        <h1 class="text-content_h1">Условия обслуживания</h1>
+                        <p class="text-content_top-text">ВНИМАНИЕ! ПРОЧТИТЕ ДАННОЕ СОГЛАШЕНИЕ ПЕРЕД ТЕМ, КАК ЗАГРУЖАТЬ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ИЛИ ИСПОЛЬЗОВАТЬ ПРОДУКТЫ ИЛИ ВЕБ-САЙТЫ IVIDEON. Соглашение об использовании сервиса Ivideon (Видеонаблюдение через интернет).</p>
+                        <div class="text-content_inner">
+                            <h2>1. Предмет соглашения</h2>
+                            <p>
+                                1.1. Использование программного обеспечения Ivideon и веб-сайта ru.ivideon.com (далее, «Сервис», исключая услуги, предоставленные компанией Ivideon в соответствии с отдельным письменным соглашением) регулируется условиями юридически обязательного соглашения
+                                между пользователем и Ivideon (далее, «Условия»). В настоящем документе содержатся основные Условия такого соглашения. «Ivideon» означает компанию АО «Мобильные видеорешения», основное место деятельности которой расположено
+                                по адресу: 121205, г. Москва, территория инновационного центра «Сколково», ул. Нобеля, дом 5, эт. 2, пом. 25, р. 2.
+                            </p>
+                            <p>
+                                1.2. Использование Сервиса (за исключением случаев, когда иное согласовано с Ivideon в письменной форме) означает согласие пользователя со всеми положениями настоящих Условий.
+                            </p>
+                            <p>
+                                1.3. Настоящие Условия представляют собой полное юридическое соглашение между пользователем и Ivideon и регулируют использование пользователем Сервиса (исключая, любые услуги, которые Ivideon может предоставлять пользователю в соответствии с отдельным
+                                соглашением), а также полностью заменяют собой любые предыдущие соглашения между вами и Ivideon в отношении Сервиса.
+                            </p>
+                            <h2>2. Согласие с Условиями</h2>
+                            <p>
+                                2.1. Пользователю необходимо дать свое согласие с Условиями, для того чтобы пользоваться Сервисом. Пользователь не вправе пользоваться Сервисом, если не принял Условия.
+                            </p>
+                            <p>2.2. Пользователь принимает Условия:</p>
+                            <p>
+                                2.2.1. если выбрал опцию «Вы принимаете наши Условия обслуживания», если такая опция предоставлена Ivideon в пользовательском интерфейсе Сервиса;
+                            </p>
+                            <p>
+                                2.2.2. если фактически пользуется Сервисом. В этом случае пользователь понимает и соглашается с тем, что Ivideon будет расценивать факт использования пользователем Сервиса, как согласие с Условиями с соответствующего момента времени.
+                            </p>
+                            <p>
+                                2.3. Пользователь не вправе пользоваться Сервисом и не может принять Условия, если не достиг установленного законом возраста, когда вправе заключать юридически обязательный договор с Ivideon, или является лицом, которому в соответствии с законодательством
+                                России или любого другого государства, включая государство, резидентом которого пользователь является или с территории которого осуществляет пользование Услугой, запрещено использование/получение такого Сервиса.
+                            </p>
+                            <p>2.4. Рекомендуем распечатать копию настоящих Условий и сохранить ее.</p>
+                            <h2>3. Изменение Условий</h2>
+                            <p>3.1. Ivideon оставляет за собой право внесения в любое время изменений в настоящие Условия, которые вступают в силу с момента их публикации. При внесении таких изменений Ivideon предоставит новую версию Условий.</p>
+                            <p>3.2. В случае несогласия пользователя с изменениями Условий пользователь обязан прекратить использовать Сервис. Продолжение использования Сервиса означает использование на условиях изменённых Условий.</p>
+                            <p>3.3. Пользователь соглашается, что Ivideon вправе направлять уведомления, включая уведомления о внесении изменений в Сервис, посредством электронной почты, обычной почтовой связи или путем размещения информации в Сервисе.</p>
+                            <h2>4. Предоставление Сервиса</h2>
+                            <p>
+                                4.1. Ivideon вправе внедрять новые разработки для предоставления пользователям наилучшего сервиса. Пользователь соглашается, что форма и характер Сервиса, предоставляемые Ivideon, могут меняться без предварительного уведомления.
+                            </p>
+                            <p>
+                                4.2. Пользователь признает и соглашается, что Ivideon вправе по собственному усмотрению прекратить (временно или окончательно) предоставление Сервиса или каких-нибудь отдельных функций сервиса всем пользователям или одному пользователю в частности без
+                                предварительного уведомления.
+                            </p>
+                            <p>
+                                4.3. Пользователь вправе прекратить пользоваться Сервисом без предварительного уведомления Ivideon об этом.
+                            </p>
+                            <p>
+                                4.4. Пользователь признает и соглашается с тем, что, если Ivideon лишает пользователя доступа к аккаунту, пользователь может утратить доступ к Сервису, сведениям пользовательского аккаунта, любым файлам или иной информации, содержащейся в пользовательском
+                                аккаунте.
+                            </p>
+                            <h2>5. Использование Сервиса</h2>
+                            <p>
+                                5.1. Для получения доступа к Сервису, от пользователя может потребоваться предоставление адреса электронной почты (e-mail) при регистрации для начала пользования Сервисом или в процессе авторизации с целью продолжения использования Сервисом. Пользователь
+                                соглашается, что любая информация, которую предоставляет Ivideon в процессе регистрации, всегда будет точной, правильной и актуальной.
+                            </p>
+                            <p>
+                                5.2. Пользователь соглашается пользоваться Сервисом исключительно для целей, разрешенных Сервисом и любыми применимыми законами, положениями, общепринятой практикой или руководствами в соответствующей юрисдикции (включая любые законы, касающиеся экспорта
+                                данных и программного обеспечения из или в Россию или иные государства).
+                            </p>
+                            <p>
+                                5.3. Пользователь соглашается не осуществлять (и не пытаться получить) доступ Сервису иным способом, кроме как через интерфейс, предоставленный Ivideon, за исключением случаев, когда такие действия были прямо разрешены отдельным соглашением с Ivideon.
+                            </p>
+                            <p>
+                                5.4. Пользователь соглашается не осуществлять какую-либо деятельность, которая препятствует предоставлению Сервиса (или работе соответствующих серверов или сетей, которые связаны с Сервисом) или нарушает его предоставление.
+                            </p>
+                            <p>
+                                5.5. Пользователь соглашается не воспроизводить, не дублировать, не копировать, не продавать, не осуществлять торговые операции и не перепродавать Сервис для каких-либо целей, за исключением случаев, когда такие действия были прямо разрешены условиями
+                                отдельного соглашения с Ivideon.
+                            </p>
+                            <p>
+                                5.6. Пользователь соглашается, что несет исключительную ответственность (и что Ivideon не несет ответственности перед пользователем или какими-либо третьими лицами) за любое нарушение обязательств пользователя, установленных настоящими Условиями, а также
+                                за все последствия таких нарушений (включая любые убытки или ущерб, которые может понести Ivideon).
+                            </p>
+                            <h2>6. Отказ от гарантий и ограничение ответственности</h2>
+                            <p>
+                                6.1. Сервис предоставляется «как есть», и Ivideon, не предоставляет пользователям каких-либо гарантий в отношении Сервиса. Ivideon, не предоставляют каких-либо заверений или гарантий в том, что:
+                            </p>
+                            <p>
+                                6.1.1. использование Сервиса будет отвечать требованиям пользователя, использование Сервиса не будет прерываться, будет доступно в любое удобное пользователю время, будет безопасным или не будет подвержено ошибкам или сбоям,
+                            </p>
+                            <p>6.1.2. любая информация, полученная в результате использования Сервиса, будет точной и достоверной,
+                            </p>
+                            <p>
+                                6.1.3. дефекты работы программного обеспечения, предоставляемого пользователю, как часть Сервиса, будут исправляться.
+                            </p>
+                            <p>
+                                6.2. К Сервису не применяются какие-либо условия, гарантии или иные положения (включая какие-либо подразумеваемые условия в отношении удовлетворительного качества, соответствия определенной цели использования или соответствия описанию), кроме тех, которые
+                                прямо указаны в Условиях.
+                            </p>
+                            <p>
+                                6.3. Настоящие Условия не влияют на действие прав, предусмотренных законом, присущих пользователю как потребителю, которые в силу договора, пользователь не может изменить и от которых не может отказаться.
+                            </p>
+                            <p>
+                                6.4. Настоящие Условия не исключают и не ограничивают ответственность Ivideon за причинение убытков в той степени, в которой такая ответственность не может быть исключена или ее действие не может быть ограничено применимым законодательством.
+                            </p>
+                            <p>
+                                6.5. При условии соблюдения Условий соглашения Ivideon не несет ответственности перед пользователем за какие-либо косвенные или возникшие вследствие чего-либо убытки, которые пользователь может понести. Это включает любую упущенную (прямо или косвенно)
+                                выгоду, любой ущерб, причиненный вашей деловой репутации или нематериальным активам, и любую утрату данных, понесенную пользователем; любой убыток или ущерб, который пользователь может понести в результате:
+                            </p>
+                            <p>
+                                6.5.1. того, что полагался на полноту, точность и наличие какой-либо рекламы, или в результате каких-либо отношений между пользователем и каким-либо рекламодателем или спонсором, чья реклама размещается в Сервисе;
+                            </p>
+                            <p>
+                                6.5.2. любых изменений, которые Ivideon вправе вносить в Сервис, или в результате прекращения (на постоянной или временной основе) предоставления Сервиса (или любой отдельной функции Сервиса);
+                            </p>
+                            <p>
+                                6.5.3. удаления, сбоя или невозможности сохранения какой-либо информации и иных коммуникационных данных, содержащихся в Сервисе или передаваемых через использование Сервиса;
+                            </p>
+                            <p>6.5.4. того, что пользователь не предоставил Ivideon точную информацию об аккаунте;</p>
+                            <p>
+                                6.5.5. того, что пользователь не смог обеспечить сохранность и конфиденциальность своего пароля или данных о своем аккаунте.
+                            </p>
+                            <p>
+                                6.6. Ограничение ответственности Ivideon перед пользователем, указанные в пункте 6.5, подлежат применению вне зависимости от того, известно ли было Ivideon о возможности возникновения таких убытков.
+                            </p>
+                            <h2>7. Защита аккаунта и информации пользователя</h2>
+                            <p>
+                                7.1. Ivideon считает информацию об использовании Сервиса пользователем, равно как и содержание сеансов видеотрансляций и видеозаписей конфиденциальной информацией. Сервис не ведет наблюдение за видеотрансляцими и видеозаписями пользователей и не передает
+                                сведения о пользователях третьим лицам.
+                            </p>
+                            <p>
+                                7.2. Пользователь соглашается, что несет ответственность за сохранение конфиденциальности паролей, связанных с любым аккаунтом, используемыми пользователем для доступа к Сервису. Следовательно, пользователь соглашается, что несет исключительную ответственность
+                                перед Ivideon за все действия, которые совершены при использовании своего аккаунта.
+                            </p>
+                            <p>
+                                7.3. Пользователь соглашается незамедлительно уведомить Ivideon, если станет известно о любом несанкционированном использовании своего пароля и аккаунта.
+                            </p>
+                            <h2>8. Информация, предоставляемая в ходе пользования Сервиса</h2>
+                            <p>
+                                8.1. Пользователь признает, что ответственность за любую информацию (такую как файлы звуковые, видео файлы и иные изображения), к которой может иметь доступ как к части Сервиса или через использование Сервиса, несет лицо, предоставившее такую информацию.
+                            </p>
+                            <p>
+                                8.2. Пользователь понимает, что такая информация, предоставленная как часть Сервиса, включая, но не ограничиваясь рекламой в рамках Сервиса и информация, размещенная спонсорами в рамках Сервиса, может являться объектом интеллектуальной собственности,
+                                права на которую защищены и принадлежат спонсорам или рекламодателям, которые размещают такую информацию в Ivideon (или иным лицам или компаниям от их имени). Пользователь не вправе вносить изменения, передавать в аренду,
+                                передавать на условиях займа, продавать, распространять или создавать производные работы на основе такой информации (полностью или в части), за исключением случаев, когда такие действия были прямо разрешены Ivideon или
+                                собственниками такой информации в соответствии с условиями отдельного соглашения.
+                            </p>
+                            <p>
+                                8.3. Ivideon оставляет за собой право (однако не обязан) осуществлять предварительную проверку, просмотр, помечать, выбирать, изменять, не допускать к размещению или убирать часть или всю информацию из Сервиса.
+                            </p>
+                            <p>
+                                8.4. Пользователь понимает, что при использовании Сервиса может обнаружить информацию, которую может счесть содержащим информацию оскорбительного, недостойного или непристойного характера, в таком случае пользователь использует Сервис на свой риск.
+                            </p>
+                            <p>
+                                8.5. Пользователь соглашается, что несет исключительную ответственность (и что Ivideon не несет ответственности перед пользователем или какими-либо третьими лицами) за любую информацию, которую создает, передает или отображает на экране в ходе использования
+                                Сервиса, а также за все последствия таких действий (включая любые убытки или ущерб, которые может понести Ivideon).
+                            </p>
+                            <h2>9. Имущественные права</h2>
+                            <p>
+                                9.1. Пользователь соглашается, что Ivideon обладает всеми имущественными и неимущественными правами в отношении Сервиса, включая любые права интеллектуальной собственности в отношении Сервиса (вне зависимости от того, зарегистрированы такие права или
+                                нет, а также вне зависимости от юрисдикции, где такие права могут возникнуть).
+                            </p>
+                            <p>
+                                9.2. Пользователь признает, что Сервис может содержать информацию, которая будет расцениваться Ivideon как конфиденциальная, и пользователь не вправе раскрывать такую информацию без предварительного письменного согласия Ivideon.
+                            </p>
+                            <p>
+                                9.3. За исключением случаев, когда иное согласовано с Ivideon в письменной форме, никакие положения настоящих Условий не предоставляют пользователю право использовать какие-либо фирменные наименования, товарные знаки, знаки обслуживания, логотипы, доменные
+                                имена, бренды или иные отличительные знаки Ivideon.
+                            </p>
+                            <p>
+                                9.4. Ivideon соглашается, что не приобретает каких-либо имущественных или неимущественных прав от пользователя в отношении информации, которую пользователь передает посредством использования Сервиса, включая любые права интеллектуальной собственности,
+                                которые могут существовать в отношении такой информации (вне зависимости от того, зарегистрированы такие права или нет, а также вне зависимости от юрисдикции, в которой такие права принадлежат пользователю).За исключением
+                                случаев, когда иное согласовано с Ivideon в письменной форме, пользователь соглашается, что несет ответственность за охрану и использование таких прав и что Ivideon не обязан осуществлять такие действия от имени пользователя.
+                            </p>
+                            <p>
+                                9.5. Пользователь соглашается не удалять, не скрывать, не изменять какие-либо знаки принадлежности прав (включая знаки авторских прав и товарные знаки), которые могут находиться или содержаться на/в Сервисе.
+                            </p>
+                            <p>
+                                9.6. За исключением случаев, когда иное прямо разрешено Ivideon в письменной форме, пользователь соглашается с тем, что при использовании Сервиса не будет использовать какие-либо товарные знаки, знаки обслуживания, фирменные наименования или логотипы
+                                какой-либо организации или компании таким образом или с таким намерением, что это могло бы внести неясность в идентификацию владельца или уполномоченного пользователя таких знаков, наименований или логотипов.
+                            </p>
+                            <p>
+                                9.7. Для возврата остатка денежных средств, зачисленных на баланс пользователя, необходимо обратиться по адресу support@ivideon.ru, указав логин и причину возврата.
+                            </p>
+                            <h2>10. Лицензия Ivideon</h2>
+                            <p>
+                                10.1. Ivideon предоставляет пользователю на условиях безвозмездности личную и неисключительную лицензию (без ограничения территории действия и не подлежащую передаче или уступке третьим лицам) на использование программного обеспечения, в рамках предоставляемого
+                                Ivideon Сервиса. Такая лицензия предназначена исключительно для того, чтобы обеспечить пользователю возможность использования Сервиса и получения выгоды от предоставляемого Ivideon Сервиса в порядке, указанном в Условиях.
+                            </p>
+                            <p>
+                                10.2. Пользователь не вправе (в том числе не вправе разрешать кому-либо) изменять, создавать производные работы, разбирать программу на составляющие коды, декомпилировать или иным образом пытаться получить исходный код программного обеспечения или любой
+                                его части, за исключением случаев, когда такие действия прямо разрешены или требуются в соответствии с законом или когда пользователем прямо получено письменное разрешение Ivideon на совершение таких действий.
+                            </p>
+                            <p>
+                                10.3. За исключением случаев, когда Ivideon предоставил пользователю письменное разрешение на совершение таких действий, пользователь не вправе уступать (или предоставлять сублицензию) права на использование программного обеспечения или иным образом передавать
+                                любую часть прав пользователя на использование программного обеспечения.
+                            </p>
+                            <h2>11. Обновления Программного обеспечения</h2>
+                            <p>11.1. Используемое пользователем программное обеспечение в рамках Сервиса может автоматически загружать и устанавливать обновления, предоставляемые Ivideon. Такие обновления созданы для того, чтобы улучшать или развивать Сервис,
+                                и могут быть предоставлены в форме отдельных исправлений программных ошибок, улучшенных функций, новых модулей программного обеспечения или полностью новых версий. Пользователь соглашается получать и разрешает Ivideon предоставлять
+                                такие обновления в рамках использования Сервиса.</p>
+                            <h2>12. Реклама и иная информация в Сервисе</h2>
+                            <p>
+                                12.1. Предоставление некоторых услуг из Сервиса финансируется за счет доходов от рекламы, и Сервис может содержать рекламу. Порядок, форма и объем рекламы, размещаемой Ivideon в Сервисе, может меняться без предоставления отдельного уведомления пользователю.
+                                Пользователь соглашается, что Ivideon вправе размещать рекламу в услугах.
+                            </p>
+                            <p>
+                                12.2. Сервис может включать гиперссылки, ведущие на другие веб-сайт или к иным ресурсам. Ivideon может не иметь контроля в отношении каких-либо веб-сайтов или ресурсов, предоставляемых иными компаниями или лицами.
+                            </p>
+                            <p>
+                                12.3. Пользователь соглашается, что Ivideon не несет ответственности за доступность любых таких внешних сайтов или ресурсов и не предоставляет свое одобрение на какую-либо рекламу, продукты или иной материал, доступный на таких сайтах, ресурсах или посредством
+                                использования таких сайтов или ресурсов.
+                            </p>
+                            <p>
+                                12.4. Пользователь соглашается, что Ivideon не несет ответственности за какие-либо убытки или ущерб, которые может понести в результате предоставленной возможности доступа к таким внешним сайтам или ресурсам.
+                            </p>
+                            <h2>13. Прекращение отношений с Ivideon</h2>
+                            <p>
+                                13.1. Условия подлежат применению до момента прекращения их действия по инициативе пользователя или по инициативе Ivideon, как указано ниже.
+                            </p>
+                            <p>
+                                13.2. Пользователь может прекратить действие соглашения с Ivideon, если предоставит Ivideon уведомления об этом в любое время. Уведомление должно быть оформлено в письменной форме и направлено по адресу Ivideon: <a href="mailto:info@ivideon.ru">info@ivideon.ru</a>.
+                            </p>
+                            <p>13.3. Ivideon вправе в любое время прекратить действие соглашения с пользователем, если:</p>
+                            <p>
+                                13.3.1. пользователь нарушил какое-либо положение Условий (или совершили действия, которые явно указывают, что пользователь не намерен или не способен соблюдать положения Условий);
+                            </p>
+                            <p>
+                                13.3.2. Ivideon должен сделать это в силу закона (например, в случаях, когда предоставление пользователю Сервиса является или становится незаконным);
+                            </p>
+                            <p>
+                                13.3.3. партнер Ivideon, вместе с которым Ivideon предлагает Сервис, прекратил свои отношения с Ivideon или более не предлагает Сервис;
+                            </p>
+                            <p>
+                                13.3.4. Ivideon прекращает предоставление Сервиса пользователям, расположенным на территории государства, резидентом которого пользователь является или с территории которого использует Сервис;
+                            </p>
+                            <p>
+                                13.3.5. предоставление пользователю Сервиса со стороны Ivideon, по мнению Ivideon, более не является коммерчески выгодным.
+                            </p>
+                            <p>
+                                13.4. Прекращение настоящих Условий не влияет на какие-либо права, обязательства и ответственность, применимые к пользователю или Ivideon (или возникшие в течение действия Условий) или в отношении которых прямо указано, что их действие не ограничено временем.
+                            </p>
+                            <h2>14. Прочие Условия</h2>
+                            <p>
+                                14.1. Настоящие Условия и отношения между пользователем и Ivideon регулируются действующим законодательством РФ. Пользователь и Ivideon соглашаются подчиняться при возникновении любых споров, возникающих в связи с настоящими Условиями, исключительной
+                                юрисдикции судов РФ.
+                            </p>
+                            <p>
+                                14.2. При предоставлении Ivideon перевода Условий с русского языка, пользователь соглашается, что такой перевод предоставлен исключительно для удобства ознакомления, а отношения с Ivideon регулируются русскоязычной версией Условий.
+                            </p>
+                            <p>
+                                14.3. В случае противоречий между русскоязычной версией Условий и ее переводом версия Условий на русском языке имеет преимущественную силу.
+                            </p>
+                            <p>
+                                14.4. Пользователь соглашается, что, несмотря на указанное в пункте 14.1, соглашается, что Ivideon вправе применять средства судебной защиты в форме наложения судебного запрета (или аналогичные средства судебной защиты немедленного действия) в любой юрисдикции.
+                            </p>
+                            <p>
+                                14.5. Если какой-либо суд, имеющий необходимую юрисдикцию для разрешения соответствующего вопроса, примет решение о том, что какое-либо положение настоящих Условий является недействительным, такое положение должно быть исключено из Условий и не затронет
+                                действие иных положений настоящих Условий. Иные положения настоящих Условий продолжают оставаться действительными и имеющими исковую силу.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-content_sidebar-col">
+                        <nav class="text-content_sidebar">
+                            <a href="#" class="text-content_sidebar-item">Публичная оферта</a>
+                            <a href="#" class="text-content_sidebar-item text-content_sidebar-item--active">Условия
+                        обслуживания</a>
+                            <a href="#" class="text-content_sidebar-item">Политика конфиденциальности</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <footer class="main-footer">
+        <div class="iv-container main-footer_container">
+            <div class="iv-row main-footer_row">
+                <div class="main-footer_about-col">
+                    <img class="main-footer_iv-logo" src="../images/icons/iv-footer.svg" alt="ivideon логотип">
+                    <img class="main-footer_sk-logo" src="../images/icons/skolkovo.svg" alt="сколково логотип">
+                    <a href="tel:+7-800-555-16-85" class="main-footer_phone">8 (800) 555-16-85</a>
+                    <p class="main-footer_time">Режим работы: с 8:00 до 22:00, без выходных</p>
+                    <div class="main-footer_about-social">
+                        <div class="main-footer_social-block">
+                            <a href="#" class="main-footer_social-item main-footer_social-item--vk">
+                                <span class="visually-hidden">Вконтакте</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--fb">
+                                <span class="visually-hidden">Фейсбук</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--tw">
+                                <span class="visually-hidden">Твиттер</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--ok">
+                                <span class="visually-hidden">Одноклассники</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--yt">
+                                <span class="visually-hidden">Ютуб</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-footer_block-icon">
+                        <a href="#" class="main-footer_platform main-footer_platform--ios">
+                            <span class="visually-hidden">app store</span>
+                        </a>
+                        <a href="#" class="main-footer_platform main-footer_platform--google">
+                            <span class="visually-hidden">google play</span>
+                        </a>
+                    </div>
+                </div>
+                <nav class="main-footer_nav-col">
+                    <div class="main-footer_nav-item">
+                        <p class="main-footer_nav-title">Каталог</p>
+                        <a href="#" class="main-footer_nav-link">Для дома</a>
+                        <a href="#" class="main-footer_nav-link">Для бизнеса</a>
+                        <a href="#" class="main-footer_nav-link">Тарифы</a>
+                        <a href="#" class="main-footer_nav-link">Загрузки</a>
+                        <a href="#" class="main-footer_nav-link">Архив</a>
+                    </div>
+                    <div class="main-footer_nav-item">
+                        <p class="main-footer_nav-title">Покупателю</p>
+                        <a href="#" class="main-footer_nav-link">Отследить заказ</a>
+                        <a href="#" class="main-footer_nav-link">Акции</a>
+                        <a href="#" class="main-footer_nav-link">Монтаж</a>
+                        <a href="#" class="main-footer_nav-link">Доставка</a>
+                        <a href="#" class="main-footer_nav-link">Оплата</a>
+                        <a href="#" class="main-footer_nav-link">Гарантия</a>
+                        <a href="#" class="main-footer_nav-link">Возврат товара</a>
+                    </div>
+                    <div class="main-footer_nav-item">
+                        <p class="main-footer_nav-title">Поддержка</p>
+                        <a href="#" class="main-footer_nav-link">Центр помощи</a>
+                        <a href="#" class="main-footer_nav-link">Контакты</a>
+                    </div>
+                </nav>
+                <div class="main-footer_email-col">
+                    <form action="" class="main-footer_email-form">
+                        <p class="main-footer_email-title">Подписаться на рассылку</p>
+                        <label class="main-footer_email-input-wrapper">
+                            <span class="visually-hidden">Емейл</span>
+                            <input type="text" class="main-footer_email-input" placeholder="E-mail*" required>
+                        </label>
+                        <button type="submit" class="btn-blue main-footer_email-btn">Подписаться на рассылку</button>
+                    </form>
+                    <div class="main-footer_email-social">
+                        <div class="main-footer_social-block">
+                            <a href="#" class="main-footer_social-item main-footer_social-item--vk">
+                                <span class="visually-hidden">Вконтакте</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--fb">
+                                <span class="visually-hidden">Фейсбук</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--tw">
+                                <span class="visually-hidden">Твиттер</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--ok">
+                                <span class="visually-hidden">Одноклассники</span>
+                            </a>
+                            <a href="#" class="main-footer_social-item main-footer_social-item--yt">
+                                <span class="visually-hidden">Ютуб</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-footer_bottom-col">
+                    <div class="main-footer_copyright-wrapper">
+                        <p class="main-footer_copyright">© Ivideon 2010 - 2021</p>
+                    </div>
+                    <div class="main-footer_bottom-link-block">
+                        <a href="#" class="main-footer_bottom-link">Публичная оферта (для юр. лиц)</a>
+                        <a href="#" class="main-footer_bottom-link">Политика конфиденциальности</a>
+                        <a href="#" class="main-footer_bottom-link">Условия обсулуживания</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../dist/js/app.min.js"></script>
+</body>
+
+</html>

@@ -23,13 +23,14 @@
   }
 }
 .favorites-h1 {
+  margin-bottom: 22px;
   font-weight: 900;
-  font-size: 24px;
-  line-height: 32px;
-  color: $black;
+  font-size: 22px;
+  line-height: 36px;
   @media all and (min-width: $tablet-bp) {
     font-size: 34px;
     line-height: 35px;
+    margin-bottom: 43px;
   }
 }
 .favorites_del-btn {

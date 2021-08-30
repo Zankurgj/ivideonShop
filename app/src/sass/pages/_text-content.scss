@@ -1,0 +1,126 @@
+.text-content_breadcrumbs {
+  padding: 86px 0 0 0;
+  margin-bottom: 50px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 172px 0 0 0;
+    margin-bottom: 22px;
+  }
+}
+.text-content_container {
+  max-width: 1500px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 0 60px;
+  }
+}
+.text-content_section {
+  padding: 0 0 68px 0;
+  @media all and (min-width: $tablet-bp) {
+    padding: 0 0 130px 0;
+  }
+}
+.text-content_col {
+  flex-basis: 100%;
+  max-width: 100%;
+  @media all and (min-width: $desktop-bp) {
+    flex-basis: calc((100% - 280px));
+    max-width: calc((100% - 280px));
+    padding-right: 36px;
+  }
+}
+.text-content_sidebar-col {
+  flex-basis: 100%;
+  max-width: 100%;
+  @media all and (min-width: $desktop-bp) {
+    flex-basis: 280px;
+    max-width: 280px;
+  }
+}
+.text-content_h1 {
+  margin-bottom: 22px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 36px;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 34px;
+    line-height: 35px;
+    margin-bottom: 50px;
+  }
+}
+.text-content_top-text {
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba($color: $black, $alpha: 0.8);
+  a {
+    color: $blue;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.text-content_inner {
+  margin-bottom: 92px;
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba($color: $black, $alpha: 0.8);
+  @media all and (min-width: $desktop-bp) {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 50px 0 34px;
+    @media all and (min-width: $tablet-bp) {
+      font-size: 22px;
+      line-height: 24px;
+      margin: 53px 0 32px;
+    }
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  a {
+    color: $blue;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+// SIDEBAR
+.text-content_sidebar {
+  @media all and (min-width: $desktop-bp) {
+    position: sticky;
+    top: 146px;
+    right: 0;
+  }
+}
+.text-content_sidebar-item {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $gray;
+  text-decoration: underline;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+  }
+}
+.text-content_sidebar-item--active {
+  color: $blue;
+  text-decoration: none;
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+  }
+}

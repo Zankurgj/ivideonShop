@@ -9,31 +9,78 @@
 
 <body>
     <style>
+        .container {
+            padding: 0 24px;
+            margin: 0 auto;
+            max-width: 1920px;
+        }
+
+        @media all and (min-width: 1200px) {
+            .container {
+                padding: 0 60px;
+            }
+        }
+
+        @media all and (min-width: 1366px) {
+            .container {
+                padding: 0 80px;
+            }
+        }
+
+        @media all and (min-width: 1920px) {
+            .container {
+                padding: 50px 160px;
+            }
+        }
+
+        ol {
+            color: #008cef;
+        }
+
         a {
-            display: block;
+            display: table;
+            margin-bottom: 12px;
+            color: #008cef;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            margin-bottom: 40px;
         }
     </style>
     <div class="container">
-        <a href="./dist/html/mainpage.html">Главная страница</a>
-        <a href="./dist/html/catalog.html">Каталог</a>
-        <a href="./dist/html/product-card.html">Карточка товара</a>
-        <a href="./dist/html/contacts.html">Контакты</a>
-        <a href="./dist/html/warranty.html">Гарантия</a>
-        <a href="./dist/html/payment.html">Способы оплаты</a>
-        <a href="./dist/html/return.html">Возврат товара</a>
-        <a href="./dist/html/tariffs.html">Тарифы</a>
-        <a href="./dist/html/news.html">Новости и акции</a>
-        <a href="./dist/html/one_news.html">Типовая новости и акции</a>
-        <a href="./dist/html/basket.html">Корзина</a>
-        <a href="./dist/html/checkout.html">Оформление заказа</a>
-        <a href="./dist/html/my-order.html">Личный кабинет (мои заказы)</a>
-        <a href="./dist/html/my-order-all.html">Личный кабинет (все заказы)</a>
-        <a href="./dist/html/search.html">Страница поиска</a>
-        <a href="./dist/html/search-empty.html">Страница поиска (пустой)</a>
-        <a href="./dist/html/tracking.html">Отслеживание заказа</a>
-        <a href="./dist/html/favorites.html">Страница избранное</a>
-        <a href="./dist/html/successful-checkout.html">Успешное оформление заказа</a>
-        <a href="./dist/html/delivery.html">Доставка</a>
+        <img class="logo" src="./dist/images/icons/iv-footer.svg" alt="ivideon логотип">
+        <ol>
+            <li><a href="./dist/html/mainpage.html">Главная страница</a></li>
+            <li><a href="./dist/html/catalog.html">Каталог</a></li>
+            <li><a href="./dist/html/product-card.html">Карточка товара</a></li>
+            <li><a href="./dist/html/contacts.html">Контакты</a></li>
+            <li><a href="./dist/html/warranty.html">Гарантия</a></li>
+            <li><a href="./dist/html/payment.html">Способы оплаты</a></li>
+            <li><a href="./dist/html/return.html">Возврат товара</a></li>
+            <li><a href="./dist/html/tariffs.html">Тарифы</a></li>
+            <li><a href="./dist/html/news.html">Новости и акции</a></li>
+            <li><a href="./dist/html/one_news.html">Типовая новости и акции</a></li>
+            <li><a href="./dist/html/basket.html">Корзина</a></li>
+            <li><a href="./dist/html/checkout.html">Оформление заказа</a></li>
+            <li><a href="./dist/html/my-order.html">Личный кабинет (мои заказы)</a></li>
+            <li><a href="./dist/html/my-order-all.html">Личный кабинет (все заказы)</a></li>
+            <li><a href="./dist/html/search.html">Страница поиска</a></li>
+            <li><a href="./dist/html/search-empty.html">Страница поиска (пустой)</a></li>
+            <li><a href="./dist/html/tracking.html">Отслеживание заказа</a></li>
+            <li><a href="./dist/html/favorites.html">Страница избранное</a></li>
+            <li><a href="./dist/html/successful-checkout.html">Успешное оформление заказа</a></li>
+            <li><a href="./dist/html/delivery.html">Доставка</a></li>
+            <li><a href="./dist/html/public-offer.html">Публичная оферта</a></li>
+            <li><a href="./dist/html/terms-of-service.html">Условия обслуживания</a></li>
+            <li><a href="./dist/html/policy.html">Политика конфиден­циальности</a></li>
+            <li><a href="./dist/html/help.html">Центр помощи</a></li>
+            <li><a href="./dist/html/compare.html">Сравнение товаров</a></li>
+        </ol>
     </div>
 </body>
 

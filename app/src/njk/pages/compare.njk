@@ -1,0 +1,151 @@
+{% set pageTitle = 'Сравнение товаров' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="compare_section">
+    <div class="iv-container compare_iv-container">
+        <div class="compare_top">
+            <h1 class="compare_h1">Сравнение товаров</h1>
+            <button class="compare_del-btn compare_del-btn--desktop">Удалить все товары</button>
+        </div>
+        <div class="compare_nav">
+            <div class="iv-row compare_nav-row">
+                <div class="compare_nav-item-wrapper compare_nav-item-wrapper--active">
+                    <a href="#" class="compare_nav-item">
+                        <span class="compare_nav-item-name">Видеоняни</span>
+                        <span class="compare_nav-item-text">3 товара</span>
+                    </a>
+                    <button class="compare_nav-item-remove">
+                        <svg class="svg-icon compare_nav-item-remove-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
+                        </svg>
+                        <span class="visually-hidden">Удалить</span>
+                    </button>
+                </div>
+                <div class="compare_nav-item-wrapper">
+                    <a href="#" class="compare_nav-item">
+                        <span class="compare_nav-item-name">Видеоняни</span>
+                        <span class="compare_nav-item-text">4 товара</span>
+                    </a>
+                    <button class="compare_nav-item-remove">
+                        <svg class="svg-icon compare_nav-item-remove-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
+                        </svg>
+                        <span class="visually-hidden">Удалить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="compare_product-slider js--compare-slider">
+        {% for i in range(0, 4) %}
+        <div class="compare_product-slide">
+            <div class="compare_product-item">
+                <div class="compare_product-item-img">
+                    <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                </div>
+                <div class="compare_product-item-inner">
+                    <div class="compare_product-cost-wrapper">
+                        <span class="compare_product-cost-item">
+                            <span class="compare_product-cost">5 190 </span>
+                            <span class="compare_product-cost-currency">₽</span>
+                        </span>
+                        <span class="compare_product-cost-item compare_product-cost-item--old">
+                            <span class="compare_product-cost-old">5 390 </span>
+                            <span class="compare_product-cost-old-currency">₽</span>
+                        </span>
+                    </div>
+                    <button class="compare_product-item-basket-btn-mobile">
+                        <span class="visually-hidden">В корзину</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="iv-container compare_iv-container">
+        <div class="compare_table-wrapper">
+            <div class="compare_table-row">
+                <p class="compare_table-title">Цена товара</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">2 999 ₽</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Бренд модели</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">Ivideon</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Форм-фактор камеры</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">Цилиндрическая (Bullet)</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Тип матрицы</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Цена товара</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">2 999 ₽</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Бренд модели</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">Ivideon</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Форм-фактор камеры</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">Цилиндрическая (Bullet)</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="compare_table-row">
+                <p class="compare_table-title">Тип матрицы</p>
+                <div class="compare_table-slider js--compare-slider">
+                    {% for i in range(0, 4) %}
+                    <div class="compare_table-slide">
+                        <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
