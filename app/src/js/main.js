@@ -10,6 +10,7 @@ import MainHeader from "./common/main-header";
 import CounterNumber from "./common/counter";
 import { initSliders } from "./common/sliders";
 import { initCatalog } from "./common/catalog";
+require("@fancyapps/fancybox");
 
 window.noUiSlider = noUiSlider;
 

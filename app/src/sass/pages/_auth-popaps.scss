@@ -1,0 +1,10 @@
+.auth-popaps-section {
+  padding: 86px 0 28px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 172px 0 28px;
+  }
+  .btn-blue {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

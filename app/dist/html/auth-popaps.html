@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Страница поиска</title>
+    <title>Авторизация (попапы)</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="../../../dist/css/app.min.css" />
@@ -486,20 +486,11 @@
 
     <div class="iv-page__wrapper">
 
-        <section class="search-section">
-            <div class="iv-container search-container">
-                <h1 class="search-h1">Результаты поиска <span>“прпрпр”</span></h1>
-                <p class="search-subtitle">По Вашему запросу не найдено ни одного товара</p>
-                <form class="search-form-wrapper">
-                    <p class="search-form-title">Попробуйте ввести новый запрос</p>
-                    <label class="search-form-input-wrapper">
-                        <span class="visually-hidden">Поиск</span>
-                        <input type="search" class="base-text-input base-text-input--search" placeholder="Введите ваш запрос">
-                        <button class="search-form-btn" type="submit">
-                            <span class="visually-hidden">Поиск</span>
-                        </button>
-                    </label>
-                </form>
+        <section class="auth-popaps-section">
+            <div class="iv-container">
+                <button class="btn-blue" data-fancybox data-src="#signin-popup">Войти</button>
+                <button class="btn-blue" data-fancybox data-src="#restore-pwd-popup">Восстановить пароль</button>
+                <button class="btn-blue" data-fancybox data-src="#new-pwd-popup">Новый пароль</button>
             </div>
         </section>
 

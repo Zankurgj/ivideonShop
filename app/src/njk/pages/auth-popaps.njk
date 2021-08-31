@@ -1,0 +1,12 @@
+{% set pageTitle = 'Авторизация (попапы)' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="auth-popaps-section">
+    <div class="iv-container">
+        <button class="btn-blue" data-fancybox data-src="#signin-popup">Войти</button>
+        <button class="btn-blue" data-fancybox data-src="#restore-pwd-popup">Восстановить пароль</button>
+        <button class="btn-blue" data-fancybox data-src="#new-pwd-popup">Новый пароль</button>
+    </div>
+</section>
+{% endblock %}

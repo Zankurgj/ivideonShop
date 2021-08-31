@@ -1025,6 +1025,97 @@
             </div>
         </div>
     </footer>
+    <div class="base-popup_wrapper auth-popap_wrapper" id="signin-popup">
+        <button class="base-popup_close" onclick="$.fancybox.close()">
+            <span class="visually-hidden">закрыть</span>
+        </button>
+        <div class="base-popup_inner">
+            <form class="base-popup_form base-popup_form--auth base-popup_form--border">
+                <p class="base-popup_title">Авторизироваться</p>
+                <p class="base-popup_subtitle">Видеонаблюдение через интернет</p>
+                <div class="base-popup_form-wrapper">
+                    <label class="auth-popups_form-label">
+                        <span class="visually-hidden">Емейл</span>
+                        <input type="email" class="base-text-input" placeholder="E-mail*" required>
+                    </label>
+                    <label class="auth-popups_form-label base-pwd-label">
+                        <button class="base-pwd-btn js--pwd-btn" type="button">
+                            <span>Показать пароль</span>
+                        </button>
+                        <span class="visually-hidden">Пароль</span>
+                        <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Пароль*" required>
+                    </label>
+                </div>
+                <button type="button" class="auth-popup_blue-text-btn">Забыли пароль?
+                </button>
+                <button class="btn-blue auth-popup_submit-btn" type="submit">Войти</button>
+            </form>
+            <div class="auth-popup_sub-block">
+                <p class="auth-popup_sub-title">Еще не зарегистрировались?</p>
+                <a href="#" class="auth-popup_sub-btn">Пройти регистрацию</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-popup_wrapper auth-popap_wrapper" id="restore-pwd-popup">
+        <button class="base-popup_close" onclick="$.fancybox.close()">
+            <span class="visually-hidden">закрыть</span>
+        </button>
+        <div class="base-popup_inner">
+            <form class="base-popup_form base-popup_form--auth base-popup_form--border">
+                <p class="base-popup_title">Восстановить пароль</p>
+                <p class="base-popup_subtitle">Для сброса пароля мы отправим письмо на email</p>
+                <div class="base-popup_form-wrapper">
+                    <label class="auth-popups_form-label">
+                        <span class="visually-hidden">Емейл</span>
+                        <input type="email" class="base-text-input" placeholder="E-mail*" required>
+                    </label>
+                </div>
+                <button class="btn-blue auth-popup_submit-btn" type="submit">Войти</button>
+            </form>
+            <div class="auth-popup_sub-block">
+                <p class="auth-popup_sub-title">Еще не зарегистрировались?</p>
+                <a href="#" class="auth-popup_sub-btn">Пройти регистрацию</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-popup_wrapper auth-popap_wrapper" id="new-pwd-popup">
+        <button class="base-popup_close" onclick="$.fancybox.close()">
+            <span class="visually-hidden">закрыть</span>
+        </button>
+        <div class="base-popup_inner">
+            <form class="base-popup_form base-popup_form--auth">
+                <p class="base-popup_title">Создайте новый пароль</p>
+                <p class="base-popup_subtitle">Введите новый пароль для аккаунта</p>
+                <div class="base-popup_form-wrapper">
+                    <label class="auth-popups_form-label base-pwd-label">
+                        <button class="base-pwd-btn js--pwd-btn" type="button">
+                            <span>Показать пароль</span>
+                        </button>
+                        <span class="visually-hidden">Пароль</span>
+                        <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Пароль*" required>
+                    </label>
+                    <label class="auth-popups_form-label base-pwd-label">
+                        <button class="base-pwd-btn js--pwd-btn" type="button">
+                            <span>Показать пароль</span>
+                        </button>
+                        <span class="visually-hidden">Повторите пароль</span>
+                        <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Повторите пароль*" required>
+                    </label>
+                    <label class="auth-popups_form-label base_radio-wrapper base-pwd-label auth-popups_radio-wrapper">
+                        <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+                        <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+                        <span class="auth-popup_radio-text">Регистрируясь, вы принимаете <a href="#">Условия
+                            обслуживания</a>
+                        и <a href="#">Политику конфиденциальности</a>.
+                    </span>
+                    </label>
+                </div>
+                <button class="btn-blue auth-popup_submit-btn" type="submit">Создать новый пароль</button>
+            </form>
+        </div>
+    </div>
     <script src="../../../dist/js/app.min.js"></script>
 </body>
 
