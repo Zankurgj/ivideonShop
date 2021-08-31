@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Сравнение товаров</title>
+    <title>Регистраиця</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="../../../dist/css/app.min.css" />
@@ -484,471 +484,64 @@
         </nav>
     </header>
 
-    <div class="iv-page__wrapper">
+    <div class="iv-page__wrapper iv-page__wrapper--registration">
+        <section class="registration_wrapper">
+            <aside class="registration_sidebar">
+                <img src="../images/icons/ivideon_logo.svg" alt="Логотип iVideon" class="registration_sidebar-img">
+                <h1 class="registration_sidebar-h1">Сервис облачного видеонаблюдения</h1>
+                <p class="registration_sidebar-text">Пройдите регистрацию или войдите, если у вас уже есть аккаунт</p>
+            </aside>
+            <div class="registration_inner">
 
-        <section class="compare_section">
-            <div class="iv-container compare_iv-container">
-                <div class="compare_top">
-                    <h1 class="compare_h1">Сравнение товаров</h1>
-                    <!-- <button class="compare_del-btn compare_del-btn--desktop">Удалить все товары</button> -->
-                </div>
-                <div class="compare_nav">
-                    <div class="iv-row compare_nav-row">
-                        <div class="compare_nav-item-wrapper compare_nav-item-wrapper--active">
-                            <a href="#" class="compare_nav-item">
-                                <span class="compare_nav-item-name">Видеоняни</span>
-                                <span class="compare_nav-item-text">3 товара</span>
-                            </a>
-                            <button class="compare_nav-item-remove">
-                                <svg class="svg-icon compare_nav-item-remove-icon">
-                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
-                                </svg>
-                                <span class="visually-hidden">Удалить</span>
-                            </button>
-                        </div>
-                        <div class="compare_nav-item-wrapper">
-                            <a href="#" class="compare_nav-item">
-                                <span class="compare_nav-item-name">Видеоняни</span>
-                                <span class="compare_nav-item-text">4 товара</span>
-                            </a>
-                            <button class="compare_nav-item-remove">
-                                <svg class="svg-icon compare_nav-item-remove-icon">
-                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
-                                </svg>
-                                <span class="visually-hidden">Удалить</span>
-                            </button>
-                        </div>
-                        <div class="compare_nav-item-wrapper">
-                            <a href="#" class="compare_nav-item">
-                                <span class="compare_nav-item-name">Видеоняни</span>
-                                <span class="compare_nav-item-text">4 товара</span>
-                            </a>
-                            <button class="compare_nav-item-remove">
-                                <svg class="svg-icon compare_nav-item-remove-icon">
-                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
-                                </svg>
-                                <span class="visually-hidden">Удалить</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="compare_product-slider-wrapper js--compare-slider-container">
-                <div class="compare_product-slider js--compare-slider">
-
-                    <div class="compare_product-slide">
-                        <div class="compare_product-item">
-                            <div class="compare_product-item-top">
-                                <span class="compare_product-item-badge">Хит</span>
-                                <div class="compare_product-item-stars">
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                </div>
-                            </div>
-                            <div class="compare_product-item-img">
-                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                            </div>
-                            <div class="compare_product-item-inner">
-                                <p class="compare_product_type">Поворотная камера</p>
-                                <div class="compare_product-middle">
-                                    <p class="compare_product-name">Ivideon Cute 360</p>
-                                    <button class="compare_product-btn compare_product-btn--like">
-                                        <span class="visually-hidden">нравится</span>
-                                    </button>
-                                </div>
-                                <div class="compare_product-cost-wrapper">
-                                    <span class="compare_product-cost-item">
-                                <span class="compare_product-cost">5 190 </span>
-                                    <span class="compare_product-cost-currency">₽</span>
-                                    </span>
-                                    <span class="compare_product-cost-item compare_product-cost-item--old">
-                                <span class="compare_product-cost-old">5 390 </span>
-                                    <span class="compare_product-cost-old-currency">₽</span>
-                                    </span>
-                                </div>
-                                <button class="compare_product-item-basket-btn-mobile">
-                                    <span class="visually-hidden">В корзину</span>
+                <div class="registration_form-inner">
+                    <form class="registration_form registration_form--border">
+                        <h2 class="registration_form-title registration_form-title--reg">Регистраиця</h2>
+                        <p class="registration_form-subtitle registration_form-subtitle--reg">Введите свои данные для регистрации</p>
+                        <div class="registration_form-field-input">
+                            <label class="registration_form-label">
+                                <span class="visually-hidden">Имя</span>
+                                <input type="text" class="base-text-input" placeholder="Имя*" required>
+                            </label>
+                            <label class="registration_form-label">
+                                <span class="visually-hidden">Емейл</span>
+                                <input type="email" class="base-text-input" placeholder="E-mail*" required>
+                            </label>
+                            <label class="base-phone-wrapper registration_form-label">
+                                <span class="visually-hidden">Телефон</span>
+                                <input class="checkout-form_input" autocomplete="off" type="tel" id="phone">
+                            </label>
+                            <label class="registration_form-label base-pwd-label">
+                                <button class="base-pwd-btn js--pwd-btn" type="button">
+                                    <span>Показать пароль</span>
                                 </button>
-                                <button class="btn-blue compare_product-item-btn-desktop">В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="compare_product-slide">
-                        <div class="compare_product-item">
-                            <div class="compare_product-item-top">
-                                <span class="compare_product-item-badge">Хит</span>
-                                <div class="compare_product-item-stars">
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                </div>
-                            </div>
-                            <div class="compare_product-item-img">
-                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                            </div>
-                            <div class="compare_product-item-inner">
-                                <p class="compare_product_type">Поворотная камера</p>
-                                <div class="compare_product-middle">
-                                    <p class="compare_product-name">Ivideon Cute 360</p>
-                                    <button class="compare_product-btn compare_product-btn--like">
-                                        <span class="visually-hidden">нравится</span>
-                                    </button>
-                                </div>
-                                <div class="compare_product-cost-wrapper">
-                                    <span class="compare_product-cost-item">
-                                <span class="compare_product-cost">5 190 </span>
-                                    <span class="compare_product-cost-currency">₽</span>
-                                    </span>
-                                    <span class="compare_product-cost-item compare_product-cost-item--old">
-                                <span class="compare_product-cost-old">5 390 </span>
-                                    <span class="compare_product-cost-old-currency">₽</span>
-                                    </span>
-                                </div>
-                                <button class="compare_product-item-basket-btn-mobile">
-                                    <span class="visually-hidden">В корзину</span>
+                                <span class="visually-hidden">Пароль</span>
+                                <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Пароль*" required>
+                            </label>
+                            <label class="registration_form-label base-pwd-label">
+                                <button class="base-pwd-btn js--pwd-btn" type="button">
+                                    <span>Показать пароль</span>
                                 </button>
-                                <button class="btn-blue compare_product-item-btn-desktop">В корзину</button>
-                            </div>
+                                <span class="visually-hidden">Повторите пароль</span>
+                                <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Повторите пароль*" required>
+                            </label>
                         </div>
-                    </div>
-
-                    <div class="compare_product-slide">
-                        <div class="compare_product-item">
-                            <div class="compare_product-item-top">
-                                <span class="compare_product-item-badge">Хит</span>
-                                <div class="compare_product-item-stars">
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                </div>
-                            </div>
-                            <div class="compare_product-item-img">
-                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                            </div>
-                            <div class="compare_product-item-inner">
-                                <p class="compare_product_type">Поворотная камера</p>
-                                <div class="compare_product-middle">
-                                    <p class="compare_product-name">Ivideon Cute 360</p>
-                                    <button class="compare_product-btn compare_product-btn--like">
-                                        <span class="visually-hidden">нравится</span>
-                                    </button>
-                                </div>
-                                <div class="compare_product-cost-wrapper">
-                                    <span class="compare_product-cost-item">
-                                <span class="compare_product-cost">5 190 </span>
-                                    <span class="compare_product-cost-currency">₽</span>
-                                    </span>
-                                    <span class="compare_product-cost-item compare_product-cost-item--old">
-                                <span class="compare_product-cost-old">5 390 </span>
-                                    <span class="compare_product-cost-old-currency">₽</span>
-                                    </span>
-                                </div>
-                                <button class="compare_product-item-basket-btn-mobile">
-                                    <span class="visually-hidden">В корзину</span>
-                                </button>
-                                <button class="btn-blue compare_product-item-btn-desktop">В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="compare_product-slide">
-                        <div class="compare_product-item">
-                            <div class="compare_product-item-top">
-                                <span class="compare_product-item-badge">Хит</span>
-                                <div class="compare_product-item-stars">
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                    <span class="compare_product-item-star-icon"></span>
-
-                                </div>
-                            </div>
-                            <div class="compare_product-item-img">
-                                <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
-                            </div>
-                            <div class="compare_product-item-inner">
-                                <p class="compare_product_type">Поворотная камера</p>
-                                <div class="compare_product-middle">
-                                    <p class="compare_product-name">Ivideon Cute 360</p>
-                                    <button class="compare_product-btn compare_product-btn--like">
-                                        <span class="visually-hidden">нравится</span>
-                                    </button>
-                                </div>
-                                <div class="compare_product-cost-wrapper">
-                                    <span class="compare_product-cost-item">
-                                <span class="compare_product-cost">5 190 </span>
-                                    <span class="compare_product-cost-currency">₽</span>
-                                    </span>
-                                    <span class="compare_product-cost-item compare_product-cost-item--old">
-                                <span class="compare_product-cost-old">5 390 </span>
-                                    <span class="compare_product-cost-old-currency">₽</span>
-                                    </span>
-                                </div>
-                                <button class="compare_product-item-basket-btn-mobile">
-                                    <span class="visually-hidden">В корзину</span>
-                                </button>
-                                <button class="btn-blue compare_product-item-btn-desktop">В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="compare_product-slide">
-                        <div class="compare_product-slide-add">
-                            <a href="#" class="compare_product-slide-add-zone">
-                                <svg class="svg-icon compare_product-slide-add-icon">
-                                    <use xlink:href="../images/sprites/svg/sprite.symbol.svg#plus"></use>
-                                </svg>
-                                <span class="visually-hidden">Добавить товары к сравнению</span>
-                            </a>
-                            <p class="compare_product-slide-add-text">Добавить товары
-                                <br>к сравнению</p>
-                            <button class="btn-blue-border compare_product-slide-add-btn">Показать аналоги</button>
-                        </div>
+                        <label class="base_radio-wrapper registration_form-radio-wrapper">
+                            <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+                            <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+                            <span class="registration_form-radio-text">Регистрируясь, вы принимаете <a href="#">Условия обслуживания</a>
+                и <a href="#">Политику конфиденциальности</a>.
+            </span>
+                        </label>
+                        <button type="submit" class="btn-blue registration_form-submit-btn">Зарегистрироваться</button>
+                    </form>
+                    <div class="registration_sub-block">
+                        <p class="registration_sub-block-title">Уже есть созданный аккаунт</p>
+                        <button class="registration_sub-block-btn">Войти в аккаунт</button>
                     </div>
                 </div>
-            </div>
-            <div class="iv-container compare_iv-container">
-                <div class="compare_table-top">
-                    <p class="compare_table-top-title">Сравнение характеристик</p>
-                    <button class="compare_table-top-btn">Отображать только различия</button>
-                </div>
-                <div class="compare_table-wrapper">
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Цена товара</p>
-                        <div class="compare_table-slider js--compare-slider">
 
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Бренд модели</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Форм-фактор камеры</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Тип матрицы</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Цена товара</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">2 999 ₽</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Бренд модели</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Ivideon</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Форм-фактор камеры</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">Цилиндрическая (Bullet)</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compare_table-row">
-                        <p class="compare_table-title">Тип матрицы</p>
-                        <div class="compare_table-slider js--compare-slider">
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-                                <p class="compare_table-text">1/2.7’’ Progressive Scan CMOS</p>
-                            </div>
-
-                            <div class="compare_table-slide">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-
     </div>
     <footer class="main-footer">
         <div class="iv-container main-footer_container">

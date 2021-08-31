@@ -134,3 +134,29 @@
     width: 100%;
   }
 }
+// PWD
+.base-pwd-label {
+  position: relative;
+}
+.base-pwd-input {
+  padding-right: 40px;
+}
+.base-pwd-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 34px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("../images/icons/view-inactive.svg");
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  &:hover {
+    opacity: 0.8;
+  }
+  &.visible {
+    background-image: url("../images/icons/view-active.svg");
+  }
+}

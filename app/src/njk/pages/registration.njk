@@ -1,0 +1,53 @@
+{% set pageTitle = 'Регистраиця' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/registration.njk" %}
+{% block content %}
+<div class="registration_form-inner">
+    <form class="registration_form registration_form--border">
+        <h2 class="registration_form-title registration_form-title--reg">Регистраиця</h2>
+        <p class="registration_form-subtitle registration_form-subtitle--reg">Введите свои данные для регистрации </p>
+        <div class="registration_form-field-input">
+            <label class="registration_form-label">
+                <span class="visually-hidden">Имя</span>
+                <input type="text" class="base-text-input" placeholder="Имя*" required>
+            </label>
+            <label class="registration_form-label">
+                <span class="visually-hidden">Емейл</span>
+                <input type="email" class="base-text-input" placeholder="E-mail*" required>
+            </label>
+            <label class="base-phone-wrapper registration_form-label">
+                <span class="visually-hidden">Телефон</span>
+                <input class="checkout-form_input" autocomplete="off" type="tel" id="phone">
+            </label>
+            <label class="registration_form-label base-pwd-label">
+                <button class="base-pwd-btn js--pwd-btn" type="button">
+                    <span>Показать пароль</span>
+                </button>
+                <span class="visually-hidden">Пароль</span>
+                <input type="password" class="base-text-input base-pwd-input js--pwd-input" placeholder="Пароль*"
+                    required>
+            </label>
+            <label class="registration_form-label base-pwd-label">
+                <button class="base-pwd-btn js--pwd-btn" type="button">
+                    <span>Показать пароль</span>
+                </button>
+                <span class="visually-hidden">Повторите пароль</span>
+                <input type="password" class="base-text-input base-pwd-input js--pwd-input"
+                    placeholder="Повторите пароль*" required>
+            </label>
+        </div>
+        <label class="base_radio-wrapper registration_form-radio-wrapper">
+            <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+            <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+            <span class="registration_form-radio-text">Регистрируясь, вы принимаете <a href="#">Условия обслуживания</a>
+                и <a href="#">Политику конфиденциальности</a>.
+            </span>
+        </label>
+        <button type="submit" class="btn-blue registration_form-submit-btn">Зарегистрироваться</button>
+    </form>
+    <div class="registration_sub-block">
+        <p class="registration_sub-block-title">Уже есть созданный аккаунт</p>
+        <button class="registration_sub-block-btn">Войти в аккаунт</button>
+    </div>
+</div>
+{% endblock %}

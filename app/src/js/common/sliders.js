@@ -137,28 +137,33 @@ const initTariffSlider = () => {
   });
 };
 const initCompareSliders = () => {
-  // $(".slider1").slick({
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   arrows: true,
-  //   fade: true,
-  //   asNavFor: ".slider",
-  // });
-  // $(".slider2").slick({
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   asNavFor: ".slider",
-  //   dots: false,
-  //   centerMode: true,
-  //   focusOnSelect: true,
-  //   arrows: false,
-  // });
   $(".js--compare-slider").slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
     focusOnSelect: true,
     infinite: false,
+    mobileFirst: true,
     asNavFor: ".js--compare-slider",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   });
 };

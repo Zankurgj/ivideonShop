@@ -1,0 +1,27 @@
+{% set pageTitle = 'Подтверждение почты' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/registration.njk" %}
+{% block content %}
+<div class="registration_form-inner">
+    <form class="registration_form">
+        <h2 class="registration_form-title registration_form-title--reg">Подтверждение почты</h2>
+        <p class="registration_form-subtitle registration_form-subtitle--reg">Введите полученный код из письма на
+            электронной почте</p>
+        <div class="registration_form-field-input">
+            <label class="registration_form-label">
+                <span class="visually-hidden">Полученный код</span>
+                <input type="text" class="base-text-input" placeholder="Полученный код*" required>
+            </label>
+        </div>
+        <label class="base_radio-wrapper registration_form-radio-wrapper">
+            <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+            <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+            <span class="registration_form-radio-text">
+                Нажимая на кнопку “Подтвердить”, вы принимаете <a href="#">Условия обслуживания</a> и <a
+                    href="#">Политику конфиденциальности.</a>
+            </span>
+        </label>
+        <button type="submit" class="btn-blue registration_form-submit-btn">Подтвердить</button>
+    </form>
+</div>
+{% endblock %}

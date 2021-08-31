@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollTopBtnInit();
   checkProductPopupScrollListener();
   deliverySpoilerListenerInit();
+  togglePwdInputListenerInit();
 });
 
 const initAnchorLink = () => {
@@ -115,5 +116,18 @@ const deliverySpoilerListenerInit = () => {
     parent.toggleClass("opened");
     btn.toggleClass("opened");
     spoiler.slideToggle(300);
+  });
+};
+
+const togglePwdInputListenerInit = () => {
+  $(".js--pwd-btn").on("click", (evt) => {
+    const btn = $(evt.currentTarget);
+    const input = btn.siblings(".js--pwd-input");
+    btn.toggleClass("visible");
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
   });
 };

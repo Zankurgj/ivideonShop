@@ -1,0 +1,20 @@
+{% set pageTitle = 'Спасибо за регистрацию' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/registration.njk" %}
+{% block content %}
+<div class="registration_form-inner registration_form-inner--thx">
+    <div class="registration_form">
+        <div class="registration_form-title-wrapper">
+            <img class="registration_form-success-icon" src="../images/icons/success-reg.svg" alt="Успешно"
+                aria-hidden="true">
+            <h2 class="registration_form-title registration_form-title--thx">Спасибо за регистрацию</h2>
+        </div>
+        <span class="registration_form-radio-text registration_form-radio-text-thx">
+            Благодарим Вас за регистрацию на нашем сервисе. <br> <br>
+            Вы можете отслеживать статус заказа в <a href="#">личном кабинете</a> или на странице <a
+                href="#">отслеживания заказа</a>.
+        </span>
+        <a href="#" class="btn-blue registration_form-submit-btn">На главную страницу</a>
+    </div>
+</div>
+{% endblock %}
