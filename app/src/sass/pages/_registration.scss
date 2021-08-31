@@ -22,6 +22,7 @@
   }
   @media all and (min-width: $large-bp) {
     max-width: 643px;
+    padding: 166px 20px 76px 117px;
   }
 }
 .registration_sidebar-img {
@@ -53,6 +54,16 @@
   @media all and (min-width: $tablet-bp) {
     font-size: 18px;
     line-height: 28px;
+  }
+  @media all and (min-width: $desktop-bp) {
+    max-width: 346px;
+  }
+  .registration_sidebar-text-link {
+    color: #fff;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 // INNER
