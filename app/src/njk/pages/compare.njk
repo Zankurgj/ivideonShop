@@ -2,11 +2,53 @@
 {% set headerType = 'transparent' %}
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
+<div class="compare_top-slider-container js--compare-top-slider-container">
+    <div class="compare_top-slider-wrapper">
+        <div class="compare_product-slider js--compare-slider">
+            {% for i in range(0, 4) %}
+            <div class="compare_top-product-slide">
+                <div class="compare_top-product-item">
+                    <div class="compare_top-product-item-img">
+                        <img src="../images/img/common/product_promo.png" alt="Ivideon Cute 360">
+                    </div>
+                    <div class="compare_top-product-item-inner">
+                        <p class="compare_top-product_type">Поворотная камера</p>
+                        <div class="compare_top-product-middle">
+                            <p class="compare_top-product-name">Ivideon Cute 360</p>
+                        </div>
+                        <div class="compare_top-product-cost-wrapper">
+                            <span class="compare_top-product-cost-item">
+                                <span class="compare_top-product-cost">5 190 </span>
+                                <span class="compare_top-product-cost-currency">₽</span>
+                            </span>
+                            <span class="compare_top-product-cost-item compare_top-product-cost-item--old">
+                                <span class="compare_top-product-cost-old">5 390 </span>
+                                <span class="compare_top-product-cost-old-currency">₽</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="compare_top-product-slide">
+                <div class="compare_top-product-slide-add">
+                    <a href="#" class="compare_top-product-slide-add-zone">
+                        <svg class="svg-icon compare_top-product-slide-add-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#plus"></use>
+                        </svg>
+                        <span class="visually-hidden">Добавить товары к сравнению</span>
+                    </a>
+                    <button class="btn-blue-border compare_top-product-slide-add-btn">Добавить товары для
+                        сравнения</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section class="compare_section">
     <div class="iv-container compare_iv-container">
         <div class="compare_top">
             <h1 class="compare_h1">Сравнение товаров</h1>
-            <!-- <button class="compare_del-btn compare_del-btn--desktop">Удалить все товары</button> -->
         </div>
         <div class="compare_nav">
             <div class="iv-row compare_nav-row">
@@ -47,6 +89,7 @@
                     </button>
                 </div>
             </div>
+            <button class="compare_nav-del-btn compare_nav-del-btn--desktop">Удалить все списки</button>
         </div>
     </div>
     <div class="compare_product-slider-wrapper js--compare-slider-container">
