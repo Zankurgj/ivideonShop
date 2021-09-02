@@ -1,0 +1,74 @@
+{% set pageTitle = 'Адреса доставки' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/lk.njk" %}
+{% block content %}
+{% from "app/src/njk/components/lk_nav.njk" import lkNav %}
+{{ lkNav(3) }}
+<div class="lk-wrapper">
+    <section class="lk-data">
+        <!-- <div class="iv-container lk-data_container">
+            
+        </div> -->
+        <div class="lk-data_form-block">
+            <div class="lk-data_form-col lk-data_form-col--top">
+                <form class="lk-data_form lk-data_form--top">
+                    <h1 class="lk-data_h1">Мои данные</h1>
+                    <div class="lk-data_form-inner">
+                        <label class="lk-data_input-wrapper">
+                            <span class="lk-data_input-title">Имя*</span>
+                            <input type="text" class="base-text-input base-text-input--edit" placeholder="Дарья"
+                                required>
+                        </label>
+                        <label class="lk-data_input-wrapper">
+                            <span class="lk-data_input-title">Фамилия</span>
+                            <input type="text" class="base-text-input base-text-input--edit" placeholder="Кудрявцева"
+                                required>
+                        </label>
+                        <label class="base-phone-wrapper lk-data_input-wrapper">
+                            <span class="lk-data_input-title">Телефон</span>
+                            <input class="checkout-form_input base-text-input--edit" autocomplete="off" type="tel"
+                                id="phone" placeholder="(988) 540-00-14">
+                        </label>
+                        <label class="lk-data_input-wrapper">
+                            <span class="lk-data_input-title">E-mail*</span>
+                            <input type="email" class="base-text-input base-text-input--edit" placeholder="E-mail*"
+                                required>
+                        </label>
+                    </div>
+                    <label class="base_radio-wrapper lk-data_radio-wrapper">
+                        <input class="base_radio-input" type="checkbox" name="paymentPersonal" required>
+                        <span class="base_radio-input-fake base_radio-input-fake--small"></span>
+                        <span class="lk-data_radio-text">Регистрируясь, вы принимаете <a href="#">Условия
+                                обслуживания</a>
+                            и <a href="#">Политику конфиденциальности</a>.
+                        </span>
+                    </label>
+                    <button class="btn-blue lk-data_submit-btn" type="submit">Сохранить изменения</button>
+                </form>
+            </div>
+            <div class="lk-data_form-col lk-data_form-col--bottom">
+                <form class="lk-data_form lk-data_form--bottom">
+                    <h2 class="lk-data_h2">Смените пароль</h2>
+                    <label class="registration_form-label base-pwd-label">
+                        <button class="base-pwd-btn js--pwd-btn" type="button">
+                            <span>Показать пароль</span>
+                        </button>
+                        <span class="visually-hidden">Пароль</span>
+                        <input type="password" autocomplete="on" class="base-text-input base-pwd-input js--pwd-input"
+                            placeholder="Пароль*" required>
+                    </label>
+                    <label class="registration_form-label base-pwd-label">
+                        <button class="base-pwd-btn js--pwd-btn" type="button">
+                            <span>Показать пароль</span>
+                        </button>
+                        <span class="visually-hidden">Повторите пароль</span>
+                        <input type="password" autocomplete="on" class="base-text-input base-pwd-input js--pwd-input"
+                            placeholder="Повторите пароль*" required>
+                    </label>
+                    <button class="btn-blue lk-data_submit-btn" type="submit">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

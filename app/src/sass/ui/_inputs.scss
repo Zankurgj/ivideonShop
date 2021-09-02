@@ -99,6 +99,17 @@
     border-color: rgba($color: #d3dce6, $alpha: 0.6);
   }
 }
+.base-text-input--edit {
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-image: url("../images/icons/pencil.svg");
+  &:focus {
+    background-image: none;
+  }
+}
+.base-text-input--textarea {
+  resize: none;
+}
 .base-text-input--search {
   padding: 9px 36px 8px 24px;
   &::-webkit-search-decoration,

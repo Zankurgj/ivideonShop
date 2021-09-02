@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   checkProductPopupScrollListener();
   deliverySpoilerListenerInit();
   togglePwdInputListenerInit();
+  closeCookiePopupListinerInit();
   new ShowCompareSlider();
 });
 
@@ -132,5 +133,11 @@ const togglePwdInputListenerInit = () => {
     } else {
       input.attr("type", "password");
     }
+  });
+};
+
+const closeCookiePopupListinerInit = () => {
+  $(".js--cookie-btn-close").on("click", (evt) => {
+    $(".js--cookie-popup").addClass("hide");
   });
 };

@@ -128,3 +128,80 @@
 .auth-popups_radio-wrapper {
   margin-top: 30px;
 }
+// COOKIE
+.cookei-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px -2px 80px rgba(0, 0, 0, 0.18),
+    0px 0.1px 10px rgba(0, 0, 0, 0.09);
+  z-index: 999;
+  &.hide {
+    display: none;
+  }
+}
+.cookei-popup_inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 0 17px;
+  @media all and (min-width: $desktop-bp) {
+    padding: 30px 0;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+.cookei-popup_col-text {
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-bottom: 13px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 20px;
+  }
+  @media all and (min-width: $desktop-bp) {
+    flex-basis: auto;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+.cookei-popup_col-btn {
+  flex-basis: 100%;
+  max-width: 100%;
+  @media all and (min-width: $desktop-bp) {
+    flex: 0 0 auto;
+    padding-left: 125px;
+  }
+}
+.cookei-popup_text {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $slate;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  a {
+    color: $blue;
+    text-decoration: underline;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+.cookei-popup_btn {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 298px;
+  padding: 6px 20px;
+  font-size: 12px;
+  line-height: 27px;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 17px;
+    line-height: 32px;
+    padding: 12px 34px;
+  }
+}

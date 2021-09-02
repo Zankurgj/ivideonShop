@@ -1,0 +1,62 @@
+{% set pageTitle = 'Адреса доставки' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/lk.njk" %}
+{% block content %}
+{% from "app/src/njk/components/lk_nav.njk" import lkNav %}
+{{ lkNav(3) }}
+<div class="lk-wrapper">
+    <section class="lk-address">
+        <div class="iv-container lk-address_container">
+            <h1 class="lk-address_h1">Адреса доставки</h1>
+            <p class="lk-address_subtitle">Выбрать адрес доставки по умолчанию</p>
+            <div class="iv-row lk-address--row">
+                <label class="lk-address_item-wrapper">
+                    <input type="radio" class="lk-address_item-input" checked name="address">
+                    <div class="lk-address_item">
+                        <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база
+                            «Мосгоропторг»</p>
+                        <div class="lk-address_item-btns">
+                            <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                            <button class="lk-address_item-btn-gray">Удалить адрес</button>
+                        </div>
+                    </div>
+                </label>
+                <label class="lk-address_item-wrapper">
+                    <input type="radio" class="lk-address_item-input" name="address">
+                    <div class="lk-address_item">
+                        <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база
+                            «Мосгоропторг»</p>
+                        <div class="lk-address_item-btns">
+                            <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                            <button class="lk-address_item-btn-gray">Удалить адрес</button>
+                        </div>
+                    </div>
+                </label>
+                <label class="lk-address_item-wrapper">
+                    <input type="radio" class="lk-address_item-input" name="address">
+                    <div class="lk-address_item">
+                        <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база
+                            «Мосгоропторг»</p>
+                        <div class="lk-address_item-btns">
+                            <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                            <button class="lk-address_item-btn-gray">Удалить адрес</button>
+                        </div>
+                    </div>
+                </label>
+                <label class="lk-address_item-wrapper">
+                    <input type="radio" class="lk-address_item-input" name="address">
+                    <div class="lk-address_item">
+                        <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база
+                            «Мосгоропторг»</p>
+                        <div class="lk-address_item-btns">
+                            <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                            <button class="lk-address_item-btn-gray">Удалить адрес</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <a href="#" class="btn-blue lk-address_bottom-btn">Добавить адрес</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

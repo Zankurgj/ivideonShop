@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Личный кабинет (мои заказы)</title>
+    <title>Адреса доставки</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="../../../dist/css/app.min.css" />
@@ -494,12 +494,13 @@
 
                 <li>
 
-                    <span class="lk-nav-item lk-nav-item--active">
-                <span class="lk-nav-item-content">
+                    <a href="#" class="lk-nav-item">
+                        <span class="lk-nav-item-content">
                     <img class="lk-nav-item-img" src="../images/icons/lk-bag.svg" alt="Мои заказы">
                     Мои заказы
                 </span>
-                    </span>
+
+                    </a>
 
                 </li>
 
@@ -517,13 +518,12 @@
 
                 <li>
 
-                    <a href="#" class="lk-nav-item">
-                        <span class="lk-nav-item-content">
+                    <span class="lk-nav-item lk-nav-item--active">
+                <span class="lk-nav-item-content">
                     <img class="lk-nav-item-img" src="../images/icons/lk-delivery.svg" alt="Адреса доставки">
                     Адреса доставки
                 </span>
-
-                    </a>
+                    </span>
 
                 </li>
 
@@ -531,142 +531,57 @@
         </nav>
 
         <div class="lk-wrapper">
-            <section class="lk-orders">
-                <div class="iv-container lk-orders_container">
-                    <h1 class="lk-orders_h1">Мои заказы</h1>
-                    <p class="lk-orders_subtitle">Всего заказов: <a href="#" class="lk-orders_subtitle-color">16 заказов</a>
-                    </p>
-                    <div class="lk-orders-item-block">
-                        <div class="lk-orders-item-title-wrapper">
-                            <p class="lk-orders-item-title-col">
-                                Номер заказа
-                            </p>
-                            <p class="lk-orders-item-title-col">
-                                Дата
-                            </p>
-                            <p class="lk-orders-item-title-col lk-orders-item-title-col--cost">
-                                Общая стоимость заказа
-                            </p>
-                            <p class="lk-orders-item-title-col lk-orders-item-title-col--statys">
-                                Статус оплаты
-                            </p>
-                        </div>
-                        <div class="lk-orders-item-wrapper">
-
-                            <div class="lk-orders-item">
-                                <div class="lk-orders-item-top-col">
-                                    <div class="lk-orders-item-number-col">
-                                        <div class="lk-orders-item-number">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile lk-orders-item-title--number">Номер
-                                        заказа</span>
-                                            <span class="lk-orders-item-number-text">314-HO-280</span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-date-col">
-                                        <div class="lk-orders-item-date">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Дата</span>
-                                            <span class="lk-orders-item-date-text">25 июля 2021, 16:14</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-bottom-col">
-                                    <div class="lk-orders-item-cost-col">
-                                        <div class="lk-orders-item-cost">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Общая стоимость
-                                        заказа</span>
-                                            <span class="lk-orders-item-cost-text">5 390 <span
-                                            class="lk-orders-item-cost-currency">₽</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-status-col">
-                                        <div class="lk-orders-item-status">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Статус оплаты</span>
-                                            <span class="lk-orders-item-status-text">Оформлен</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-btn-col">
-                                    <button class="btn-blue lk-orders-item-btn">Детали</button>
+            <section class="lk-address">
+                <div class="iv-container lk-address_container">
+                    <h1 class="lk-address_h1">Адреса доставки</h1>
+                    <p class="lk-address_subtitle">Выбрать адрес доставки по умолчанию</p>
+                    <div class="iv-row lk-address--row">
+                        <label class="lk-address_item-wrapper">
+                            <input type="radio" class="lk-address_item-input" checked name="address">
+                            <div class="lk-address_item">
+                                <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база «Мосгоропторг»
+                                </p>
+                                <div class="lk-address_item-btns">
+                                    <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                                    <button class="lk-address_item-btn-gray">Удалить адрес</button>
                                 </div>
                             </div>
-
-                            <div class="lk-orders-item">
-                                <div class="lk-orders-item-top-col">
-                                    <div class="lk-orders-item-number-col">
-                                        <div class="lk-orders-item-number">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile lk-orders-item-title--number">Номер
-                                        заказа</span>
-                                            <span class="lk-orders-item-number-text">314-HO-280</span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-date-col">
-                                        <div class="lk-orders-item-date">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Дата</span>
-                                            <span class="lk-orders-item-date-text">25 июля 2021, 16:14</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-bottom-col">
-                                    <div class="lk-orders-item-cost-col">
-                                        <div class="lk-orders-item-cost">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Общая стоимость
-                                        заказа</span>
-                                            <span class="lk-orders-item-cost-text">5 390 <span
-                                            class="lk-orders-item-cost-currency">₽</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-status-col">
-                                        <div class="lk-orders-item-status">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Статус оплаты</span>
-                                            <span class="lk-orders-item-status-text">Оформлен</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-btn-col">
-                                    <button class="btn-blue lk-orders-item-btn">Детали</button>
+                        </label>
+                        <label class="lk-address_item-wrapper">
+                            <input type="radio" class="lk-address_item-input" name="address">
+                            <div class="lk-address_item">
+                                <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база «Мосгоропторг»
+                                </p>
+                                <div class="lk-address_item-btns">
+                                    <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                                    <button class="lk-address_item-btn-gray">Удалить адрес</button>
                                 </div>
                             </div>
-
-                            <div class="lk-orders-item">
-                                <div class="lk-orders-item-top-col">
-                                    <div class="lk-orders-item-number-col">
-                                        <div class="lk-orders-item-number">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile lk-orders-item-title--number">Номер
-                                        заказа</span>
-                                            <span class="lk-orders-item-number-text">314-HO-280</span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-date-col">
-                                        <div class="lk-orders-item-date">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Дата</span>
-                                            <span class="lk-orders-item-date-text">25 июля 2021, 16:14</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-bottom-col">
-                                    <div class="lk-orders-item-cost-col">
-                                        <div class="lk-orders-item-cost">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Общая стоимость
-                                        заказа</span>
-                                            <span class="lk-orders-item-cost-text">5 390 <span
-                                            class="lk-orders-item-cost-currency">₽</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="lk-orders-item-status-col">
-                                        <div class="lk-orders-item-status">
-                                            <span class="lk-orders-item-title lk-orders-item-title--mobile">Статус оплаты</span>
-                                            <span class="lk-orders-item-status-text">Оформлен</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-orders-item-btn-col">
-                                    <button class="btn-blue lk-orders-item-btn">Детали</button>
+                        </label>
+                        <label class="lk-address_item-wrapper">
+                            <input type="radio" class="lk-address_item-input" name="address">
+                            <div class="lk-address_item">
+                                <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база «Мосгоропторг»
+                                </p>
+                                <div class="lk-address_item-btns">
+                                    <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                                    <button class="lk-address_item-btn-gray">Удалить адрес</button>
                                 </div>
                             </div>
-
-                        </div>
-                        <button class="btn-blue lk-orders-item-block-btn">Посмотреть все заказы</button>
+                        </label>
+                        <label class="lk-address_item-wrapper">
+                            <input type="radio" class="lk-address_item-input" name="address">
+                            <div class="lk-address_item">
+                                <p class="lk-address_item-text">г. Москва,Каширский проезд, д. 17, стр. 12, база «Мосгоропторг»
+                                </p>
+                                <div class="lk-address_item-btns">
+                                    <a href="#" class="lk-address_item-btn-blue">Изменить</a>
+                                    <button class="lk-address_item-btn-gray">Удалить адрес</button>
+                                </div>
+                            </div>
+                        </label>
                     </div>
+                    <a href="#" class="btn-blue lk-address_bottom-btn">Добавить адрес</a>
                 </div>
             </section>
         </div>

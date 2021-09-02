@@ -1,0 +1,123 @@
+.lk-data {
+  padding: 35px 0 0 0;
+  @media all and (min-width: $tablet-bp) {
+    padding: 80px 0 0 0;
+  }
+  @media all and (min-width: $large-bp) {
+    height: 100%;
+    padding: 0;
+  }
+}
+.lk-data_container {
+  max-width: 1800px;
+}
+.lk-data_h1 {
+  margin-bottom: 32px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 35px;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 48px;
+    font-size: 34px;
+    line-height: 58px;
+  }
+}
+.lk-data_form-block {
+  @media all and (min-width: $large-bp) {
+    height: 100%;
+    display: flex;
+  }
+}
+.lk-data_form-col {
+  padding: 0 20px;
+}
+.lk-data_form-col--top {
+  @media all and (min-width: $large-bp) {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+}
+.lk-data_form-col--bottom {
+  background-color: #f9fafc;
+  @media all and (min-width: $large-bp) {
+    max-width: 60%;
+    flex-basis: 60%;
+  }
+}
+// FORM
+.lk-data_form {
+  display: block;
+  max-width: 390px;
+  margin: 0 auto;
+}
+.lk-data_form--top {
+  padding-bottom: 70px;
+  @media all and (min-width: $large-bp) {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+}
+.lk-data_input-wrapper {
+  display: block;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 16px;
+  }
+}
+.lk-data_input-title {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 27px;
+  color: $steel;
+}
+.lk-data_radio-text {
+  font-size: 13px;
+  line-height: 22px;
+  color: rgba(31, 45, 61, 0.5);
+  a {
+    color: $blue;
+    text-decoration: underline;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+.lk-data_radio-wrapper {
+  margin-top: 30px;
+  margin-bottom: 32px;
+}
+.lk-data_submit-btn {
+  display: block;
+  width: 100%;
+  max-width: 298px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 27px;
+  padding: 8px 10px;
+}
+// BOTTOM FORM {
+
+.lk-data_form--bottom {
+  padding: 56px 0 92px;
+  @media all and (min-width: $large-bp) {
+    padding-top: 170px;
+    padding-bottom: 20px;
+  }
+}
+.lk-data_h2 {
+  margin-bottom: 43px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: $steel;
+  @media all and (min-width: $large-bp) {
+    margin-bottom: 22px;
+  }
+}

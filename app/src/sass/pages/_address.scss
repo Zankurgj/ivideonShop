@@ -1,0 +1,189 @@
+.lk-address {
+  padding: 35px 0 92px 0;
+  @media all and (min-width: $tablet-bp) {
+    padding: 80px 0 92px 0;
+  }
+}
+.lk-address_container {
+  max-width: 1800px;
+}
+.lk-address_h1 {
+  margin-bottom: 32px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 35px;
+  color: $black;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 31px;
+    font-size: 34px;
+    line-height: 58px;
+  }
+}
+.lk-address_subtitle {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #1f2d3d;
+}
+.lk-address-row {
+  margin-bottom: 22px;
+  @media all and (min-width: $desktop-bp) {
+    margin-bottom: 32px;
+  }
+}
+.lk-address-row--new {
+  max-width: 772px;
+}
+// INPUTS
+.lk-address_item-wrapper {
+  flex-basis: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 0 22px 0;
+  @media all and (min-width: 700px) {
+    flex-basis: calc((100% - 22px) / 2);
+    max-width: calc((100% - 22px) / 2);
+    margin-right: 22px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1200px) {
+    flex-basis: calc((100% - 22px * 2) / 3);
+    max-width: calc((100% - 22px * 2) / 3);
+    &:nth-child(2n) {
+      margin-right: 22px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: 1500px) {
+    flex-basis: calc((100% - 22px * 3) / 4);
+    max-width: calc((100% - 22px * 3) / 4);
+    &:nth-child(3n) {
+      margin-right: 22px;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+.lk-address_item-input {
+  @extend .visually-hidden;
+  &:checked + .lk-address_item {
+    border-color: $blue;
+  }
+}
+.lk-address_item {
+  border: 2px solid #e5e9f2;
+  border-radius: 20px;
+  padding: 23px 13px 18px 30px;
+  transition: border-color $base-duration $base-timing;
+  @media all and (min-width: $tablet-bp) {
+    padding: 23px 30px 15px 30px;
+  }
+}
+.lk-address_item-text {
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  color: #1f2d3d;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.lk-address_item-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 27px;
+  @media all and (min-width: $tablet-bp) {
+    padding-right: 14px;
+  }
+}
+.lk-address_item-btn-blue {
+  padding-left: 26px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("../images/icons/pencil.svg");
+  font-size: 13px;
+  line-height: 32px;
+  color: $blue;
+  transition: opacity $base-duration $base-timing;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 14px;
+  }
+  &:hover {
+    color: $blue;
+    opacity: 0.8;
+  }
+}
+.lk-address_item-btn-gray {
+  text-decoration: underline;
+  font-size: 13px;
+  line-height: 32px;
+  color: rgba($color: $steel, $alpha: 0.5);
+  @media all and (min-width: $tablet-bp) {
+    font-size: 14px;
+  }
+}
+// BTN
+.lk-address_bottom-btn {
+  display: block;
+  max-width: 298px;
+  padding: 8px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 27px;
+  @media all and (min-width: $desktop-bp) {
+    font-size: 17px;
+    line-height: 32px;
+    max-width: 276px;
+    padding: 12px;
+    margin: 0;
+  }
+}
+// FORM
+.lk-address-input-col {
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  @media all and (min-width: $tablet-bp) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex-basis: calc((100% - 20px) / 2);
+      max-width: calc((100% - 20px) / 2);
+      margin-right: 20px;
+    }
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+  @media all and (min-width: $desktop-bp) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex-basis: calc((100% - 20px * 2) / 3);
+      max-width: calc((100% - 20px * 2) / 3);
+      margin-right: 20px;
+    }
+    &:nth-child(2) {
+      margin-right: 20px;
+    }
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}
+.lk-address-textarea {
+  min-height: 90px;
+  @media all and (min-width: $desktop-bp) {
+    min-height: auto;
+    height: 46px;
+  }
+}
