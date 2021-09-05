@@ -4,7 +4,7 @@
     padding: 216px 0 0;
   }
 }
-.basket--container {
+.basket-container {
   max-width: 1320px;
   @media all and (min-width: $desktop-bp) {
     padding: 0 60px;
@@ -531,6 +531,7 @@
   background-size: 100%;
   background-image: url("../images/img/common/mp-discount-bg-m.svg");
   @media all and (min-width: $desktop-bp) {
+    padding: 0 0 80px 0;
     border-radius: 0 0 80px 80px;
     background-image: url("../images/img/common/mp-discount-bg-d.svg");
   }
@@ -543,5 +544,48 @@
 .basket-discount_slider--wrapper {
   .iv-promo-slider .slick-dots li.slick-active button {
     background-color: #fff;
+  }
+}
+// EMPTY
+.basket-section--empty {
+  margin-bottom: 74px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 90px;
+  }
+}
+.basket-h1--empty {
+  margin-bottom: 32px;
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 44px;
+  }
+}
+.basket-empty-subtitle {
+  margin-bottom: 22px;
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba($color: $black, $alpha: 0.8);
+  @media all and (min-width: $tablet-bp) {
+    margin-bottom: 18px;
+  }
+}
+.basket-empty-btn {
+  font-size: 12px;
+  line-height: 27px;
+  padding: 8px 10px;
+  max-width: 298px;
+  width: 100%;
+  @media all and (min-width: $tablet-bp) {
+    max-width: 282px;
+    padding-right: 12px;
+    font-size: 17px;
+    line-height: 32px;
+  }
+}
+.basket-discount--noimg {
+  background-image: none;
+}
+.basket-discount_h2--empty {
+  @media all and (min-width: $desktop-bp) {
+    margin-bottom: 48px;
   }
 }

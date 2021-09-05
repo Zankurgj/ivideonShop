@@ -1,0 +1,73 @@
+{% set pageTitle = 'Корзина' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="basket-section basket-section--empty">
+    <div class="iv-container basket-container">
+        <h1 class="basket-h1 basket-h1--empty">Ваша корзина пуста</h1>
+        <p class="basket-empty-subtitle">Самое время в нее что-нибудь добавить</p>
+        <a href="#" class="btn-blue basket-empty-btn">Перейти на главную</a>
+    </div>
+</section>
+<section class="basket-discount basket-discount--noimg">
+    <h2 class="mp-h2 basket-discount_h2 basket-discount_h2--empty">Недавно просмотренные</h2>
+    <div class="">
+        {% set promoSliderData = [
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        stars: 2,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 3,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 5,
+        badge: "Хит"
+        },
+        {
+        type: "Поворотная камера",
+        img: "../images/img/common/product_promo.png",
+        name: "Ivideon Cute 360",
+        cost: "5 190",
+        oldCost: "5 390",
+        stars: 4,
+        badge: "Хит"
+        }
+        ] %}
+        {% from "app/src/njk/components/promo_slider.njk" import promoSlider %}
+        {{ promoSlider(promoSliderData, scaleActive=true) }}
+    </div>
+</section>
+{% endblock %}

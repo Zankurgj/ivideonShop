@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Отслеживание заказа</title>
+    <title>Сравнение товаров</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="../../../dist/css/app.min.css" />
@@ -486,38 +486,18 @@
 
     <div class="iv-page__wrapper">
 
-        <section class="tracking-section">
-            <div class="iv-container tracking-container">
-                <h1 class="tracking-h1">Отслеживание заказа</h1>
-                <p class="tracking-subtitle">Статус заказа можно проверить примерно <span class="tracking-subtitle-color">через
-                5 минут после оформления заказа.</span>
-                </p>
-                <form class="tracking-form">
-                    <h2 class="tracking-form-h2">Введите номер заказа и телефон, чтобы узнать статус своего заказа</h2>
-                    <div class="tracking-form-input-col">
-                        <label class="tracking-input-label">
-                            <input type="text" class="base-text-input" placeholder="Номер заказа">
-                        </label>
-                        <label class="tracking-input-label base-phone-wrapper">
-                            <span class="visually-hidden">Телефон</span>
-                            <input class="checkout-form_input" autocomplete="off" type="tel" id="phone">
-                        </label>
+        <section class="compare-empty_section">
+            <div class="iv-container">
+                <div class="compare-empty_inner">
+                    <div class="compare-empty_img">
+                        <img src="../images/img/compare/compare-empty.png" alt="камера">
                     </div>
-                    <div class="tracking-form-bottom-col">
-                        <button class="btn-blue tracking-form-btn" type="submit">Найти заказ</button>
-                        <p class="tracking-form-text">Номер заказа указан в письме с <span class="tracking-description-color">подтверждением заказа.</span> Не получили письмо? Оно могло попасть в папку «Спам.</p>
-                    </div>
-                </form>
-                <div class="tracking-description">
-                    <p class="tracking-description-title">
-                        Статус заказа <span class="tracking-description-color">№ 408 40</span>
+                    <h1 class="compare-empty_h1">Список сравнения пуст</h1>
+                    <p class="compare-empty_subtitle">Для добавления товаров к сравнению <a href="#">перейдите в каталог</a>
                     </p>
-                    <div class="tracking-description-text-wrapper">
-                        <p class="tracking-description-text">Товар находится на этапе: <span class="tracking-description-color">Собирается</span>
-                        </p>
-                        <p class="tracking-description-text">Приерная дата доставки: <span class="tracking-description-color">28
-                        июня</span>
-                        </p>
+                    <div class="compare-empty_btn-wrapper">
+                        <a href="#" class="compare-empty_btn btn-blue">Перейти в каталог</a>
+                        <a href="#" class="compare-empty_btn btn-blue-border">Вернуться на главную</a>
                     </div>
                 </div>
             </div>

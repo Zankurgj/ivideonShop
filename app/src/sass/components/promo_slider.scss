@@ -120,6 +120,18 @@
     }
   }
 }
+// NO SCALE
+.iv-promo-slider--noscale {
+  .slick-slide {
+    &.slick-current {
+      .iv-promo-slide {
+        @media all and (min-width: $desktop-bp) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
 // ITEM
 .iv-promo-slide {
   display: flex;

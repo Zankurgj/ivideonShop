@@ -1,6 +1,6 @@
-{% macro promoSlider(dataArr) %}
+{% macro promoSlider(dataArr, scaleActive, blueDots) %}
 <div class="iv-promo-slider_container">
-    <div class="iv-promo-slider js--product-slider">
+    <div class="iv-promo-slider js--product-slider {% if scaleActive %}iv-promo-slider--noscale{%endif%}">
         {% for item in dataArr %}
         <div class="iv-promo-slide_inner">
             <div class="iv-promo-slide">

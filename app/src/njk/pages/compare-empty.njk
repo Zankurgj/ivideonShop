@@ -1,0 +1,20 @@
+{% set pageTitle = 'Сравнение товаров' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="compare-empty_section">
+    <div class="iv-container">
+        <div class="compare-empty_inner">
+            <div class="compare-empty_img">
+                <img src="../images/img/compare/compare-empty.png" alt="камера">
+            </div>
+            <h1 class="compare-empty_h1">Список сравнения пуст</h1>
+            <p class="compare-empty_subtitle">Для добавления товаров к сравнению <a href="#">перейдите в каталог</a></p>
+            <div class="compare-empty_btn-wrapper">
+                <a href="#" class="compare-empty_btn btn-blue">Перейти в каталог</a>
+                <a href="#" class="compare-empty_btn btn-blue-border">Вернуться на главную</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

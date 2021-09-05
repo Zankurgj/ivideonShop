@@ -1,0 +1,87 @@
+{% set pageTitle = '404' %}
+{% set headerType = 'transparent' %}
+{% set bodyStyle = 'dark' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="err404_section">
+    <div class="iv-container">
+        <div class="iv-row err404_row">
+            <div class="err404_img-col">
+                <div class="err404_img-inner">
+                    <span class="err404_number">4</span>
+                    <div class="err404_img">
+                        <img src="../images/img/404/camera.png" alt="камера">
+                    </div>
+                    <span class="err404_number">4</span>
+                </div>
+            </div>
+            <div class="err404_text-col">
+                <h1 class="err404_h1">Страница не найдена</h1>
+                <p class="err404_text">К сожалению, такой страницы нет. Возможно, вы перешли по старой ссылке или ввели
+                    неправильный адрес.
+                    Попробуйте воспользоваться поиском или перейдите на <a href="#">главную страницу.</a></p>
+                <label class="err404_search-wrapper">
+                    <span class="err404_search-title">Найдите что-то полезное для Вас</span>
+                    <span class="err404_search-input-wapper">
+                        <input type="search" class="err404_search-input" placeholder="Введите ваш запрос">
+                        <button class="err404_search-input-btn">
+                            <span class="visually-hidden">Искать</span>
+                        </button>
+                    </span>
+                </label>
+                <a href="#" class="btn-blue err404_search-btn">Перейти на главную</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="err404_slider-section">
+    <h2 class="visually-hidden">Разделы</h2>
+    <div class="iv-container err404_slider-container">
+        <div class="err404_slider js--mp-section-slider">
+            {% set sectionSlider = [
+            {
+            img: '../images/img/main/section1.png',
+            title: 'Комплекты для загороднго дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section2.png',
+            title: 'Системы видеонянь для вашего дома',
+            link: 'Видеоняни'
+            },
+            {
+            img: '../images/img/main/section3.png',
+            title: 'Комплекты для магазина у дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section1.png',
+            title: 'Комплекты для загороднго дома',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section5.png',
+            title: 'Видеонаблюдение для квартиры',
+            link: 'Видеонаблюдение'
+            },
+            {
+            img: '../images/img/main/section6.png',
+            title: 'Акции',
+            link: 'Видеонаблюдение'
+            }
+            ] %}
+            {% for item in sectionSlider %}
+            <div class="err404_slide">
+                <div class="err404_slider-item">
+                    <div class="err404_slider-img">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    <p class="err404_slider-title">{{item.title}}</p>
+                    <a href="#" class="err404_slider-link">{{item.link}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

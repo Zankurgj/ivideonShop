@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../../../dist/css/app.min.css" />
 </head>
 
-<body>
+<body class="{%if bodyStyle %}body--{{bodyStyle}}{%endif%}">
   {% if not(headerType) %}
   {% set headerType = "default" %}
   {% endif %}
