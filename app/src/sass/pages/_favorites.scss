@@ -130,6 +130,7 @@
   flex-basis: 100%;
   max-width: 100%;
   @media all and (min-width: 1200px) {
+    margin-top: 0;
     flex-basis: calc((100% - 110px) / 3);
     max-width: calc((100% - 110px) / 3);
   }
@@ -348,6 +349,7 @@
   @media all and (min-width: 1200px) {
     max-width: 124px;
     margin-left: auto;
+    margin-right: 50px;
   }
 }
 // DEL BTN

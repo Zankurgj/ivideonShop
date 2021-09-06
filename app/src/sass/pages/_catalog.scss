@@ -102,6 +102,7 @@
   line-height: 16px;
   letter-spacing: 0.02em;
   color: $slate;
+  white-space: nowrap;
   transition: color $base-duration $base-timing;
   &:hover {
     text-decoration: none;
@@ -659,9 +660,9 @@
 .catalog-item_btn-wrapper {
   display: flex;
   width: 100%;
-  //   @media all and (min-width: $desktop-bp) {
-  //     flex-direction: row;
-  //   }
+}
+.catalog-item_btn-wrapper--search {
+  justify-content: center;
 }
 .catalog-item_btn-bottom {
   margin-right: 14px;

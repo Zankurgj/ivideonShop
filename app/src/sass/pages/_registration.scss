@@ -100,6 +100,9 @@
   line-height: 35px;
   color: $black;
   text-align: center;
+  @media all and (min-width: $desktop-bp) {
+    text-align: left;
+  }
 }
 .registration_form-title--reg {
   margin-bottom: 8px;
@@ -111,6 +114,9 @@
   line-height: 25px;
   color: $black;
   text-align: center;
+  @media all and (min-width: $desktop-bp) {
+    text-align: left;
+  }
 }
 .registration_form-subtitle--reg {
   margin-bottom: 32px;

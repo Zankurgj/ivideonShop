@@ -457,12 +457,12 @@
   line-height: 24px;
   color: $steel;
   margin-bottom: 24px;
+  min-height: 48px;
 }
 .help_equipment-item-img {
   margin-bottom: 30px;
   img {
     display: block;
-    margin: 0 auto;
     max-width: 235px;
   }
 }
