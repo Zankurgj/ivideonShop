@@ -302,7 +302,7 @@
         </div>
         <div class="iv-container product-card--iv-container">
             <div class="product-card_tab-inner">
-                <div class="product-card_tab-item product-card_tab-item--description show" data-tab-name="productTab"
+                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
                     data-tab="productTab1">
                     <div class="iv-row product-card_tab-row">
                         {% set cardDescriptionArr = [
@@ -529,8 +529,116 @@
                 </div>
                 <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
                     data-tab="productTab4">4</div>
-                <div class="product-card_tab-item product-card_tab-item--description" data-tab-name="productTab"
-                    data-tab="productTab5">5</div>
+                <div class="product-card_tab-item product-card_tab-item--description show" data-tab-name="productTab"
+                    data-tab="productTab5">
+                    <div class="product-card_tab-text-inner">
+                        <div class="product_comment-top">
+                            <div class="product_comment-rating-col">
+                                <p class="product_comment-title">3 отзыва</p>
+                                <div class="product_comment-number-wrapper">
+                                    <p class="product_comment-number">4.8</p>
+                                    <p class="product_comment-number-text">рейтинг</p>
+                                </div>
+                                <div class="product_comment-rating-block">
+                                    {% for i in range(0, 5) %}
+                                    <div class="product_comment-rating-item">
+                                        <div class="product_comment-rating-stars">
+                                            <div class="product_comment-rating-star product_comment-rating-star--on">
+                                            </div>
+                                            <div class="product_comment-rating-star product_comment-rating-star--on">
+                                            </div>
+                                            <div class="product_comment-rating-star product_comment-rating-star--on">
+                                            </div>
+                                            <div class="product_comment-rating-star"></div>
+                                            <div class="product_comment-rating-star"></div>
+                                        </div>
+                                        <div class="product_comment-ratin-score-block">
+                                            <div class="product_comment-ratin-score-wrapper">
+                                                <div class="product_comment-ratin-score-loader" style="width: 40%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product_comment-rating-number">2</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="product_comment-form-col">
+                                <form class="product_comment-form">
+                                    <p class="product_comment-form-title">Написать отзыв</p>
+                                    <div class="product_comment-form-rating-block">
+                                        <p class="product_comment-subtitle">Ваша оценка:</p>
+                                        <div class="product_rating-group">
+                                            <input class="product_rating-input" type="radio" name="raiting"
+                                                id="raiting-1" value="1">
+                                            <label class="product_rating-star" for="raiting-1" aria-label="1"></label>
+
+                                            <input class="product_rating-input" type="radio" name="raiting"
+                                                id="raiting-2" value="2">
+                                            <label class="product_rating-star" for="raiting-2" aria-label="2"></label>
+
+                                            <input class="product_rating-input" type="radio" name="raiting"
+                                                id="raiting-3" value="3" checked>
+                                            <label class="product_rating-star" for="raiting-3" aria-label="3"></label>
+
+                                            <input class="product_rating-input" type="radio" name="raiting"
+                                                id="raiting-4" value="4">
+                                            <label class="product_rating-star" for="raiting-4" aria-label="4"></label>
+
+                                            <input class="product_rating-input" type="radio" name="raiting"
+                                                id="raiting-5" value="5">
+                                            <label class="product_rating-star" for="raiting-5" aria-label="5"></label>
+                                        </div>
+                                    </div>
+                                    <div class="product_comment-form-inner">
+                                        <label class="product_comment-form-wrapper">
+                                            <span class="visually-hidden">Ваш отзыв</span>
+                                            <textarea
+                                                class="product_comment-form-input product_comment-form-input--area"
+                                                placeholder="Ваш отзыв"></textarea>
+                                        </label>
+                                        <label class="product_comment-form-wrapper">
+                                            <span class="visually-hidden">Ваше имя</span>
+                                            <input type="text" class="product_comment-form-input"
+                                                placeholder="Ваше имя">
+                                        </label>
+                                        <label class="product_comment-form-wrapper">
+                                            <span class="visually-hidden">Email</span>
+                                            <input type="email" class="product_comment-form-input" placeholder="Email">
+                                        </label>
+                                    </div>
+                                    <button class="btn-blue product_comment-form-btn" type="submit">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="product_comment-bottom">
+                            {% for i in range(0, 2) %}
+                            <div class="product_comment-item">
+                                <p class="product_comment-item-name">Динар</p>
+                                <div class="product_comment-item-stars-block">
+                                    <div class="product_comment-item-stars">
+                                        <div class="product_comment-item-star product_comment-item-star--on"></div>
+                                        <div class="product_comment-item-star product_comment-item-star--on"></div>
+                                        <div class="product_comment-item-star product_comment-item-star--on"></div>
+                                        <div class="product_comment-item-star product_comment-item-star--on"></div>
+                                        <div class="product_comment-item-star"></div>
+                                    </div>
+                                    <span class="product_comment-item-star-text">Отличный товар</span>
+                                </div>
+                                <p class="product_comment-item-text">
+                                    Камера записывает Отлично!
+                                    Качество Видео Отличное!
+                                    В тёмное время суток, когда включается инфракрасная подсветка записывает только в
+                                    чёрно-белом виде.
+                                    Из минусов: Отсутствует Микрофон и поэтому не записывает звук.
+                                    Записывает только по датчику движения, нельзя её никак включить на постоянную
+                                    запись, чтобы всё время записывала на карту памяти циклически.
+                                </p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
