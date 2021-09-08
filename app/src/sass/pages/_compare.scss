@@ -230,6 +230,10 @@
 }
 // ITEM
 .compare_product-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   max-width: 180px;
   padding: 10px 32px;
@@ -321,6 +325,10 @@
 }
 // INNER
 .compare_product-item-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
   position: relative;
   padding-right: 18px;
 }
@@ -356,6 +364,7 @@
 }
 // BTN
 .compare_product-btn {
+  flex: 0 0 auto;
   display: none;
   width: 20px;
   height: 20px;
@@ -440,6 +449,7 @@
   }
 }
 .compare_product-item-btn-desktop {
+  margin-top: auto;
   display: none;
   font-size: 12px;
   line-height: 27px;
