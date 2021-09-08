@@ -871,6 +871,9 @@
   }
 }
 // BUY POPUP
+.product_buy-popup-row {
+  flex-wrap: nowrap;
+}
 .product_buy-popup {
   position: fixed;
   left: 0;
@@ -899,9 +902,11 @@
   width: 100%;
 }
 .product_buy-popup-middle {
+  overflow: hidden;
   flex-grow: 1;
   @media all and (min-width: $tablet-bp) {
     display: flex;
+    justify-content: space-around;
   }
 }
 .product_buy-popup-img {
@@ -946,6 +951,10 @@
   }
 }
 .product_buy-popup-text-col {
+  @media all and (min-width: $tablet-bp) {
+    max-width: 60%;
+    flex-basis: 60%;
+  }
   @media all and (min-width: $desktop-bp) {
     max-width: 33%;
     flex-basis: 33%;
@@ -957,6 +966,9 @@
   font-size: 10px;
   line-height: 16px;
   color: $black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   @media all and (min-width: $desktop-bp) {
     font-size: 12px;
     line-height: 20px;
@@ -968,6 +980,9 @@
   font-size: 16px;
   line-height: 20px;
   color: $black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   @media all and (min-width: $desktop-bp) {
     font-weight: 900;
     font-size: 25px;
@@ -1010,8 +1025,11 @@
 }
 
 .product_buy-popup-cost-col {
-  margin-left: auto;
-  padding-right: 100px;
+  // margin-left: auto;
+  // padding-right: 100px;
+  @media all and (min-width: $tablet-bp) {
+    flex: 0 0 auto;
+  }
   @media all and (min-width: $large-bp) {
     margin-left: 0;
     padding-right: 64px;
