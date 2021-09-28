@@ -1,0 +1,123 @@
+{% set pageTitle = 'Страница избранное' %}
+{% set headerType = 'transparent' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<section class="favorites-new-section">
+    <div class="iv-container favorites-new--iv-container">
+        <div class="favorites-new-top">
+            <h1 class="favorites-new-h1">Избранное</h1>
+            <div class="favorites-new-auth">
+                <p><a href="#">Авторизуйтесь,</a> чтобы сохранить список избранного для просмотра на этом и других
+                    устройствах.</p>
+                <img class="favorites-new-auth-icon" src="../images/img/favorites/mi_circle-information.svg"
+                    aria-hidden="true" alt="Информация">
+            </div>
+        </div>
+    </div>
+    <div class="iv-container favorites-new--iv-container">
+        <div class="favorites-new-items-row iv-row">
+            {% for i in range(0, 3) %}
+            {% set item = {
+            type: "Поворотная камера",
+            img: "../images/img/common/product_promo.png",
+            name: "Ivideon Cute 360",
+            cost: "5 190",
+            oldCost: "5 390",
+            stars: 5,
+            badge: "Хит"
+            } %}
+            <div class="favorites-new-item_col">
+                <div class="favorites-new-item">
+                    <div class="favorites-new-item_top favorites-new-item_top--desktop">
+                        {% if item.badge %}
+
+                        {% if loop.index == 1%}
+                        <span class="favorites-new-item_badge favorites-new-item_badge--orange">{{item.badge}}</span>
+                        {% elseif loop.index == 2 %}
+                        <span class="favorites-new-item_badge favorites-new-item_badge--green">{{item.badge}}</span>
+                        {% elseif loop.index == 3 %}
+                        <span class="favorites-new-item_badge favorites-new-item_badge--red">Акция</span>
+                        {% else %}
+                        <span class="favorites-new-item_badge">{{item.badge}}</span>
+                        {% endif %}
+
+                        {% endif %}
+                        <div class="favorites-new-item_stars">
+                            {% for i in range(0, item.stars) %}
+                            <span class="favorites-new-item_star-icon"></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="favorites-new-item_middle">
+                        <div class="favorites-new-item_img">
+                            <img src="{{item.img}}" alt="{{item.name}}">
+                        </div>
+                        <div class="favorites-new-item_content">
+                            <div class="favorites-new-item_star-mobile-wrapper">
+                                <div class="favorites-new-item_btns">
+                                    <button class="favorites-new-item_btn favorites-new-item_btn--like">
+                                        <span class="visually-hidden">нравится</span>
+                                    </button>
+                                    <button class="favorites-new-item_btn favorites-new-item_btn--compare">
+                                        <span class="visually-hidden">сравнить</span>
+                                    </button>
+                                </div>
+                                <div class="favorites-new-item_stars">
+                                    {% for i in range(0, item.stars) %}
+                                    <span class="favorites-new-item_star-icon"></span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p class="favorites-new-item_type">{{item.type}}</p>
+                            <div class="favorites-new-item_wrapper">
+                                <p class="favorites-new-item_name">{{item.name}}</p>
+                                <div class="favorites-new-item_btns favorites-new-item_btns--desktop">
+                                    <button class="favorites-new-item_btn favorites-new-item_btn--like">
+                                        <span class="visually-hidden">нравится</span>
+                                    </button>
+                                    <button class="favorites-new-item_btn favorites-new-item_btn--compare">
+                                        <span class="visually-hidden">сравнить</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="favorites-new-item_cost-wrapper">
+                                <span class="favorites-new-item_cost-item">
+                                    <span class="favorites-new-item_cost">{{item.cost}} </span>
+                                    <span class="favorites-new-item_cost-currency">₽</span>
+                                </span>
+                                {% if item.oldCost %}
+                                <span class="favorites-new-item_cost-item">
+                                    <span class="favorites-new-item_cost-old">{{item.oldCost}} </span>
+                                    <span class="favorites-new-item_cost-old-currency">₽</span>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favorites-new-item_btn-wrapper">
+                        <button class="btn-blue favorites-new-item_btn-bottom">В корзину</button>
+                        <button class="btn-blue-border favorites-new-item_btn-bottom btn-blue-border--btn-order"
+                            data-fancybox data-src="#quick-order-popup">Быстрый заказ</button>
+                        <button class="favorites-new-item-remove-btn">
+                            <span class="favorites-new-item-remove-btn-text">Удалить<br> из избранного</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="favorites-new-item_col favorites-new-item_col--add">
+                <div class="favorites-new-item-add favorites-new-item--add">
+                    <a href="#" class="favorites-new-item-add-zone">
+                        <svg class="svg-icon favorites-new-item-add-icon">
+                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#plus"></use>
+                        </svg>
+                        <span class="visually-hidden">Добавить товары к сравнению</span>
+                    </a>
+                    <p class="favorites-new-item-add-text">Добавить товары <br> в избранное</p>
+                    <button class="btn-blue-border favorites-new-item-add-btn">Показать аналоги</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
