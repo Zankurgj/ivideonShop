@@ -340,6 +340,7 @@
   transition: border-color $base-duration $base-timing,
     transform $base-duration $base-timing;
   cursor: pointer;
+  overflow: hidden;
   @media all and (min-width: $tablet-bp) {
     width: 64px;
     height: 64px;
