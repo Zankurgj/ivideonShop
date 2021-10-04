@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   deliverySpoilerListenerInit();
   togglePwdInputListenerInit();
   closeCookiePopupListinerInit();
+  toggleBtnProductListener();
   new ShowCompareSlider();
 });
 
@@ -139,5 +140,16 @@ const togglePwdInputListenerInit = () => {
 const closeCookiePopupListinerInit = () => {
   $(".js--cookie-btn-close").on("click", (evt) => {
     $(".js--cookie-popup").addClass("hide");
+  });
+};
+
+const toggleBtnProductListener = () => {
+  $(".js--btn-like").on("click", (evt) => {
+    const btn = $(evt.currentTarget);
+    btn.toggleClass("active");
+  });
+  $(".js--btn-compare").on("click", (evt) => {
+    const btn = $(evt.currentTarget);
+    btn.toggleClass("active");
   });
 };

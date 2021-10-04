@@ -163,3 +163,15 @@ input[type="submit"] {
     background-image: url("../images/icons/file.svg");
   }
 }
+.btn-like-main {
+  background-image: url("../images/icons/like_icon.svg");
+  &.active {
+    background-image: url("../images/icons/like-full.svg");
+  }
+}
+.btn-compare-main {
+  background-image: url("../images/icons/compare_icon.svg");
+  &.active {
+    background-image: url("../images/icons/checkmark.svg");
+  }
+}

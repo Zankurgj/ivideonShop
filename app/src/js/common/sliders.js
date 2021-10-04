@@ -96,7 +96,7 @@ const initPromoSlider = () => {
     arrows: false,
     dots: true,
     mobileFirst: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
       {
