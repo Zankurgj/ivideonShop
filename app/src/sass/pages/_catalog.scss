@@ -211,6 +211,7 @@
   }
 }
 .catalog-item_wrapper-col {
+  width: 100%;
   @media all and (min-width: $desktop-bp) {
     max-width: calc(100% - 300px);
   }
@@ -469,7 +470,6 @@
 // IMG
 .catalog-item_middle {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
   @media all and (min-width: $desktop-bp) {
     flex-direction: column;
@@ -478,6 +478,8 @@
   }
 }
 .catalog-item_img {
+  flex: 0 0 auto;
+  display: block;
   position: relative;
   margin-right: 12px;
   width: 98px;

@@ -73,6 +73,9 @@
     flex-basis: 250px;
     max-width: 250px;
     margin-right: 40px;
+    &:last-child {
+      margin-bottom: 18px;
+    }
   }
 }
 .compare_nav-item-wrapper--active {
@@ -87,6 +90,7 @@
 .compare_nav-item {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 18px 30px;
   border: 2px solid #e5e9f2;
   border-radius: 20px;
