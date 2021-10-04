@@ -437,6 +437,11 @@
     line-height: 40px;
   }
 }
+.quick_item-cost--nodiscount {
+  @media all and (min-width: $desktop-bp) {
+    line-height: 56px;
+  }
+}
 .quick_item-cost-currency {
   font-weight: 600;
   font-size: 14px;
@@ -536,20 +541,26 @@
   }
 }
 .quick_item-price {
+  display: inline-block;
   font-weight: bold;
   font-size: 20px;
   line-height: 25px;
   color: $black;
   @media all and (min-width: $desktop-bp) {
-    line-height: 40px;
+    line-height: 56px;
   }
 }
 .quick_item-price-currency {
+  font-weight: 600;
   font-size: 14px;
   line-height: 25px;
   color: $black;
+  @media all and (min-width: $tablet-bp) {
+    font-size: 18px;
+    line-height: 25px;
+  }
   @media all and (min-width: $desktop-bp) {
-    line-height: 40px;
+    line-height: 56px;
   }
 }
 

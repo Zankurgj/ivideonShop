@@ -1058,6 +1058,7 @@
   align-items: flex-end;
 }
 .product_buy-popup-cost {
+  display: inline-block;
   margin-right: 12px;
   font-weight: 500;
   font-size: 18px;
@@ -1067,6 +1068,11 @@
     margin-right: 15px;
     font-size: 26px;
     line-height: 40px;
+  }
+}
+.product_buy-popup-cost--nodiscount {
+  @media all and (min-width: $tablet-bp) {
+    line-height: 64px;
   }
 }
 .product_buy-popup-cost-currency {
