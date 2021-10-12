@@ -155,6 +155,10 @@
   @media all and (min-width: 1200px) {
     padding: 0 16px;
   }
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -207,6 +211,13 @@
     visibility $base-duration $base-timing,
     transform $base-duration $base-timing;
 }
+.main-header_nav-dropdown-inner--small {
+  display: flex;
+  align-items: center;
+  padding: 34px 0 45px;
+  min-height: 276px;
+  overflow-x: auto;
+}
 .main-header_nav-dropdown-container {
   position: relative;
   width: 100%;
@@ -216,6 +227,138 @@
   }
   @media all and (min-width: 1600px) {
     padding-right: 520px;
+  }
+}
+.main-header_nav-dropdown-inner-img-container {
+  display: flex;
+  width: 100%;
+}
+.main-header_nav-dropdown-img-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-right: 52px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    .main-header_nav-dropdown-img-item-icon-wrapper {
+      img {
+        transform: translateY(-16px);
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+.main-header_nav-dropdown-img-item-icon {
+  display: block;
+  min-width: 124px;
+  height: 138px;
+}
+.main-header_nav-dropdown-img-item-icon-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: block;
+    width: 80%;
+    height: 6px;
+    background-color: rgba($color: #3c4858, $alpha: 0.3);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity $base-duration $base-timing;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    will-change: transform;
+    transition: transform $base-duration $base-timing;
+  }
+}
+.main-header_nav-dropdown-img-item-text {
+  display: inline-block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3c4858;
+}
+// details
+.iv-container--main-header_details {
+  display: none;
+  width: 100%;
+}
+.main-header_nav-dropdown-inner-details {
+  width: 100%;
+  display: flex;
+}
+.main-header_nav-dropdown-inner-details-left {
+  flex: 0 0 auto;
+  padding-right: 38px;
+  border-right: 1px solid #8492a6;
+  min-height: 184px;
+}
+.main-header_nav-dropdown-inner-details-left-img {
+  display: block;
+  max-width: 120px;
+  margin: 0 auto 4px auto;
+}
+.main-header_nav-dropdown-inner-details-left-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: #3c4858;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-header_nav-dropdown-inner-details-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+.iv-row--main-header_nav-dropdown-inner-details-left {
+  flex-grow: 1;
+  padding: 0 60px;
+}
+.main-header_nav-dropdown-inner-details-btn-back {
+  position: relative;
+  margin-top: 46px;
+  padding-left: 42px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $slate;
+  &:hover {
+    opacity: 0.8;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 16px;
+    background-position: 0 0;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='16' viewBox='0 0 34 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.928929C7.68054 0.538404 7.04738 0.538404 6.65686 0.928928L0.292893 7.29289ZM34 7L1 7L1 9L34 9L34 7Z' fill='%233C4858'/%3E%3C/svg%3E%0A");
   }
 }
 .main-header_nav-dropdown-img {

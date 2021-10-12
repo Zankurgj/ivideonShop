@@ -7,14 +7,19 @@ class MainHeader {
     this.leftMenuWrapper = $(".js--left-menu");
     this.topMenuOverlay = $(".js--top-menu-overlay");
     this.subNav = $(".js--header-subnav");
+    this.detailBtn = $(".js--detail-btn");
+    this.detailMenuWrapper = $(".js--detail-menu-wrapper");
+    this.btnDetailBack = $(".js--menu-btn-back");
     this.bottomMenuBtnHandler = this.bottomMenuBtn.bind(this);
     this.closeBottomMenuHandler = this.closeBottomMenu.bind(this);
     this.toggleLeftMenuHandler = this.toggleLeftMenu.bind(this);
     this.addClassActiveDropdownHandler = this.addClassActiveDropdown.bind(this);
     this.toggleSearchHandler = this.toggleSearch.bind(this);
     this.checkWindowScrollHandler = this.checkWindowScroll.bind(this);
+    this.showDetailHandler = this.showDetail.bind(this);
     this.removeClassActiveDropdownHandler =
       this.removeClassActiveDropdown.bind(this);
+    this.backToMainMenuHandler = this.backToMainMenu.bind(this);
     this.initMenu();
   }
   initMenu() {
@@ -24,6 +29,28 @@ class MainHeader {
     this.initDropdownMenuListeners();
     this.initToggleSearchListeners();
     this.initCheckWindowScrollListeners();
+    this.initShowDetailListeners();
+    this.initBtnDetailBackListeners();
+  }
+  // BTN DETAIL BACK
+  initBtnDetailBackListeners() {
+    this.btnDetailBack.on("click", this.backToMainMenuHandler);
+  }
+  backToMainMenu() {
+    $(`.js--details-container`).hide();
+    this.detailMenuWrapper.show();
+  }
+  // SHOW DEATAIL
+  initShowDetailListeners() {
+    this.detailBtn.on("click", this.showDetailHandler);
+  }
+  showDetail(evt) {
+    const detailId = $(evt.currentTarget).data("datailsId");
+    const activeDetail = $(
+      `.js--details-container[data-datails-id=${detailId}]`
+    );
+    this.detailMenuWrapper.hide();
+    activeDetail.show();
   }
   // CHECK SCROLL
   initCheckWindowScrollListeners() {
@@ -67,6 +94,7 @@ class MainHeader {
     this.topMenuOverlay.addClass("show");
   }
   removeClassActiveDropdown(evt) {
+    this.backToMainMenu();
     $(evt.currentTarget).removeClass("opened");
     this.topMenuOverlay.removeClass("show");
   }
