@@ -18,51 +18,53 @@
                         <div class="main-header_nav-dropdown-inner main-header_nav-dropdown-inner--small">
                             <div
                                 class="iv-container main-header_nav-dropdown-inner-img-container js--detail-menu-wrapper">
-                                {% set homeMenu = [
-                                {
-                                icon:'../images/img/menu/header1.png',
-                                text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
-                                },
-                                {
-                                icon:'../images/img/menu/header2.png',
-                                text:'тепловизоры'
-                                },
-                                {
-                                icon:'../images/img/menu/header3.png',
-                                text:'Видеорегистраторы'
-                                },
-                                {
-                                icon:'../images/img/menu/header4.png',
-                                text:'Сетевое оборудование'
-                                },
-                                {
-                                icon:'../images/img/menu/header5.png',
-                                text:'Видеоаналитика'
-                                },
-                                {
-                                icon:'../images/img/menu/header6.png',
-                                text:'Скуд'
-                                },
-                                {
-                                icon:'../images/img/menu/header7.png',
-                                text:'ДОПОЛНИТЕЛЬНО'
-                                },
-                                {
-                                icon:'../images/img/menu/header8.png',
-                                text:'ТАРИФЫ'
-                                }
-                                ] %}
-                                {% for item in homeMenu %}
-                                <button class="main-header_nav-dropdown-img-item js--detail-btn"
-                                    data-datails-id="menu-1-{{loop.index}}">
-                                    <span class="main-header_nav-dropdown-img-item-icon">
-                                        <span class="main-header_nav-dropdown-img-item-icon-wrapper">
-                                            <img src="{{item.icon}}" alt="{{item.text}}">
+                                <div class="main-header_nav-dropdown-inner-img-row">
+                                    {% set homeMenu = [
+                                    {
+                                    icon:'../images/img/menu/header1.png',
+                                    text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header2.png',
+                                    text:'тепловизоры'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header3.png',
+                                    text:'Видеорегистраторы'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header4.png',
+                                    text:'Сетевое оборудование'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header5.png',
+                                    text:'Видеоаналитика'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header6.png',
+                                    text:'Скуд'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header7.png',
+                                    text:'ДОПОЛНИТЕЛЬНО'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header8.png',
+                                    text:'ТАРИФЫ'
+                                    }
+                                    ] %}
+                                    {% for item in homeMenu %}
+                                    <button class="main-header_nav-dropdown-img-item js--detail-btn"
+                                        data-datails-id="menu-1-{{loop.index}}">
+                                        <span class="main-header_nav-dropdown-img-item-icon">
+                                            <span class="main-header_nav-dropdown-img-item-icon-wrapper">
+                                                <img src="{{item.icon}}" alt="{{item.text}}">
+                                            </span>
                                         </span>
-                                    </span>
-                                    <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
-                                </button>
-                                {% endfor %}
+                                        <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
+                                    </button>
+                                    {% endfor %}
+                                </div>
                             </div>
                             {% for item in homeMenu %}
                             <div class="iv-container iv-container--main-header_details js--details-container"
@@ -100,31 +102,33 @@
                         <div class="main-header_nav-dropdown-inner main-header_nav-dropdown-inner--small">
                             <div
                                 class="iv-container main-header_nav-dropdown-inner-img-container js--detail-menu-wrapper">
-                                {% set homeMenu = [
-                                {
-                                icon:'../images/img/menu/header1.png',
-                                text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
-                                },
-                                {
-                                icon:'../images/img/menu/header7.png',
-                                text:'ДОПОЛНИТЕЛЬНО'
-                                },
-                                {
-                                icon:'../images/img/menu/header8.png',
-                                text:'ТАРИФЫ'
-                                }
-                                ] %}
-                                {% for item in homeMenu %}
-                                <button class="main-header_nav-dropdown-img-item js--detail-btn"
-                                    data-datails-id="menu-2-{{loop.index}}">
-                                    <span class="main-header_nav-dropdown-img-item-icon">
-                                        <span class="main-header_nav-dropdown-img-item-icon-wrapper">
-                                            <img src="{{item.icon}}" alt="{{item.text}}">
+                                <div class="main-header_nav-dropdown-inner-img-row">
+                                    {% set homeMenu = [
+                                    {
+                                    icon:'../images/img/menu/header1.png',
+                                    text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header7.png',
+                                    text:'ДОПОЛНИТЕЛЬНО'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header8.png',
+                                    text:'ТАРИФЫ'
+                                    }
+                                    ] %}
+                                    {% for item in homeMenu %}
+                                    <button class="main-header_nav-dropdown-img-item js--detail-btn"
+                                        data-datails-id="menu-2-{{loop.index}}">
+                                        <span class="main-header_nav-dropdown-img-item-icon">
+                                            <span class="main-header_nav-dropdown-img-item-icon-wrapper">
+                                                <img src="{{item.icon}}" alt="{{item.text}}">
+                                            </span>
                                         </span>
-                                    </span>
-                                    <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
-                                </button>
-                                {% endfor %}
+                                        <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
+                                    </button>
+                                    {% endfor %}
+                                </div>
                             </div>
                             {% for item in homeMenu %}
                             <div class="iv-container iv-container--main-header_details js--details-container"
@@ -162,51 +166,53 @@
                         <div class="main-header_nav-dropdown-inner main-header_nav-dropdown-inner--small">
                             <div
                                 class="iv-container main-header_nav-dropdown-inner-img-container js--detail-menu-wrapper">
-                                {% set homeMenu = [
-                                {
-                                icon:'../images/img/menu/header1.png',
-                                text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
-                                },
-                                {
-                                icon:'../images/img/menu/header2.png',
-                                text:'тепловизоры'
-                                },
-                                {
-                                icon:'../images/img/menu/header3.png',
-                                text:'Видеорегистраторы'
-                                },
-                                {
-                                icon:'../images/img/menu/header4.png',
-                                text:'Сетевое оборудование'
-                                },
-                                {
-                                icon:'../images/img/menu/header5.png',
-                                text:'Видеоаналитика'
-                                },
-                                {
-                                icon:'../images/img/menu/header6.png',
-                                text:'Скуд'
-                                },
-                                {
-                                icon:'../images/img/menu/header7.png',
-                                text:'ДОПОЛНИТЕЛЬНО'
-                                },
-                                {
-                                icon:'../images/img/menu/header8.png',
-                                text:'ТАРИФЫ'
-                                }
-                                ] %}
-                                {% for item in homeMenu %}
-                                <button class="main-header_nav-dropdown-img-item js--detail-btn"
-                                    data-datails-id="menu-3-{{loop.index}}">
-                                    <span class="main-header_nav-dropdown-img-item-icon">
-                                        <span class="main-header_nav-dropdown-img-item-icon-wrapper">
-                                            <img src="{{item.icon}}" alt="{{item.text}}">
+                                <div class="main-header_nav-dropdown-inner-img-row">
+                                    {% set homeMenu = [
+                                    {
+                                    icon:'../images/img/menu/header1.png',
+                                    text:'КАМЕРЫ <br> ВИДЕОНАБЛЮДЕНИЯ'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header2.png',
+                                    text:'тепловизоры'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header3.png',
+                                    text:'Видеорегистраторы'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header4.png',
+                                    text:'Сетевое оборудование'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header5.png',
+                                    text:'Видеоаналитика'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header6.png',
+                                    text:'Скуд'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header7.png',
+                                    text:'ДОПОЛНИТЕЛЬНО'
+                                    },
+                                    {
+                                    icon:'../images/img/menu/header8.png',
+                                    text:'ТАРИФЫ'
+                                    }
+                                    ] %}
+                                    {% for item in homeMenu %}
+                                    <button class="main-header_nav-dropdown-img-item js--detail-btn"
+                                        data-datails-id="menu-3-{{loop.index}}">
+                                        <span class="main-header_nav-dropdown-img-item-icon">
+                                            <span class="main-header_nav-dropdown-img-item-icon-wrapper">
+                                                <img src="{{item.icon}}" alt="{{item.text}}">
+                                            </span>
                                         </span>
-                                    </span>
-                                    <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
-                                </button>
-                                {% endfor %}
+                                        <span class="main-header_nav-dropdown-img-item-text">{{item.text|safe}}</span>
+                                    </button>
+                                    {% endfor %}
+                                </div>
                             </div>
                             {% for item in homeMenu %}
                             <div class="iv-container iv-container--main-header_details js--details-container"
