@@ -215,12 +215,18 @@
   display: flex;
   align-items: center;
   min-height: auto;
-  height: 342px;
-  overflow-x: auto;
+  height: 310px;
+  @media all and (min-width: 1600px) {
+    height: 342px;
+  }
 }
 .main-header_nav-dropdown-inner-img-container {
   width: 100%;
   height: 100%;
+  padding: 0 20px;
+  @media all and (min-width: 1600px) {
+    padding: 0 80px;
+  }
 }
 .main-header_nav-dropdown-container {
   position: relative;
@@ -240,12 +246,13 @@
   padding-top: 62px;
 }
 .main-header_nav-dropdown-img-item {
+  flex-basis: calc((100% - 10px * 7) / 8);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-right: 52px;
+  margin-right: 10px;
   &:last-child {
     margin-right: 0;
   }
@@ -259,17 +266,26 @@
       }
     }
   }
+  @media all and (min-width: 1800px) {
+    flex-basis: calc((100% - 52px * 7) / 8);
+    margin-right: 52px;
+  }
 }
 .main-header_nav-dropdown-img-item-icon {
   display: block;
-  min-width: 124px;
-  height: 138px;
+  width: 90px;
+  height: 100px;
+  @media all and (min-width: 1366px) {
+    width: 120px;
+    height: 130px;
+  }
 }
 .main-header_nav-dropdown-img-item-icon-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
   &::before {
     content: "";
@@ -287,7 +303,10 @@
   }
   img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
     will-change: transform;
     transition: transform $base-duration $base-timing;
   }
@@ -296,12 +315,24 @@
   display: inline-block;
   width: 100%;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 11px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #3c4858;
+  @media all and (min-width: 1200px) {
+    font-size: 12px;
+  }
+  @media all and (min-width: 1366px) {
+    font-size: 13px;
+  }
+  @media all and (min-width: 1500px) {
+    font-size: 14px;
+  }
+  @media all and (min-width: 1600px) {
+    font-size: 15px;
+  }
 }
 // details
 .iv-container--main-header_details {
@@ -344,7 +375,7 @@
 }
 .main-header_nav-dropdown-inner-details-btn-back {
   position: relative;
-  margin-top: 46px;
+  margin-top: 20px;
   padding-left: 42px;
   font-weight: 500;
   font-size: 12px;
@@ -352,6 +383,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $slate;
+  @media all and (min-width: 1600px) {
+    margin-top: 46px;
+  }
   &:hover {
     opacity: 0.8;
   }
