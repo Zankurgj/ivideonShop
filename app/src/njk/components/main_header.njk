@@ -1,5 +1,5 @@
 {% macro mainHeader(headerType = "default") %}
-<header class="main-header">
+<header class="main-header js--main-header">
     <div class="main-header_inner">
         <button class="main-header_menu-btn js--toggle-left-menu">
             <span class="visually-hidden">Меню</span>
@@ -266,40 +266,87 @@
                 </button>
                 <!-- Авторизованный -->
                 <div class="main-header_user-block">
-                    <button class="main-header_user-btn">
-                        <svg class="svg-icon main-header_user-btn-icon">
-                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#clock-header"></use>
-                        </svg>
-                        <span class="visually-hidden">TODO</span>
-                    </button>
-                    <button class="main-header_user-btn">
-                        <span class="main-header_user-btn-counter">12</span>
-                        <svg class="svg-icon main-header_user-btn-icon">
-                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#swap-header"></use>
-                        </svg>
-                        <span class="visually-hidden">TODO</span>
-                    </button>
-                    <button class="main-header_user-btn">
-                        <span class="main-header_user-btn-counter">12</span>
-                        <svg class="svg-icon main-header_user-btn-icon">
-                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#heart-header"></use>
-                        </svg>
-                        <span class="visually-hidden">TODO</span>
-                    </button>
-                    <button class="main-header_user-btn main-header_user-btn--basket main-header_user-btn--show">
-                        <span class="main-header_user-btn-counter">12</span>
-                        <svg class="svg-icon main-header_user-btn-icon">
-                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#add-header"></use>
-                        </svg>
-                        <span class="visually-hidden">TODO</span>
-                        <span class="main-header_user-btn-bubble">12 999,00 ₽</span>
-                    </button>
-                    <button class="main-header_user-btn">
-                        <svg class="svg-icon main-header_user-btn-icon">
-                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#user-header"></use>
-                        </svg>
-                        <span class="visually-hidden">TODO</span>
-                    </button>
+                    <div class="main-header_user-item">
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#clock-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                    </div>
+                    <div class="main-header_user-item">
+                        <button class="main-header_user-btn">
+                            <span class="main-header_user-btn-counter">12</span>
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#swap-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                    </div>
+                    <div class="main-header_user-item">
+                        <button class="main-header_user-btn">
+                            <span class="main-header_user-btn-counter">12</span>
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#heart-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                    </div>
+                    <div class="main-header_user-item main-header_user-item__dropdown">
+                        <a href="#" class="main-header_user-btn main-header_user-btn--basket">
+                            <span class="main-header_user-btn-counter">12</span>
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#add-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </a>
+                        <div class="main-header_user-item-popup main-header_basket-popup">
+                            <ul class="main-header_basket-list">
+                                {% for i in range(0, 4) %}
+                                <li class="main-header_basket-list-item">
+                                    <a href="#" class="main-header_basket-item">
+                                        <div class="main-header_basket-item-img">
+                                            <img src="../images/img/common/product_promo.png" alt="Продукция">
+                                        </div>
+                                        <span class="main-header_basket-item-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quaerat
+                                            obcaecati necessitatibus quidem nesciunt ipsum expedita sed iure, accusamus
+                                            sit?
+                                        </span>
+                                        <span class="main-header_basket-item-cost">
+                                            5 190
+                                            <span class="main-header_basket-item-currency">₽</span>
+                                        </span>
+                                    </a>
+                                    <button class="main-header_basket-item-remove">
+                                        <svg class="svg-icon main-header_basket-item-remove-icon">
+                                            <use xlink:href="../images/sprites/svg/sprite.symbol.svg#cancel"></use>
+                                        </svg>
+                                        <span class="visually-hidden">Удалить</span>
+                                    </button>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="main-header_basket-panel">
+                                <a href="#" class="btn btn-blue main-header_basket-panel-btn">Оформить заказ</a>
+                                <div class="main-header_basket-total-cost">
+                                    <span class="main-header_basket-total-text">Итого:</span>
+                                    <span class="main-header_basket-total-cost">
+                                        26 765
+                                        <span class="main-header_basket-total-currency">₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header_user-item">
+                        <button class="main-header_user-btn">
+                            <svg class="svg-icon main-header_user-btn-icon">
+                                <use xlink:href="../images/sprites/svg/sprite.symbol.svg#user-header"></use>
+                            </svg>
+                            <span class="visually-hidden">TODO</span>
+                        </button>
+                    </div>
                 </div>
                 <!-- Неавторизованный, раскоментить-->
                 <!-- <button class="btn-white-border main-header-nav_btn">Войти</button> -->

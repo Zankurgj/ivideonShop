@@ -8,7 +8,7 @@ require("~/node_modules/intl-tel-input/build/js/utils.js");
 import noUiSlider from "nouislider";
 import MainHeader from "./common/main-header";
 import CounterNumber from "./common/counter";
-import ShowCompareSlider from "./common/show-compare-slider";
+import ShowTopPopup from "./common/show-top-popup";
 import { initSliders } from "./common/sliders";
 import { initCatalog } from "./common/catalog";
 require("@fancyapps/fancybox");
@@ -25,12 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
   initCatalog();
   initTelInput();
   scrollTopBtnInit();
-  checkProductPopupScrollListener();
+  // checkProductPopupScrollListener();
   deliverySpoilerListenerInit();
   togglePwdInputListenerInit();
   closeCookiePopupListinerInit();
   toggleBtnProductListener();
-  new ShowCompareSlider();
+  new ShowTopPopup(
+    ".js--compare-top-slider-container",
+    ".js--compare-slider-container"
+  );
+  new ShowTopPopup(".js--product-buy-popup", ".js--product-container");
 });
 
 const initAnchorLink = () => {

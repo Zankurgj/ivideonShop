@@ -150,6 +150,7 @@
 .compare_product-slider {
   .slick-track {
     display: flex !important;
+    min-width: 100%;
   }
   .slick-slide {
     height: inherit !important;
@@ -537,7 +538,7 @@
   @media all and (min-width: $desktop-bp) {
     margin: 0 auto;
     max-width: 1320px;
-    padding: 40px 60px 40px 60px;
+    padding: 20px 60px 20px 60px;
   }
 }
 .compare_top-slider-container {
@@ -549,8 +550,13 @@
   background-color: #fff;
   box-shadow: 0px -2px 80px rgba(0, 0, 0, 0.2), 0px 1px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  transform: translateY(-10px);
   visibility: hidden;
+  transition: opacity $base-timing $base-duration,
+    visibility $base-timing $base-duration,
+    transform $base-timing $base-duration;
   &.show {
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
