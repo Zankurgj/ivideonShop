@@ -815,7 +815,17 @@
   @media all and (min-width: $desktop-bp) {
     max-width: 530px;
     border-radius: 0 80px 80px 0;
-    padding: 80px 120px 0 120px;
+    padding: 80px 120px 20px 120px;
+  }
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 .main-header_left-nav-btn-close {

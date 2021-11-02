@@ -235,6 +235,7 @@
 }
 // ITEM
 .compare_product-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -251,6 +252,32 @@
   }
   @media all and (min-width: $desktop-bp) {
     max-width: none;
+  }
+}
+.compare_product-item-remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: $gray;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/img/basket/close-small.svg");
+  z-index: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+  @media all and (min-width: $tablet-bp) {
+    top: auto;
+    bottom: 29px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: $dark-snow;
+    background-image: url("../images/img/basket/close-big.svg");
   }
 }
 .compare_product-item-top {
@@ -335,7 +362,7 @@
   width: 100%;
   flex-grow: 1;
   position: relative;
-  padding-right: 18px;
+  // padding-right: 18px;
 }
 .compare_product_type {
   display: none;
@@ -459,8 +486,10 @@
   font-size: 12px;
   line-height: 27px;
   padding: 8px 48px;
+  max-width: 154px;
   @media all and (min-width: $tablet-bp) {
     display: block;
+    margin-right: 40px;
   }
 }
 // TABLE
@@ -573,6 +602,7 @@
   }
 }
 .compare_top-product-item {
+  position: relative;
   max-width: 180px;
   margin: 0 auto;
   padding: 10px 32px;
@@ -580,6 +610,26 @@
     display: flex;
     max-width: none;
     padding: 1px 1px;
+  }
+}
+.compare_top-product-remove {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  background-color: $gray;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/img/basket/close-small.svg");
+  z-index: 2;
+  @media all and (min-width: $tablet-bp) {
+    top: 0px;
+    right: 2px;
+  }
+  &:hover {
+    opacity: 0.8;
   }
 }
 // IMG
@@ -629,6 +679,7 @@
 }
 .compare_top-product-cost-item {
   margin-right: 10px;
+  white-space: nowrap;
   &:last-child {
     margin-right: 0;
   }
@@ -673,6 +724,7 @@
   color: $black;
   @media all and (min-width: $tablet-bp) {
     display: block;
+    padding-right: 24px;
   }
 }
 .compare_top-product-name {
