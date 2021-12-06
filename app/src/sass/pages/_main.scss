@@ -12,13 +12,24 @@
 // PROMO SECTION
 // SLIDER
 .mp-promo_slide {
-  padding: 68px 0 100px 0;
-  background-image: linear-gradient(111.37deg, #2b8acb -5.7%, #c70093 67.85%);
+  position: relative;
+  padding-top: 100%;
   @media all and (min-width: $desktop-bp) {
-    display: flex !important;
-    min-height: 590px;
-    padding: 50px 0 0px 0;
+    padding-top: 28%;
   }
+  // padding: 68px 0 100px 0;
+  // background-image: linear-gradient(111.37deg, #2b8acb -5.7%, #c70093 67.85%);
+  // @media all and (min-width: $desktop-bp) {
+  //   display: flex !important;
+  //   min-height: 590px;
+  //   padding: 50px 0 0px 0;
+  // }
+}
+.mp-promo_slide-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 .mp-promo_slide_row {
   @media all and (min-width: $desktop-bp) {

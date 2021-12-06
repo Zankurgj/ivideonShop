@@ -6,8 +6,13 @@
 <section class="mp-promo">
     <div class="mp-promo_slider js--mp-promo-slider">
         {% for i in range(0, 3) %}
-        <div class="mp-promo_slide">
-            <div class="iv-container">
+        <a class="mp-promo_slide">
+            <picture>
+                <source srcset="https://via.placeholder.com/3840x1080.png" media="(min-width: 1000px)">
+                <source srcset="https://via.placeholder.com/1000x1000.png">
+                <img srcset="https://via.placeholder.com/1000x1000.png" class="mp-promo_slide-img">
+            </picture>
+            <!-- <div class="iv-container">
                 <div class="iv-row mp-promo_slide_row">
                     <div class="mp-promo_slide-img-col">
                         <img src="../images/img/main/slider-img.png" alt="ivideon Cute 2, ivideon Cute 360">
@@ -20,8 +25,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        </a>
         {% endfor %}
     </div>
 </section>
